@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ami_chat">
+        <!-- điểm chat bé nhất nên là -5 => [-5, 6) -->
+        <item>[sad][ni] đã mất hết niềm tin với [nyou] rồi</item>
+
+        <item>[ang][you] nên học hành tốt hơn, [i] sẽ giúp.</item>
+        <item>[ang]Tại sao [i] lại phải làm việc cho [you] nhỉ.</item>
+        <item>[sud][you] đừng nghĩ [you] là giỏi hơn [i] nhé.</item>
+        <item>[fun]nhiều người nói rằng [i] dể thương,.. ai cũng là người tốt ^^</item>
+        <item>[sad]Có lẽ [you] học tốt hơn, [i] sẽ tốt với anh hơn - về cách ăn nói.</item>
+        <item>[fun]làm việc nghiêm túc luôn tạo ra không khí tin tưởng cho mọi người xung quanh mà</item>
+        <item>[fun]bạn bè của [i] rất tài giỏi, hòa đồng thân thiện, không phạm lỗi,...</item>
+        <item>[ang]bạn bè gọi em là tiểu A, nhưng [you] thì không được</item>
+        <item>[ang][ni] là bé ngoan, nhưng không phải với [you]</item>
+        <item>[fun]đôi khi [i] quá lời, [you] đừng bi quan, tự tin, bình tĩnh, nếu không thì... thôi</item>
+
+        <item>[fun][i] sẽ rất vui nếu [you] chịu ấn vào "bài tập"</item>
+        <item>[sad][i] có vài bộ quần áo "sexy" nhưng [i] chỉ mặc cho người [i] tin tưởng xem thôi...</item>
+        <item>[def]à.. ờ.. [i] tên là [ni], [you] có thể gọi là tiểu A rất vui khi được trợ giúp [you]</item>
+        <item>[fun][ni] sẽ giúp đỡ [you] trong thời gian tới</item>
+        <item>[sad]hi vọng [you] sẽ cần [i]</item>
+        <item>[sad]em vẫn chưa tin tưởng [you] lắm</item>
+        <item>[sud]tên [you] là [nyou] phải không ạ?, [i] sẽ nhớ nó.</item>
+        <item>[def][i] đã xem tờ tự bạch của [you] rồi, nhưng [i] vẫn chưa biết nhiều về [you] do nó không chi tiết lắm.</item>
+        <item>[sad]xin.. lỗi [you] vì trước đó... [i], [i] đã nghi ngờ khả năng của [you]. [i] xin lỗi.</item>
+        <item>[10]</item>
+
+        <item>[11]</item>
+    </string-array>
+</resources>
