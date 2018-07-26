@@ -184,28 +184,4 @@
         <item>eyebrow2</item>
     </string-array>
 
-    <string-array name="ami_chat">
-        <item>ami 0</item>
-        <item>ami 1</item>
-        <item>ami 2</item>
-        <item>ami 3</item>
-        <item>ami 4</item>
-        <item>ami 5</item>
-        <item>ami 6</item>
-        <item>ami 7</item>
-        <item>ami 8</item>
-        <item>ami 9</item>
-        <item>ami 10</item>
-        <item>ami 11</item>>
-        <item>ami 12</item>
-        <item>ami 13</item>
-        <item>ami 14</item>
-        <item>ami 15</item>
-        <item>ami 16</item>
-        <item>ami 17</item>
-        <item>ami 18</item>
-        <item>ami 19</item>
-        <item>ami 20</item>
-    </string-array>
-
 </resources>
