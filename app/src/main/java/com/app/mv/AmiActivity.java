@@ -67,7 +67,6 @@ public class AmiActivity extends AppCompatActivity {
         buttonChat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setImageAmi("Fun");
             }
         });
     }
