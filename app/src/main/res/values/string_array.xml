@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="body">
+        <item>body0</item>
+    </string-array>
+
+    <string-array name="hair">
+        <item>hair0</item>
+    </string-array>
+
+    <string-array name="eye">
+        <item>eye0</item>
+        <item>eye1</item>
+        <item>eye2</item>
+        <item>eye3</item>
+        <item>eye4</item>
+        <item>eye5</item>
+        <item>eye6</item>
+        <item>eye7</item>
+        <item>eye8</item>
+    </string-array>
+
+    <string-array name="glass">
+        <item>glass0</item>
+        <item>glass1</item>
+        <item>glass2</item>
+        <item>glass3</item>
+    </string-array>
+
+    <string-array name="mouth">
+        <item>mouth0</item>
+        <item>mouth1</item>
+        <item>mouth2</item>
+        <item>mouth3</item>
+        <item>mouth4</item>
+        <item>mouth5</item>
+        <item>mouth6</item>
+        <item>mouth7</item>
+        <item>mouth8</item>
+        <item>mouth9</item>
+        <item>mouth10</item>
+        <item>mouth11</item>
+        <item>mouth12</item>
+        <item>mouth13</item>
+        <item>mouth14</item>
+        <item>mouth15</item>
+        <item>mouth16</item>
+        <item>mouth17</item>
+        <item>mouth18</item>
+        <item>mouth19</item>
+        <item>mouth20</item>
+        <item>mouth21</item>
+        <item>mouth22</item>
+        <item>mouth23</item>
+        <item>mouth24</item>
+        <item>mouth25</item>
+        <item>mouth26</item>
+        <item>mouth27</item>
+        <item>mouth28</item>
+        <item>mouth29</item>
+        <item>mouth30</item>
+        <item>mouth31</item>
+        <item>mouth32</item>
+        <item>mouth33</item>
+        <item>mouth34</item>
+        <item>mouth35</item>
+        <item>mouth36</item>
+        <item>mouth37</item>
+        <item>mouth38</item>
+        <item>mouth39</item>
+        <item>mouth40</item>
+        <item>mouth41</item>
+        <item>mouth42</item>
+        <item>mouth43</item>
+        <item>mouth44</item>
+        <item>mouth45</item>
+        <item>mouth46</item>
+        <item>mouth47</item>
+        <item>mouth48</item>
+        <item>mouth49</item>
+        <item>mouth50</item>
+        <item>mouth51</item>
+        <item>mouth52</item>
+        <item>mouth53</item>
+        <item>mouth54</item>
+        <item>mouth55</item>
+        <item>mouth56</item>
+    </string-array>
+
+    <string-array name="feature">
+        <item>feature0</item>
+        <item>feature1</item>
+        <item>feature2</item>
+        <item>feature3</item>
+        <item>feature4</item>
+        <item>feature5</item>
+        <item>feature6</item>
+        <item>feature7</item>
+        <item>feature8</item>
+        <item>feature9</item>
+        <item>feature10</item>
+        <item>feature11</item>
+        <item>feature12</item>
+        <item>feature13</item>
+        <item>feature14</item>
+        <item>feature15</item>
+        <item>feature16</item>
+        <item>feature17</item>
+        <item>feature18</item>
+        <item>feature19</item>
+    </string-array>
+
+    <string-array name="clothes">
+        <item>clothes0</item>
+        <item>clothes1</item>
+        <item>clothes2</item>
+        <item>clothes3</item>
+        <item>clothes4</item>
+        <item>clothes5</item>
+        <item>clothes6</item>
+        <item>clothes7</item>
+        <item>clothes8</item>
+        <item>clothes9</item>
+        <item>clothes10</item>
+        <item>clothes11</item>
+        <item>clothes12</item>
+        <item>clothes13</item>
+        <item>clothes14</item>
+        <item>clothes15</item>
+        <item>clothes16</item>
+        <item>clothes17</item>
+        <item>clothes18</item>
+        <item>clothes19</item>
+        <item>clothes20</item>
+        <item>clothes21</item>
+        <item>clothes22</item>
+        <item>clothes23</item>
+        <item>clothes24</item>
+        <item>clothes25</item>
+        <item>clothes26</item>
+        <item>clothes27</item>
+        <item>clothes28</item>
+        <item>clothes29</item>
+        <item>clothes30</item>
+        <item>clothes31</item>
+        <item>clothes32</item>
+        <item>clothes33</item>
+        <item>clothes34</item>
+        <item>clothes35</item>
+        <item>clothes36</item>
+        <item>clothes37</item>
+        <item>clothes38</item>
+        <item>clothes39</item>
+        <item>clothes40</item>
+        <item>clothes41</item>
+        <item>clothes42</item>
+        <item>clothes43</item>
+        <item>clothes44</item>
+        <item>clothes45</item>
+        <item>clothes46</item>
+        <item>clothes47</item>
+        <item>clothes48</item>
+        <item>clothes49</item>
+        <item>clothes50</item>
+        <item>clothes51</item>
+        <item>clothes52</item>
+        <item>clothes53</item>
+        <item>clothes54</item>
+        <item>clothes55</item>
+        <item>clothes56</item>
+        <item>clothes57</item>
+        <item>clothes58</item>
+        <item>clothes59</item>
+        <item>clothes60</item>
+        <item>clothes61</item>
+        <item>clothes62</item>
+        <item>clothes63</item>
+    </string-array>
+
+    <string-array name="eyebrow">
+        <item>eyebrow0</item>
+        <item>eyebrow1</item>
+        <item>eyebrow2</item>
+    </string-array>
+
+    <string-array name="ami_chat">
+        <item>ami 0</item>
+        <item>ami 1</item>
+        <item>ami 2</item>
+        <item>ami 3</item>
+        <item>ami 4</item>
+        <item>ami 5</item>
+        <item>ami 6</item>
+        <item>ami 7</item>
+        <item>ami 8</item>
+        <item>ami 9</item>
+        <item>ami 10</item>
+        <item>ami 11</item>>
+        <item>ami 12</item>
+        <item>ami 13</item>
+        <item>ami 14</item>
+        <item>ami 15</item>
+        <item>ami 16</item>
+        <item>ami 17</item>
+        <item>ami 18</item>
+        <item>ami 19</item>
+        <item>ami 20</item>
+    </string-array>
+
+</resources>
