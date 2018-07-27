@@ -10,18 +10,16 @@ import android.widget.TextView;
 
 public class AmiActivity extends AppCompatActivity {
 
-    int trust    = 0;
+    int trust    = 3000;
     int clothes  = 3;
-    int chat     = 1;
     String sYou = "anh", sI = "em", sNI = "Ami", sNYou = "Vinh";
 
     HelpData helpData;
 
     ImageView imageBody, imageHair, imageClothes, imageEye, imageGlass, imageEyebrow, imageMouth, imageFeature;
-    TextView textAmiChat;
+    TextView textViewAmiChat;
     Button buttonChat;
 
-    int bodyDefault, hairDefault, eyeDefault, eyebrowDeafault, clothesDefault, glassDefault, featureDefault, mouthDefault;
     int bodyChange,  hairchange,  eyeChange,  eyebrowChange,   clothesChange,  glassChange,  featureChange,   mouthChange;
 
     final int BODY_DEFAULT    = 1; // body.length;		// HAIR DEFAULT = BODY DEFAULT = 1
@@ -44,29 +42,49 @@ public class AmiActivity extends AppCompatActivity {
     final int TEST_WIN        = 100;  //x10 up 1 chat
     final int TEST_LOST       = -25;  //x40 down 1 chat
     final int CHAT_ABOUT      = 10;   //chat random [chat, chat + 10) // about 10 chat
-    final int CHAT_ADD        = 10;   //x100 up 1 chat
+    final int CHAT_ADD        = 25;   //x100 up 1 chat
+    final int TL_CHAT         = 320;  // tỉ lệ 1 chat = 320 trust
+    final int TL_CLOTHES      = 468;  // tỉ lệ 1 clothe = 468 trust
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ami);
 
-        helpData      = new HelpData();
-        imageBody     = findViewById(R.id.image_body);
-        imageHair     = findViewById(R.id.image_hair);
-        imageClothes  = findViewById(R.id.image_clothes);
-        imageEye      = findViewById(R.id.image_eye);
-        imageEyebrow  = findViewById(R.id.image_eyebrow);
-        imageFeature  = findViewById(R.id.image_feature);
-        imageGlass    = findViewById(R.id.image_glass);
-        imageMouth    = findViewById(R.id.image_mouth);
-        textAmiChat   = findViewById(R.id.text_AmiChat);
+        helpData        = new HelpData();
+        imageBody       = findViewById(R.id.image_body);
+        imageHair       = findViewById(R.id.image_hair);
+        imageClothes    = findViewById(R.id.image_clothes);
+        imageEye        = findViewById(R.id.image_eye);
+        imageEyebrow    = findViewById(R.id.image_eyebrow);
+        imageFeature    = findViewById(R.id.image_feature);
+        imageGlass      = findViewById(R.id.image_glass);
+        imageMouth      = findViewById(R.id.image_mouth);
+        textViewAmiChat = findViewById(R.id.text_AmiChat);
         setIndexDefault(false);
 
         buttonChat = findViewById(R.id.button_chat);
+
+        final String textAmiChat[] = getResources().getStringArray(R.array.ami_chat);
+
         buttonChat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                int chat = 0;
+                if (trust > 320){
+                    chat = (int) trust / 320;
+                }
+                trust += CHAT_ADD;
+                if (chat < 1){
+                    chatWithAmi(textAmiChat[0]);
+                }
+                else if (chat < (textAmiChat.length - CHAT_ABOUT)){
+                    chatWithAmi(textAmiChat[helpData.randomRange(chat, chat + CHAT_ABOUT)]);
+                }
+                else {
+                    chatWithAmi(textAmiChat[helpData.randomRange((textAmiChat.length - CHAT_ABOUT), textAmiChat.length)]);
+                }
+                Log.d("MVLog", "AmiActivity <- onClick chat: index chat: "+chat);
             }
         });
     }
@@ -82,21 +100,25 @@ public class AmiActivity extends AppCompatActivity {
         //String feature[]    = getResources().getStringArray(R.array.feature); // no feature default
         String mouth[]      = getResources().getStringArray(R.array.mouth);
 
-        int indexBody    = helpData.randomRange(BODY_DEFAULT);
-        bodyDefault      = idImageFromName(body[indexBody]);
-        hairDefault      = idImageFromName(hair[indexBody]); // index body = index hair
-        clothesDefault   = idImageFromName(clothes[helpData.randomRange(CLOTHES_DEFAULT)]);
-        eyebrowDeafault  = idImageFromName(eyebrow[helpData.randomRange(EYEBROW_DEFAULT)]);
-        mouthDefault     = idImageFromName(mouth[helpData.randomRange(MOUTH_DEFAULT)]);
-        featureDefault   = R.drawable.imagenull; //(NO FEATURE DEFAULT)
+        int indexBodyAndHair    = helpData.randomRange(BODY_DEFAULT);
+        helpData.setBodyDefault(idImageFromName(body[indexBodyAndHair]));
+        helpData.setHairDefault(idImageFromName(hair[indexBodyAndHair])); // index body = index hair
+        helpData.setEyebrowDeafault(idImageFromName(eyebrow[helpData.randomRange(EYEBROW_DEFAULT)]));
+        helpData.setMouthDefault(idImageFromName(mouth[helpData.randomRange(MOUTH_DEFAULT)]));
+        helpData.setFeatureDefault(R.drawable.imagenull); //(NO FEATURE DEFAULT)
         if (sglass){
-            eyeDefault   = idImageFromName(eye[helpData.randomRange(EYE_TINY)]);
-            glassDefault = idImageFromName(glass[helpData.randomRange(GLASS_DEFAULT)]);
+            helpData.setEyeDefault(idImageFromName(eye[helpData.randomRange(EYE_TINY)]));
+            helpData.setGlassDefault(idImageFromName(glass[helpData.randomRange(GLASS_DEFAULT)]));
         }
         else{
-            eyeDefault   = idImageFromName(eye[helpData.randomRange(EYE_TINY, EYE_BIG)]);
-            glassDefault = R.drawable.imagenull;
+            helpData.setEyeDefault(idImageFromName(eye[helpData.randomRange(EYE_TINY, EYE_BIG)]));
+            helpData.setGlassDefault(R.drawable.imagenull);
         }
+        int CLOTHES = 3;
+        if (trust > (TL_CLOTHES * CLOTHES)){
+            CLOTHES = (int) trust / TL_CLOTHES;
+        }
+        helpData.setClothesDefault(idImageFromName(clothes[helpData.randomRange(CLOTHES)]));
         setImageAmi("Default");
     }
 
@@ -117,7 +139,7 @@ public class AmiActivity extends AppCompatActivity {
                 imageEye.setImageResource(eyeChange);
                 imageMouth.setImageResource(mouthChange);
                 imageFeature.setImageResource(featureChange);
-                imageEyebrow.setImageResource(eyebrowDeafault);
+                imageEyebrow.setImageResource(helpData.getEyebrowDeafault());
                 Log.d("MVLog", "AmiActivity <- setImageAmi ami cảm thấy vui (fun)");
                 break;
             case "Angry":
@@ -130,7 +152,7 @@ public class AmiActivity extends AppCompatActivity {
                 imageFeature.setImageResource(featureChange);
                 imageMouth.setImageResource(mouthChange);
                 imageEyebrow.setImageResource(eyebrowChange);
-                imageEye.setImageResource(eyeDefault);
+                imageEye.setImageResource(helpData.getEyeDefault());
                 Log.d("MVLog", "AmiActivity <- setImageAmi ami cảm thấy giận (ang)");
                 break;
             case "Sad":
@@ -143,25 +165,25 @@ public class AmiActivity extends AppCompatActivity {
                 imageMouth.setImageResource(mouthChange);
                 imageEyebrow.setImageResource(eyebrowChange);
                 imageFeature.setImageResource(featureChange);
-                imageEye.setImageResource(eyeDefault);
+                imageEye.setImageResource(helpData.getEyeDefault());
                 Log.d("MVLog", "AmiActivity <- setImageAmi ami cảm thấy buồn (sad)");
                 break;
             case "Suddent":
 //                String mouth[]      = getResources().getStringArray(R.array.mouth);
                 mouthChange = idImageFromName(mouth[helpData.randomRange(MOUTH_SAD, MOUTH_SUDDENT)]);
                 imageMouth.setImageResource(mouthChange);
-                imageEye.setImageResource(eyeDefault);
+                imageEye.setImageResource(helpData.getEyeDefault());
                 Log.d("MVLog", "AmiActivity <- setImageAmi ami cảm thấy bất ngờ (sud)");
                 break;
             case "Default":
-                imageBody.setImageResource(bodyDefault);
-                imageHair.setImageResource(hairDefault);
-                imageClothes.setImageResource(clothesDefault);
-                imageEyebrow.setImageResource(eyebrowDeafault);
-                imageEye.setImageResource(eyeDefault);
-                imageGlass.setImageResource(glassDefault);
-                imageFeature.setImageResource(featureDefault);
-                imageMouth.setImageResource(mouthDefault);
+                imageBody.setImageResource(helpData.getBodyDefault());
+                imageHair.setImageResource(helpData.getHairDefault());
+                imageClothes.setImageResource(helpData.getClothesDefault());
+                imageEyebrow.setImageResource(helpData.getEyebrowDeafault());
+                imageEye.setImageResource(helpData.getEyeDefault());
+                imageGlass.setImageResource(helpData.getGlassDefault());
+                imageFeature.setImageResource(helpData.getFeatureDefault());
+                imageMouth.setImageResource(helpData.getMouthDefault());
                 Log.d("MVLog", "AmiActivity <- setImageAmi ami cảm thấy bình thường (def)");
                 break;
             default:
@@ -177,12 +199,12 @@ public class AmiActivity extends AppCompatActivity {
     }
 
     public void chatWithAmi(String text){
-        if(text.contains("[fun]")){setImageAmi("Fun"); text = helpData.removeSubString(text, "[fun]");}
-        if(text.contains("[ang]")){setImageAmi("Angry"); text = helpData.removeSubString(text, "[ang]");}
-        if(text.contains("[sad]")){setImageAmi("Sad"); text = helpData.removeSubString(text, "[sad]");}
+        if(text.contains("[fun]")){setImageAmi("Fun");     text = helpData.removeSubString(text, "[fun]");}
+        if(text.contains("[ang]")){setImageAmi("Angry");   text = helpData.removeSubString(text, "[ang]");}
+        if(text.contains("[sad]")){setImageAmi("Sad");     text = helpData.removeSubString(text, "[sad]");}
         if(text.contains("[sud]")){setImageAmi("Suddent"); text = helpData.removeSubString(text, "[sud]");}
         if(text.contains("[def]")){setImageAmi("Default"); text = helpData.removeSubString(text, "[def]");}
-        text = text.replaceAll("[you]",sYou).replaceAll("[snyou]", sNYou).replaceAll("[i]", sI).replaceAll("[ni]", sNI);
-        textAmiChat.setText(text);
+        String s = text.replaceAll("[you]",sYou).replaceAll("[snyou]", sNYou).replaceAll("[i]", sI).replaceAll("[ni]", sNI);
+        textViewAmiChat.setText(s);
     }
 }
