@@ -73,7 +73,7 @@ public class HelpData {
         return random;
     }
     public String removeSubString(String stringDefault, String stringDelete) {
-        String s = stringDefault.replaceAll(stringDelete, "");
+        String s = stringDefault.replace(stringDelete, "");
         Log.d("MVLog", "HelpData <- removeSubString delete: " + stringDefault + " <- " + stringDelete + " = " + s);
         return s;
     }

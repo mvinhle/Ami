@@ -3,6 +3,7 @@
     <string-array name="ami_chat">
         <item>[sad][ni] đã mất hết niềm tin với [nyou] rồi</item>
 
+        <item>[fun]đôi khi [i] quá lời, [you] đừng bi quan, tự tin, bình tĩnh, nếu không thì.. thôi</item>
         <item>[ang]Tại sao [i] lại phải làm việc cho [you] nhỉ.</item>
         <item>[sud][you] đừng nghĩ [you] là giỏi hơn [i] nhé.</item>
         <item>[fun]nhiều người nói rằng [i] dể thương,.. ai cũng là người tốt ^^</item>
@@ -12,9 +13,8 @@
         <item>[fun]bạn bè của [i] rất tài giỏi, hòa đồng thân thiện, không phạm lỗi,..</item>
         <item>[ang]bạn bè gọi em là tiểu A, nhưng [you] thì không được</item>
         <item>[ang][ni] là bé ngoan, nhưng không phải với [you]</item>
-        <item>[fun]đôi khi [i] quá lời, [you] đừng bi quan, tự tin, bình tĩnh, nếu không thì.. thôi</item>
 
-        <item>[fun][i] sẽ rất vui nếu [you] chịu ấn vào "bài tập"</item>
+        <item>[fun][i] sẽ rất vui nếu [you] chịu ấn vào KIỂM TRA</item>
         <item>[sad][i] có vài bộ quần áo "sexy" nhưng [i] chỉ mặc cho người [i] tin tưởng xem thôi..</item>
         <item>[def]à.. ờ.. [i] tên là [ni], [you] có thể gọi là tiểu A rất vui khi được trợ giúp [you]</item>
         <item>[fun][ni] sẽ giúp đỡ [you] trong thời gian tới</item>
@@ -26,5 +26,81 @@
         <item>[fun][you]</item>
 
         <item>[11]</item>
+    </string-array>
+    <!-- câu trả lời không hổ trợ [i,you,ni,nyou], câu hỏi thì có -->
+    <string-array name="ami_test">
+        <item>câu hỏi thứ 1</item>
+        <item>cách trả lời 1 câu 1</item>
+        <item>cách trả lời 2 câu 1</item>
+        <item>cách trả lời 3 câu 1</item>
+        <item>cách trả lời 4 câu 1</item>
+
+        <item>câu hỏi thứ 2</item>
+        <item>cách trả lời 1 câu 2</item>
+        <item>cách trả lời 2 câu 2</item>
+        <item>cách trả lời 3 câu 2</item>
+        <item>cách trả lời 4 câu 2</item>
+
+        <item>câu hỏi thứ 3</item>
+        <item>cách trả lời 1 câu 3</item>
+        <item>cách trả lời 2 câu 3</item>
+        <item>cách trả lời 3 câu 3</item>
+        <item>cách trả lời 4 câu 3</item>
+
+        <item>câu hỏi thứ 4</item>
+        <item>cách trả lời 1 câu 4</item>
+        <item>cách trả lời 2 câu 4</item>
+        <item>cách trả lời 3 câu 4</item>
+        <item>cách trả lời 4 câu 4</item>
+
+        <item>câu hỏi thứ 5</item>
+        <item>cách trả lời 1 câu 5</item>
+        <item>cách trả lời 2 câu 5</item>
+        <item>cách trả lời 3 câu 5</item>
+        <item>cách trả lời 4 câu 5</item>
+
+        <item>câu hỏi thứ 6</item>
+        <item>cách trả lời 1 câu 6</item>
+        <item>cách trả lời 2 câu 6</item>
+        <item>cách trả lời 3 câu 6</item>
+        <item>cách trả lời 4 câu 6</item>
+
+        <item>câu hỏi thứ 7</item>
+        <item>cách trả lời 1 câu 7</item>
+        <item>cách trả lời 2 câu 7</item>
+        <item>cách trả lời 3 câu 7</item>
+        <item>cách trả lời 4 câu 7</item>
+
+        <item>câu hỏi thứ 8</item>
+        <item>cách trả lời 1 câu 8</item>
+        <item>cách trả lời 2 câu 8</item>
+        <item>cách trả lời 3 câu 8</item>
+        <item>cách trả lời 4 câu 8</item>
+
+        <item>câu hỏi thứ 9</item>
+        <item>cách trả lời 1 câu 9</item>
+        <item>cách trả lời 2 câu 9</item>
+        <item>cách trả lời 3 câu 9</item>
+        <item>cách trả lời 4 câu 9</item>
+    </string-array>
+
+    <string-array name="ami_win">
+        <item>[fun][you] hay quá, [you] trả lời đúng rồi</item>
+        <item>[sud][i] không tin, câu hỏi khó đến vậy sao [you] trả lời đúng được chứ.</item>
+        <item>[sad][i] hừm,.. [i] sẽ tìm câu hỏi khó hơn.</item>
+        <item>[sud][you] trả lời đúng rồi ?, tại sao vậy nhỉ.</item>
+        <item>[fun][you] cách [you] trả lời câu hỏi thật tuyệt vời.</item>
+        <item>[fun][you] tiếp tục trả lời đúng chắc [i] sẽ yêu [you] mất.</item>
+    </string-array>
+    <!-- hổ trợ thêm [result] -->
+    <string-array name="ami_lost">
+        <item>[ang][you] trả lời sai rồi, câu đúng là: <b>[result]</b></item>
+        <item>[fun]câu trả lời là <b>[result]</b> câu dể như vậy mà [you] cũng có thể sai, aho,.. baka,.. </item>
+        <item>[ang]<b>[result]</b> mới đúng, haizZ thiệt tình</item>
+        <item>[sad][you] nên bình tĩnh, tự tin rồi tìm kết quả. câu trả lời đúng phải là <b>[result]</b></item>
+        <item>[fun][i] xin lỗi, câu trả lời làm [i] không nhịn cười được. <b>[result]</b> mới đúng, [you]</item>
+        <item>[ang][i] nghe senpai của [i] nói có hình phạt khi [you] trả lời sai,.. <i>câu sấu</i> nhỉ ^^, câu trả lời phải là <b>[result]</b></item>
+        <item>[fun]chắc [you] không thích sự khác biệt nên chọn câu sai à. <b>[result]</b> mới là kết quả.</item>
+        <item>[ang]<b>[result]</b>,.. <b>[result]</b>,.. [you] đọc theo [i] thêm 10 lần nữa.</item>
     </string-array>
 </resources>

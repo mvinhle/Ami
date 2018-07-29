@@ -1,5 +1,12 @@
 <resources>
     <string name="app_name">Ami</string>
     <string name="ClickAlway">Click vào đây để tiếp tục.</string>
-    <string name="test">đây là dòng chử khá dài dùng để test [ngoặc vuông nè] ahihi dòng chử dài thật</string>
+    <string name="Chat">Trò chuyện</string>
+    <string name="Test">Kiểm tra</string>
+    <string name="TKB">Thời khóa biểu</string>
+    <string name="Time">Quản lí</string>
+    <string name="A">A</string>
+    <string name="B">B</string>
+    <string name="C">C</string>
+    <string name="D">D</string>
 </resources>

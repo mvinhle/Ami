@@ -92,18 +92,71 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
             android:padding="20dp"/>
     </RelativeLayout>
 
     <!--Button tương tác-->
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="18">
-        <Button
-            android:id="@+id/button_chat"
+        <LinearLayout
+            android:id="@+id/linearLayout_home"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </LinearLayout>
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/button_chat"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/Chat"/>
+            <Button
+                android:id="@+id/button_test"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/Test"/>
+        </LinearLayout>
+        <!-- đối lập với phía trên -->
+        <LinearLayout
+            android:id="@+id/linearLayout_class"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/button_testA"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/A"/>
+            <Button
+                android:id="@+id/button_testB"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/B"/>
+            <Button
+                android:id="@+id/button_testC"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/C"/>
+            <Button
+                android:id="@+id/button_testD"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/D"/>
+        </LinearLayout>
+    </RelativeLayout>
 
 </LinearLayout>
