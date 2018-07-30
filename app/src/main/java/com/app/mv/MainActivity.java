@@ -1,6 +1,7 @@
 package com.app.mv;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -21,12 +22,26 @@ public class MainActivity extends AppCompatActivity {
 
         ImageButton button = findViewById(R.id.ButtonClickAlway);
 
+        final SharedPreferences sharedPreferences   = getSharedPreferences(HelpData.KEY_INFORMATION, MODE_PRIVATE);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, AmiActivity.class);
-                startActivity(intent);
+                if (sharedPreferences.getString(HelpData.KEY_SUB_NAME,HelpData.KEY_DONT_BUG).equals(HelpData.KEY_DONT_BUG)
+                        || sharedPreferences.getString(HelpData.KEY_NAME,HelpData.KEY_DONT_BUG).equals(HelpData.KEY_DONT_BUG)){
+                    Intent intent = new Intent(MainActivity.this, InformationActivity.class);
+                    startActivity(intent);
+                }
+                else {
+                    Intent intent = new Intent(MainActivity.this, AmiActivity.class);
+                    startActivity(intent);
+                }
             }
         });
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        finish();
     }
 }

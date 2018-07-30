@@ -1,12 +1,37 @@
 <resources>
     <string name="app_name">Ami</string>
+
     <string name="ClickAlway">Click vào đây để tiếp tục.</string>
+
     <string name="Chat">Trò chuyện</string>
     <string name="Test">Kiểm tra</string>
     <string name="TKB">Thời khóa biểu</string>
-    <string name="Time">Quản lí</string>
+
     <string name="A">A</string>
     <string name="B">B</string>
     <string name="C">C</string>
     <string name="D">D</string>
+
+    <string name="name">Tên của bạn: </string>
+    <string name="testName">vd: Vinh, Minh Vinh, Neko-chan,..</string>
+
+    <string name="amiChatWithYou">Ami sẽ gọi bạn là: </string>
+    <string name="testAmiChatWithYou">vd: em, anh, chị, chú, bác, thầy, cô,..</string>
+
+    <string name="job">Bạn đang là: </string>
+    <string name="jobStudent">Học sinh</string>
+    <string name="jobTeacher">Giáo viên</string>
+
+    <string name="noteInformation">
+        note:\n
+        \t\t<u>Vui lòng điền đầy đủ thông tin.</u>\n
+        \t\tCác thông tin có thể sẽ công khai, bạn có thể điền thông tin không chính xác\n
+        \t\tAmi tự xưng em, thông tin chỉ đăng kí 1 lần
+    </string>
+    <string name="titleInformartion"><b>Thông tin cá nhân</b></string>
+    <string name="ok">Đăng kí</string>
+    <string name="restartOk">Sửa đổi</string>
+    
+    <string name="noteInformationError">Vui lòng điền đầy đủ thông tin</string>
+    <string name="noteInformationComplete">Bạn đã đăng kí thông tin thành công</string>
 </resources>

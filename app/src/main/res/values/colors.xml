@@ -5,4 +5,8 @@
     <color name="colorAccent">#FF4081</color>
     <color name="gold">#ffe944</color>
     <color name="white">#ffffff</color>
+    <color name="red">#ff0000</color>
+    <color name="backgroundInformation">#bcabff</color>
+    <color name="blu">#0066ff</color>
+    <color name="black">#000000</color>
 </resources>

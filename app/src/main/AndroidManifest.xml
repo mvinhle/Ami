@@ -16,7 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AmiActivity"></activity>
+        <activity android:name=".AmiActivity" />
+        <activity android:name=".InformationActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.Dialog.Alert" />
     </application>
 
 </manifest>
