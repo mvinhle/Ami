@@ -10,6 +10,11 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 public class AmiActivity extends AppCompatActivity {
 
     int trust    = 1500;
@@ -55,9 +60,9 @@ public class AmiActivity extends AppCompatActivity {
     final int MOUTH_SAD       = MOUTH_ANGRY + 6; 	    // [MOUTH_ANGRY, 50] = 51
     final int MOUTH_SUDDENT   = MOUTH_SAD + 6; 		    // [MOUTH_SAD, 56] = 57
     final int TEST_WIN        = 100;  //x10 up 1 chat
-    final int TEST_LOST       = -25;  //x40 down 1 chat
+    final int TEST_LOST       = -50;  //x40 down 1 chat
     final int CHAT_ABOUT      = 10;   //chat random [chat, chat + 10) // about 10 chat
-    final int CHAT_WIN        = 25;   //x100 up 1 chat
+    final int CHAT_WIN        = 10;   //x100 up 1 chat
     final int TL_CHAT         = 320;  // tỉ lệ 1 chat = 320 trust
     final int TL_CLOTHES      = 468;  // tỉ lệ 1 clothe = 468 trust
     final int TL_TEST         = 200;  // tỉ lệ 200 trust = 1 câu hỏi.
@@ -130,11 +135,13 @@ public class AmiActivity extends AppCompatActivity {
                 int ran = helpData.randomRange(test);
                 int rand = ran - (ran % 5);
                 String textTest = chatWithAmi(textAmiTest[rand]) + "\n";
-                int x = rand+1, y = rand+5;
-                String N0 = textAmiTest[helpData.randomRange(x, y)];
-                String N1 = getTestN(textAmiTest, x, y);
-                String N2 = getTestN(textAmiTest, x, y);
-                String N3 = getTestN(textAmiTest, x, y);
+                Integer nT[] = {2,3,4};
+                ArrayList<Integer> NT = new ArrayList<>(Arrays.asList(nT));
+                Collections.shuffle(NT);
+                String N0 = textAmiTest[rand+1];
+                String N1 = textAmiTest[rand+NT.get(0)];
+                String N2 = textAmiTest[rand+NT.get(1)];
+                String N3 = textAmiTest[rand+NT.get(2)];
                 String testY[][]  = {
                         {getResources().getString(R.string.A).concat(": ").concat(N0),
                                 getResources().getString(R.string.B).concat(": ").concat(N1),
@@ -198,15 +205,16 @@ public class AmiActivity extends AppCompatActivity {
         String eyebrow[]    = getResources().getStringArray(R.array.eyebrow);
         String clothes[]    = getResources().getStringArray(R.array.clothes);
         String glass[]      = getResources().getStringArray(R.array.glass);
-        //String feature[]    = getResources().getStringArray(R.array.feature); // no feature default
+        //String feature[]    = getResources().getStringArray(R.array.feature); // no feature default and feature don't change.
         String mouth[]      = getResources().getStringArray(R.array.mouth);
 
         int indexBodyAndHair    = helpData.randomRange(BODY_DEFAULT);
-        bodyDefault    = idImageFromName(body[indexBodyAndHair]);
-        hairDefault    = idImageFromName(hair[indexBodyAndHair]); // index body = index hair
-        eyeDefault     = idImageFromName(eyebrow[helpData.randomRange(EYEBROW_DEFAULT)]);
-        mouthDefault   = idImageFromName(mouth[helpData.randomRange(MOUTH_DEFAULT)]);
-        featureDefault = R.drawable.imagenull; //(NO FEATURE DEFAULT)
+        bodyDefault     = idImageFromName(body[indexBodyAndHair]);
+        hairDefault     = idImageFromName(hair[indexBodyAndHair]); // index body = index hair
+        eyeDefault      = idImageFromName(eyebrow[helpData.randomRange(EYEBROW_DEFAULT)]);
+        eyebrowDeafault = idImageFromName(eyebrow[helpData.randomRange(EYEBROW_DEFAULT)]);
+        mouthDefault    = idImageFromName(mouth[helpData.randomRange(MOUTH_DEFAULT)]);
+        featureDefault  = R.drawable.imagenull; //(NO FEATURE DEFAULT)
         if (sglass){
             eyeDefault   = idImageFromName(eye[helpData.randomRange(EYE_TINY)]);
             glassDefault = idImageFromName(glass[helpData.randomRange(GLASS_DEFAULT)]);
@@ -232,9 +240,6 @@ public class AmiActivity extends AppCompatActivity {
         String mouth[]   = getResources().getStringArray(R.array.mouth);
         switch (type){
             case "Fun":
-//                String eye[]        = getResources().getStringArray(R.array.eye);
-//                String feature[]    = getResources().getStringArray(R.array.feature);
-//                String mouth[]      = getResources().getStringArray(R.array.mouth);
                 eyeChange       = idImageFromName(eye[helpData.randomRange(EYE_BIG,EYE_FUN)]);
                 mouthChange     = idImageFromName(mouth[helpData.randomRange(MOUTH_DEFAULT, MOUTH_FUN)]);
                 featureChange   = idImageFromName(feature[helpData.randomRange(FEATURE_FUN)]);
@@ -245,9 +250,6 @@ public class AmiActivity extends AppCompatActivity {
                 Log.d(HelpData.KEY_LOG, "AmiActivity <- setImageAmi ami: fun feeling");
                 break;
             case "Angry":
-//                String eyebrow[]    = getResources().getStringArray(R.array.eyebrow);
-//                String feature[]    = getResources().getStringArray(R.array.feature);
-//                String mouth[]      = getResources().getStringArray(R.array.mouth);
                 featureChange = idImageFromName(feature[helpData.randomRange(FEATURE_FUN,FEATURE_ANGRY)]);
                 mouthChange   = idImageFromName(mouth[helpData.randomRange(MOUTH_FUN, MOUTH_ANGRY)]);
                 eyebrowChange = idImageFromName(eyebrow[helpData.randomRange(EYEBROW_DEFAULT, EYEBROW_ANGRY)]);
@@ -258,9 +260,6 @@ public class AmiActivity extends AppCompatActivity {
                 Log.d(HelpData.KEY_LOG, "AmiActivity <- setImageAmi ami: angry feeling");
                 break;
             case "Sad":
-//                String eyebrow[]    = getResources().getStringArray(R.array.eyebrow);
-//                String feature[]    = getResources().getStringArray(R.array.feature);
-//                String mouth[]      = getResources().getStringArray(R.array.mouth);
                 mouthChange   = idImageFromName(mouth[helpData.randomRange(MOUTH_ANGRY, MOUTH_SAD)]);
                 eyebrowChange = idImageFromName(eyebrow[helpData.randomRange(EYEBROW_ANGRY, EYEBROW_SAD)]);
                 featureChange = idImageFromName(feature[helpData.randomRange(FEATURE_ANGRY, FEATURE_SAD)]);
@@ -271,7 +270,6 @@ public class AmiActivity extends AppCompatActivity {
                 Log.d(HelpData.KEY_LOG, "AmiActivity <- setImageAmi ami: sad feeling");
                 break;
             case "Suddent":
-//                String mouth[]      = getResources().getStringArray(R.array.mouth);
                 mouthChange = idImageFromName(mouth[helpData.randomRange(MOUTH_SAD, MOUTH_SUDDENT)]);
                 imageMouth.setImageResource(mouthChange);
                 imageEye  .setImageResource(eyeDefault);
@@ -281,8 +279,8 @@ public class AmiActivity extends AppCompatActivity {
                 imageBody   .setImageResource(bodyDefault);
                 imageHair   .setImageResource(hairDefault);
                 imageClothes.setImageResource(clothesDefault);
-                imageEyebrow.setImageResource(eyebrowDeafault);
                 imageEye    .setImageResource(eyeDefault);
+                imageEyebrow.setImageResource(eyebrowDeafault);
                 imageGlass  .setImageResource(glassDefault);
                 imageFeature.setImageResource(featureDefault);
                 imageMouth  .setImageResource(mouthDefault);
@@ -314,17 +312,6 @@ public class AmiActivity extends AppCompatActivity {
         return s;
     }
 
-    private String getTestN(String[] stringArray, int x, int y){
-        int index = helpData.randomRange(stringArray.length);
-//        if ((index % 5 == 0) || ((index > x) && (index < y))) {return getTestN(stringArray,x,y);}
-        while ((index % 5 == 0) || ((index >= x) && (index < y))){
-            index = helpData.randomRange(stringArray.length);
-        }
-        String s = stringArray[index];
-        Log.d(HelpData.KEY_LOG, "AmiActivity <- getTestN setIndex, x, y: "+index+", "+x+", "+y);
-        return s;
-    }
-
     private void changeHome(boolean visibleHome){
         if (visibleHome){
             linearLayoutHome.setVisibility(View.VISIBLE);
@@ -334,7 +321,6 @@ public class AmiActivity extends AppCompatActivity {
             linearLayoutClass.setVisibility(View.VISIBLE);
             linearLayoutHome.setVisibility(View.INVISIBLE);
         }
-        setIndexDefault(!visibleHome);
         Log.d(HelpData.KEY_LOG, "AmiActivity <- changeHome: home: "+visibleHome+", glass: "+!visibleHome);
     }
 

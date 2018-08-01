@@ -6,12 +6,12 @@
         <item>[fun]đôi khi [i] quá lời, [you] đừng bi quan, tự tin, bình tĩnh, nếu không thì.. thôi</item>
         <item>[ang]Tại sao [i] lại phải làm việc cho [you] nhỉ.</item>
         <item>[sud][you] đừng nghĩ [you] là giỏi hơn [i] nhé.</item>
+        <item>[ang]bạn bè gọi em là tiểu A, nhưng [you] thì không được</item>
         <item>[fun]nhiều người nói rằng [i] dể thương,.. ai cũng là người tốt ^^</item>
         <item>[ang][you] nên học hành tốt hơn, [i] sẽ giúp.</item>
         <item>[sad]Có lẽ [you] học tốt hơn, [i] sẽ tốt với anh hơn - về cách ăn nói.</item>
         <item>[fun]làm việc nghiêm túc luôn tạo ra không khí tin tưởng cho mọi người xung quanh mà</item>
         <item>[fun]bạn bè của [i] rất tài giỏi, hòa đồng thân thiện, không phạm lỗi,..</item>
-        <item>[ang]bạn bè gọi em là tiểu A, nhưng [you] thì không được</item>
         <item>[ang][ni] là bé ngoan, nhưng không phải với [you]</item>
 
         <item>[fun][i] sẽ rất vui nếu [you] chịu ấn vào KIỂM TRA</item>
@@ -23,65 +23,65 @@
         <item>[sud]tên [you] là [nyou] phải không ạ?, [i] sẽ nhớ nó.</item>
         <item>[def][i] đã xem tờ tự bạch của [you] rồi, nhưng [i] vẫn chưa biết nhiều về [you] do nó không chi tiết lắm.</item>
         <item>[sad]xin.. lỗi [you] vì trước đó.. [i], [i] đã nghi ngờ khả năng của [you]. [i] xin lỗi.</item>
-        <item>[fun][you]</item>
+        <item>[fun][you]..</item>
 
-        <item>[11]</item>
+        <item>[21]</item>
     </string-array>
     <!-- câu trả lời không hổ trợ [i,you,ni,nyou], câu hỏi thì có -->
     <string-array name="ami_test">
-        <item>câu hỏi thứ 1</item>
-        <item>cách trả lời 1 câu 1</item>
-        <item>cách trả lời 2 câu 1</item>
-        <item>cách trả lời 3 câu 1</item>
-        <item>cách trả lời 4 câu 1</item>
+        <item>[fun]Câu hỏi thứ 1</item>
+        <item>Câu trả lời đúng của câu 1</item>
+        <item>Câu trả lời sai thứ 1 của câu 1</item>
+        <item>Câu trả lời sai thứ 2 của câu 1</item>
+        <item>Câu trả lời sai thứ 3 của câu 1</item>
 
-        <item>câu hỏi thứ 2</item>
-        <item>cách trả lời 1 câu 2</item>
-        <item>cách trả lời 2 câu 2</item>
-        <item>cách trả lời 3 câu 2</item>
-        <item>cách trả lời 4 câu 2</item>
+        <item>[fun]Câu hỏi thứ 2</item>
+        <item>Câu trả lời đúng của câu 2</item>
+        <item>Câu trả lời sai thứ 1 của câu 2</item>
+        <item>Câu trả lời sai thứ 2 của câu 2</item>
+        <item>Câu trả lời sai thứ 3 của câu 2</item>
 
-        <item>câu hỏi thứ 3</item>
-        <item>cách trả lời 1 câu 3</item>
-        <item>cách trả lời 2 câu 3</item>
-        <item>cách trả lời 3 câu 3</item>
-        <item>cách trả lời 4 câu 3</item>
+        <item>[fun]Câu hỏi thứ 3</item>
+        <item>Câu trả lời đúng của câu 3</item>
+        <item>Câu trả lời sai thứ 1 của câu 3</item>
+        <item>Câu trả lời sai thứ 2 của câu 3</item>
+        <item>Câu trả lời sai thứ 3 của câu 3</item>
 
-        <item>câu hỏi thứ 4</item>
-        <item>cách trả lời 1 câu 4</item>
-        <item>cách trả lời 2 câu 4</item>
-        <item>cách trả lời 3 câu 4</item>
-        <item>cách trả lời 4 câu 4</item>
+        <item>[fun]Câu hỏi thứ 4</item>
+        <item>Câu trả lời đúng của câu 4</item>
+        <item>Câu trả lời sai thứ 1 của câu 4</item>
+        <item>Câu trả lời sai thứ 2 của câu 4</item>
+        <item>Câu trả lời sai thứ 3 của câu 4</item>
 
-        <item>câu hỏi thứ 5</item>
-        <item>cách trả lời 1 câu 5</item>
-        <item>cách trả lời 2 câu 5</item>
-        <item>cách trả lời 3 câu 5</item>
-        <item>cách trả lời 4 câu 5</item>
+        <item>[fun]Câu hỏi thứ 5</item>
+        <item>Câu trả lời đúng của câu 5</item>
+        <item>Câu trả lời sai thứ 1 của câu 5</item>
+        <item>Câu trả lời sai thứ 2 của câu 5</item>
+        <item>Câu trả lời sai thứ 3 của câu 5</item>
 
-        <item>câu hỏi thứ 6</item>
-        <item>cách trả lời 1 câu 6</item>
-        <item>cách trả lời 2 câu 6</item>
-        <item>cách trả lời 3 câu 6</item>
-        <item>cách trả lời 4 câu 6</item>
+        <item>[fun]Câu hỏi thứ 6</item>
+        <item>Câu trả lời đúng của câu 6</item>
+        <item>Câu trả lời sai thứ 1 của câu 6</item>
+        <item>Câu trả lời sai thứ 2 của câu 6</item>
+        <item>Câu trả lời sai thứ 3 của câu 6</item>
 
-        <item>câu hỏi thứ 7</item>
-        <item>cách trả lời 1 câu 7</item>
-        <item>cách trả lời 2 câu 7</item>
-        <item>cách trả lời 3 câu 7</item>
-        <item>cách trả lời 4 câu 7</item>
+        <item>[fun]Câu hỏi thứ 7</item>
+        <item>Câu trả lời đúng của câu 7</item>
+        <item>Câu trả lời sai thứ 1 của câu 7</item>
+        <item>Câu trả lời sai thứ 2 của câu 7</item>
+        <item>Câu trả lời sai thứ 3 của câu 7</item>
 
-        <item>câu hỏi thứ 8</item>
-        <item>cách trả lời 1 câu 8</item>
-        <item>cách trả lời 2 câu 8</item>
-        <item>cách trả lời 3 câu 8</item>
-        <item>cách trả lời 4 câu 8</item>
+        <item>[fun]Câu hỏi thứ 8</item>
+        <item>Câu trả lời đúng của câu 8</item>
+        <item>Câu trả lời sai thứ 1 của câu 8</item>
+        <item>Câu trả lời sai thứ 2 của câu 8</item>
+        <item>Câu trả lời sai thứ 3 của câu 8</item>
 
-        <item>câu hỏi thứ 9</item>
-        <item>cách trả lời 1 câu 9</item>
-        <item>cách trả lời 2 câu 9</item>
-        <item>cách trả lời 3 câu 9</item>
-        <item>cách trả lời 4 câu 9</item>
+        <item>[fun]Câu hỏi thứ 9</item>
+        <item>Câu trả lời đúng của câu 9</item>
+        <item>Câu trả lời sai thứ 1 của câu 9</item>
+        <item>Câu trả lời sai thứ 2 của câu 9</item>
+        <item>Câu trả lời sai thứ 3 của câu 9</item>
     </string-array>
 
     <string-array name="ami_win">
