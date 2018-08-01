@@ -18,6 +18,15 @@ public class AmiActivity extends AppCompatActivity {
     int result = 0;
     String textResult = "";
 
+    private int bodyDefault;
+    private int hairDefault;
+    private int eyeDefault;
+    private int eyebrowDeafault;
+    private int clothesDefault;
+    private int glassDefault;
+    private int featureDefault;
+    private int mouthDefault;
+
     SharedPreferences sharedPreferencesInformation;
     SharedPreferences sharedPreferencesTrust;
     SharedPreferences.Editor editor;
@@ -193,25 +202,25 @@ public class AmiActivity extends AppCompatActivity {
         String mouth[]      = getResources().getStringArray(R.array.mouth);
 
         int indexBodyAndHair    = helpData.randomRange(BODY_DEFAULT);
-        helpData.setBodyDefault(idImageFromName(body[indexBodyAndHair]));
-        helpData.setHairDefault(idImageFromName(hair[indexBodyAndHair])); // index body = index hair
-        helpData.setEyebrowDeafault(idImageFromName(eyebrow[helpData.randomRange(EYEBROW_DEFAULT)]));
-        helpData.setMouthDefault(idImageFromName(mouth[helpData.randomRange(MOUTH_DEFAULT)]));
-        helpData.setFeatureDefault(R.drawable.imagenull); //(NO FEATURE DEFAULT)
+        bodyDefault    = idImageFromName(body[indexBodyAndHair]);
+        hairDefault    = idImageFromName(hair[indexBodyAndHair]); // index body = index hair
+        eyeDefault     = idImageFromName(eyebrow[helpData.randomRange(EYEBROW_DEFAULT)]);
+        mouthDefault   = idImageFromName(mouth[helpData.randomRange(MOUTH_DEFAULT)]);
+        featureDefault = R.drawable.imagenull; //(NO FEATURE DEFAULT)
         if (sglass){
-            helpData.setEyeDefault(idImageFromName(eye[helpData.randomRange(EYE_TINY)]));
-            helpData.setGlassDefault(idImageFromName(glass[helpData.randomRange(GLASS_DEFAULT)]));
+            eyeDefault   = idImageFromName(eye[helpData.randomRange(EYE_TINY)]);
+            glassDefault = idImageFromName(glass[helpData.randomRange(GLASS_DEFAULT)]);
         }
         else{
-            helpData.setEyeDefault(idImageFromName(eye[helpData.randomRange(EYE_TINY, EYE_BIG)]));
-            helpData.setGlassDefault(R.drawable.imagenull);
+            eyeDefault   = idImageFromName(eye[helpData.randomRange(EYE_TINY, EYE_BIG)]);
+            glassDefault = R.drawable.imagenull;
         }
         int CLOTHES = 3;
         if (trust > (TL_CLOTHES * CLOTHES) ){
             CLOTHES = (int) trust / TL_CLOTHES;
             if (CLOTHES > CLOTHES_DEFAULT){CLOTHES = CLOTHES_DEFAULT;}
         }
-        helpData.setClothesDefault(idImageFromName(clothes[helpData.randomRange(CLOTHES)]));
+        clothesDefault = idImageFromName(clothes[helpData.randomRange(CLOTHES)]);
         setImageAmi("Default");
     }
 
@@ -232,7 +241,7 @@ public class AmiActivity extends AppCompatActivity {
                 imageEye    .setImageResource(eyeChange);
                 imageMouth  .setImageResource(mouthChange);
                 imageFeature.setImageResource(featureChange);
-                imageEyebrow.setImageResource(helpData.getEyebrowDeafault());
+                imageEyebrow.setImageResource(eyebrowDeafault);
                 Log.d(HelpData.KEY_LOG, "AmiActivity <- setImageAmi ami: fun feeling");
                 break;
             case "Angry":
@@ -245,7 +254,7 @@ public class AmiActivity extends AppCompatActivity {
                 imageFeature.setImageResource(featureChange);
                 imageMouth  .setImageResource(mouthChange);
                 imageEyebrow.setImageResource(eyebrowChange);
-                imageEye    .setImageResource(helpData.getEyeDefault());
+                imageEye    .setImageResource(eyeDefault);
                 Log.d(HelpData.KEY_LOG, "AmiActivity <- setImageAmi ami: angry feeling");
                 break;
             case "Sad":
@@ -258,25 +267,25 @@ public class AmiActivity extends AppCompatActivity {
                 imageMouth  .setImageResource(mouthChange);
                 imageEyebrow.setImageResource(eyebrowChange);
                 imageFeature.setImageResource(featureChange);
-                imageEye    .setImageResource(helpData.getEyeDefault());
+                imageEye    .setImageResource(eyeDefault);
                 Log.d(HelpData.KEY_LOG, "AmiActivity <- setImageAmi ami: sad feeling");
                 break;
             case "Suddent":
 //                String mouth[]      = getResources().getStringArray(R.array.mouth);
                 mouthChange = idImageFromName(mouth[helpData.randomRange(MOUTH_SAD, MOUTH_SUDDENT)]);
                 imageMouth.setImageResource(mouthChange);
-                imageEye  .setImageResource(helpData.getEyeDefault());
+                imageEye  .setImageResource(eyeDefault);
                 Log.d(HelpData.KEY_LOG, "AmiActivity <- setImageAmi ami: suddent feeling");
                 break;
             case "Default":
-                imageBody   .setImageResource(helpData.getBodyDefault());
-                imageHair   .setImageResource(helpData.getHairDefault());
-                imageClothes.setImageResource(helpData.getClothesDefault());
-                imageEyebrow.setImageResource(helpData.getEyebrowDeafault());
-                imageEye    .setImageResource(helpData.getEyeDefault());
-                imageGlass  .setImageResource(helpData.getGlassDefault());
-                imageFeature.setImageResource(helpData.getFeatureDefault());
-                imageMouth  .setImageResource(helpData.getMouthDefault());
+                imageBody   .setImageResource(bodyDefault);
+                imageHair   .setImageResource(hairDefault);
+                imageClothes.setImageResource(clothesDefault);
+                imageEyebrow.setImageResource(eyebrowDeafault);
+                imageEye    .setImageResource(eyeDefault);
+                imageGlass  .setImageResource(glassDefault);
+                imageFeature.setImageResource(featureDefault);
+                imageMouth  .setImageResource(mouthDefault);
                 Log.d(HelpData.KEY_LOG, "AmiActivity <- setImageAmi ami: Default feeling");
                 break;
             default:
@@ -325,6 +334,7 @@ public class AmiActivity extends AppCompatActivity {
             linearLayoutClass.setVisibility(View.VISIBLE);
             linearLayoutHome.setVisibility(View.INVISIBLE);
         }
+        setIndexDefault(!visibleHome);
         Log.d(HelpData.KEY_LOG, "AmiActivity <- changeHome: home: "+visibleHome+", glass: "+!visibleHome);
     }
 
