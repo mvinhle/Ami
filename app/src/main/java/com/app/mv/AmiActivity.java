@@ -19,7 +19,7 @@ public class AmiActivity extends AppCompatActivity {
 
     int trust    = 1500;
     int eyeChange,  eyebrowChange, featureChange,   mouthChange;
-    String sYou = "anh", sI = "em", sNI = "Ami", sNYou = "Vinh";
+    String sYou = "bạn", sI = "em", sNI = "Ami", sNYou = "Vinh";
     int result = 0;
     String textResult = "";
 
@@ -98,8 +98,8 @@ public class AmiActivity extends AppCompatActivity {
         sharedPreferencesInformation = getSharedPreferences(HelpData.KEY_INFORMATION, MODE_PRIVATE);
         sharedPreferencesTrust = getSharedPreferences(HelpData.KEY_SHARED_TRUST, MODE_PRIVATE);
         editor                 = sharedPreferencesTrust.edit();
-        sNYou = sharedPreferencesInformation.getString(HelpData.KEY_NAME, ".. quên tên anh mất rồi ^^..");
-        sYou  = sharedPreferencesInformation.getString(HelpData.KEY_SUB_NAME, "anh");
+        sNYou = sharedPreferencesInformation.getString(HelpData.KEY_NAME, ".. quên tên bạn mất rồi ^^..");
+        sYou  = sharedPreferencesInformation.getString(HelpData.KEY_SUB_NAME, "bạn");
         trust = sharedPreferencesTrust.getInt(HelpData.KEY_TRUST, trust);
 
         final String textAmiChat[] = getResources().getStringArray(R.array.ami_chat);

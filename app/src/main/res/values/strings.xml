@@ -1,7 +1,8 @@
 <resources>
-    <string name="app_name">Ami</string>
+    <string name="app_name">Tiểu AA</string>
 
-    <string name="ClickAlway">Click vào đây để tiếp tục.</string>
+    <string name="ClickYes">Đồng ý</string>
+    <string name="ClickNo">Không đồng ý</string>
 
     <string name="Chat">Trò chuyện</string>
     <string name="Test">Kiểm tra</string>
@@ -15,23 +16,30 @@
     <string name="name">Tên của bạn: </string>
     <string name="testName">vd: Vinh, Minh Vinh, Neko-chan,..</string>
 
-    <string name="amiChatWithYou">Ami sẽ gọi bạn là: </string>
-    <string name="testAmiChatWithYou">vd: em, anh, chị, chú, bác, thầy, cô,..</string>
-
-    <string name="job">Bạn đang là: </string>
-    <string name="jobStudent">Học sinh</string>
-    <string name="jobTeacher">Giáo viên</string>
+    <string name="job">Bạn là: </string>
+    <string name="jobBoy">Nam</string>
+    <string name="jobGirl">Nữ</string>
 
     <string name="noteInformation">
         note:\n
-        \t\t<u>Vui lòng điền đầy đủ thông tin.</u>\n
-        \t\tCác thông tin có thể sẽ công khai, bạn có thể điền thông tin không chính xác\n
-        \t\tAmi tự xưng em, thông tin chỉ đăng kí 1 lần
+        \t\t>|-<u>Vui lòng điền đầy đủ thông tin.</u>\n
+        \t\t>|-Thông tin <u>có thể chỉnh sửa</u> trong tương lai.
     </string>
     <string name="titleInformartion"><b>Thông tin cá nhân</b></string>
     <string name="ok">Đăng kí</string>
     <string name="restartOk">Sửa đổi</string>
     
     <string name="noteInformationError">Vui lòng điền đầy đủ thông tin</string>
-    <string name="noteInformationComplete">Bạn đã đăng kí thông tin thành công</string>
+    <string name="noteInformationComplete">Bạn đã đăng kí thành công</string>
+
+    <string name="noteAplication">
+        <b>QUAN TRỌNG, CẦN ĐỌC KĨ</b>\n
+        \tKhi bạn ấn vào nút \"Đồng ý\" nghĩa là bạn đã đồng ý với các điều khoản sau đây:\n
+        <b>Về sữ dụng dữ liệu:</b>\n
+        \tdòng 1\n
+        <b>Về phần mềm:</b>\n
+        \tdòng 2\n
+        <b>Liên hệ và hổ trợ:</b>\n
+        \tdòng 3\n
+    </string>
 </resources>

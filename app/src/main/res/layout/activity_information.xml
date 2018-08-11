@@ -10,7 +10,8 @@
         android:layout_height="match_parent"
         android:background="@color/backgroundInformation"
         android:gravity="top|left"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_margin="5dp">
 
         <TextView
             android:layout_width="match_parent"
@@ -25,8 +26,8 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingHorizontal="10dp"
-            android:paddingVertical="5dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="5dp"
             android:text="@string/noteInformation"
             android:textColor="@color/red"
             android:textSize="18sp" />
@@ -36,8 +37,8 @@
             android:layout_height="wrap_content"
             android:gravity="top|left"
             android:orientation="horizontal"
-            android:paddingHorizontal="10dp"
-            android:paddingVertical="5dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="5dp"
             android:weightSum="10">
 
             <TextView
@@ -58,40 +59,40 @@
                 android:textSize="20sp" />
         </LinearLayout>
 
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:gravity="top|left"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:layout_marginHorizontal="10dp"-->
+            <!--android:layout_marginVertical="5dp"-->
+            <!--android:weightSum="10">-->
+
+            <!--<TextView-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="3"-->
+                <!--android:text="@string/amiChatWithYou"-->
+                <!--android:textColor="@color/black"-->
+                <!--android:textSize="20sp" />-->
+
+            <!--<EditText-->
+                <!--android:id="@+id/editText_InformationAmiChatWithYou"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="7"-->
+                <!--android:hint="@string/testAmiChatWithYou"-->
+                <!--android:textColor="@color/blu"-->
+                <!--android:textSize="20sp" />-->
+        <!--</LinearLayout>-->
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="top|left"
             android:orientation="horizontal"
-            android:paddingHorizontal="10dp"
-            android:paddingVertical="5dp"
-            android:weightSum="10">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
-                android:text="@string/amiChatWithYou"
-                android:textColor="@color/black"
-                android:textSize="20sp" />
-
-            <EditText
-                android:id="@+id/editText_InformationAmiChatWithYou"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="7"
-                android:hint="@string/testAmiChatWithYou"
-                android:textColor="@color/blu"
-                android:textSize="20sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="top|left"
-            android:orientation="horizontal"
-            android:paddingHorizontal="10dp"
-            android:paddingVertical="5dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="5dp"
             android:weightSum="10">
 
             <TextView
@@ -100,29 +101,31 @@
                 android:layout_weight="3"
                 android:text="@string/job"
                 android:textColor="@color/black"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:layout_gravity="center"/>
 
             <RadioGroup
-                android:id="@+id/radioGroup_studentAndTeacher"
+                android:id="@+id/radioGroup_BoyAndGirl"
                 android:layout_width="0dp"
+                android:orientation="horizontal"
                 android:layout_height="wrap_content"
                 android:layout_weight="7">
-
                 <RadioButton
-                    android:id="@+id/radioButton_Student"
-                    android:layout_width="match_parent"
+                    android:id="@+id/radioButton_Boy"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/jobStudent"
+                    android:text="@string/jobBoy"
                     android:textColor="@color/blu"
-                    android:textSize="20sp" />
-
+                    android:textSize="20sp"
+                    android:layout_marginRight="10dp"/>
                 <RadioButton
-                    android:id="@+id/radioButton_Teacher"
-                    android:layout_width="match_parent"
+                    android:id="@+id/radioButton_Girl"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/jobTeacher"
+                    android:text="@string/jobGirl"
                     android:textColor="@color/blu"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:layout_marginHorizontal="10dp"/>
             </RadioGroup>
         </LinearLayout>
 
@@ -131,8 +134,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:paddingHorizontal="10dp"
-            android:paddingVertical="5dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="5dp"
             android:text="@string/ok"
             android:textSize="20sp" />
     </LinearLayout>

@@ -10,118 +10,126 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="33"
-        android:weightSum="2">
+        android:layout_weight="82"
+        android:weightSum="100">
 
         <!--Image View-->
         <RelativeLayout
             android:layout_width="0dp"
-            android:layout_weight="1"
+            android:layout_weight="28"
             android:layout_height="match_parent">
             <ImageView
                 android:id="@+id/image_body"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_centerInParent="true"
+                android:scaleType="fitEnd"
                 android:src="@drawable/body0" />
             <ImageView
                 android:id="@+id/image_clothes"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_centerInParent="true"
+                android:scaleType="fitEnd"
                 android:src="@drawable/clothes0"/>
             <ImageView
                 android:id="@+id/image_eye"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_centerInParent="true"
+                android:scaleType="fitEnd"
                 android:src="@drawable/eye0"/>
             <ImageView
                 android:id="@+id/image_glass"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_centerInParent="true"
+                android:scaleType="fitEnd"
                 android:src="@drawable/glass2"/>
             <ImageView
                 android:id="@+id/image_eyebrow"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_centerInParent="true"
+                android:scaleType="fitEnd"
                 android:src="@drawable/eyebrow0"/>
             <ImageView
                 android:id="@+id/image_hair"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_centerInParent="true"
+                android:scaleType="fitEnd"
                 android:src="@drawable/hair0"/>
             <ImageView
                 android:id="@+id/image_mouth"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_centerInParent="true"
+                android:scaleType="fitEnd"
                 android:src="@drawable/mouth0"/>
             <ImageView
                 android:id="@+id/image_feature"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_centerInParent="true"
+                android:scaleType="fitEnd"
                 android:src="@drawable/feature0"/>
         </RelativeLayout>
 
-        <!--stt-->
-        <LinearLayout
+        <!--Text View chat,...-->
+        <RelativeLayout
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="match_parent"
-            android:weightSum="3">
-        </LinearLayout>
+            android:layout_weight="72">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/backgroundscreen"
+                android:scaleType="fitXY"/>
+            <TextView
+                android:id="@+id/text_AmiChat"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|left"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:padding="20dp"/>
+        </RelativeLayout>
     </LinearLayout>
 
-    <!--Text View chat,...-->
+    <!--Button
+    android:layout_margin="2dp"
+     android:textColor="@color/white"tương tác-->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="49">
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/backgroundscreen"
-            android:scaleType="fitXY"/>
-        <TextView
-            android:id="@+id/text_AmiChat"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:padding="20dp"/>
-    </RelativeLayout>
-
-    <!--Button tương tác-->
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="18">
+        android:layout_weight="18"
+        android:background="@color/black">
         <LinearLayout
             android:id="@+id/linearLayout_home"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal">
             <Button
+                android:layout_margin="2dp"
+                android:textColor="@color/white"
                 android:id="@+id/button_chat"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="@string/Chat"/>
+                android:text="@string/Chat" />
             <Button
+                android:layout_margin="2dp"
+                android:textColor="@color/white"
                 android:id="@+id/button_test"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="@string/Test"/>
+                android:text="@string/Test" />
         </LinearLayout>
+
         <!-- đối lập với phía trên -->
         <LinearLayout
             android:id="@+id/linearLayout_class"
@@ -129,34 +137,41 @@
             android:layout_height="match_parent"
             android:orientation="horizontal">
             <Button
+                android:layout_margin="2dp"
+                android:textColor="@color/white"
                 android:id="@+id/button_testA"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="@string/A"/>
+                android:text="@string/A" />
             <Button
+                android:layout_margin="2dp"
+                android:textColor="@color/white"
                 android:id="@+id/button_testB"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="@string/B"/>
+                android:text="@string/B" />
             <Button
+                android:layout_margin="2dp"
+                android:textColor="@color/white"
                 android:id="@+id/button_testC"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="@string/C"/>
+                android:text="@string/C" />
             <Button
+
+                android:textColor="@color/white"
                 android:id="@+id/button_testD"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="@string/D"/>
+                android:text="@string/D" />
         </LinearLayout>
     </RelativeLayout>
-
 </LinearLayout>

@@ -9,16 +9,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="sensorLandscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AmiActivity" />
-        <activity android:name=".InformationActivity"
-            android:theme="@style/Theme.AppCompat.DayNight.Dialog.Alert" />
+        <activity
+            android:name=".AmiActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:screenOrientation="sensorLandscape"/>
+        <activity
+            android:name=".InformationActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.Dialog.Alert"
+            android:screenOrientation="sensorLandscape"/>
     </application>
 
 </manifest>
