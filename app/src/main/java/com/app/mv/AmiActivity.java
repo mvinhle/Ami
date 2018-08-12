@@ -9,14 +9,14 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.List;
 
 public class AmiActivity extends AppCompatActivity {
 
+    int changeRoom = 6;
+    boolean atHome = true;
     int trust    = 1500;
     int eyeChange,  eyebrowChange, featureChange,   mouthChange;
     String sYou = "bạn", sI = "em", sNI = "Ami", sNYou = "Vinh";
@@ -39,8 +39,9 @@ public class AmiActivity extends AppCompatActivity {
 
     ImageView imageBody, imageHair, imageClothes, imageEye, imageGlass, imageEyebrow, imageMouth, imageFeature;
     TextView textViewAmiChat;
+    TextView textViewStt;
     Button buttonChat, buttonTest, button0, button1, button2, button3;
-    LinearLayout linearLayoutHome, linearLayoutClass;
+    LinearLayout linearLayoutHome, linearLayoutClass, linearLayoutBackground;
 
     final int BODY_DEFAULT    = 1; // body.length;		// HAIR DEFAULT = BODY DEFAULT = 1
     final int CLOTHES_DEFAULT = 64;              		// [0, 63]
@@ -66,6 +67,7 @@ public class AmiActivity extends AppCompatActivity {
     final int TL_CHAT         = 320;  // tỉ lệ 1 chat = 320 trust
     final int TL_CLOTHES      = 468;  // tỉ lệ 1 clothe = 468 trust
     final int TL_TEST         = 200;  // tỉ lệ 200 trust = 1 câu hỏi.
+    final int CHANGE_ROOM     = 5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,9 +85,11 @@ public class AmiActivity extends AppCompatActivity {
         imageMouth      = findViewById(R.id.image_mouth);
         textViewAmiChat = findViewById(R.id.text_AmiChat);
         setIndexDefault(false);
+        textViewStt = findViewById(R.id.textView_HomeAndClass);
 
         linearLayoutHome  = findViewById(R.id.linearLayout_home);
         linearLayoutClass = findViewById(R.id.linearLayout_class);
+        linearLayoutBackground = findViewById(R.id.linearLayout_BackgroundHomeAndClass);
         changeHome(true);
 
         buttonChat = findViewById(R.id.button_chat);
@@ -107,6 +111,17 @@ public class AmiActivity extends AppCompatActivity {
         buttonChat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if (!atHome){
+                    if (changeRoom > CHANGE_ROOM){
+                        linearLayoutBackground.setBackgroundResource(R.drawable.athome);
+                        atHome = true;
+                        setIndexDefault(false);
+                    }
+                    else {
+                        changeRoom+=1;
+                        textViewStt.setText("Độ lười: "+changeRoom);
+                    }
+                }
                 int chat = 0;
                 if (trust > TL_CHAT){
                     chat = (int) trust / TL_CHAT;
@@ -128,6 +143,17 @@ public class AmiActivity extends AppCompatActivity {
         buttonTest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if (atHome){
+                    if (changeRoom < -CHANGE_ROOM){
+                        linearLayoutBackground.setBackgroundResource(R.drawable.atclass);
+                        atHome = false;
+                        setIndexDefault(true);
+                    }
+                    else {
+                        changeRoom-=1;
+                        textViewStt.setText("Độ lười: "+changeRoom);
+                    }
+                }
                 changeHome(false);
                 int test = (int)  trust / TL_TEST + 30; // +30 để trust <= 0 vẫn ra 6 câu hỏi
                 if (test > textAmiTest.length) {test = textAmiTest.length;}

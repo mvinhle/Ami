@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
+    android:background="@color/mainBackground"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -8,11 +9,14 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="85">
+        android:layout_weight="85"
+        android:background="@drawable/custom_textview_note">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="@string/noteAplication"
+            android:padding="20dp"
+            android:layout_margin="10dp"
             android:textSize="20sp"/>
     </ScrollView>
     <LinearLayout

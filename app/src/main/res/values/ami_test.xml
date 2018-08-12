@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- câu trả lời không hổ trợ [i,you,ni,nyou], câu hỏi thì có -->
+    <!-- câu hỏi support: [fun][sad][sud][ang][def][i][ni][you][nyou] -->
+    <!-- câu trả lời không hổ trợ -->
     <string-array name="ami_test">
         <item>[fun]Câu hỏi thứ 1</item>
         <item>Câu trả lời đúng của câu 1</item>
@@ -56,7 +57,7 @@
         <item><i>Câu trả lời sai thứ 2</i> của câu 9</item>
         <item><u>Câu trả lời sai thứ 3</u> của câu 9</item>
     </string-array>
-
+    <!-- support: [fun][sad][sud][ang][def][i][ni][you][nyou] -->
     <string-array name="ami_win">
         <item>[fun][you] hay quá, [you] trả lời đúng rồi</item>
         <item>[sud][i] không tin, câu hỏi khó đến vậy sao [you] trả lời đúng được chứ.</item>

@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
+    android:id="@+id/linearLayout_BackgroundHomeAndClass"
+    android:background="@drawable/athome"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     android:orientation="vertical"
@@ -16,8 +18,16 @@
         <!--Image View-->
         <RelativeLayout
             android:layout_width="0dp"
-            android:layout_weight="28"
+            android:layout_weight="25"
             android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/textView_HomeAndClass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="Độ lười: 5"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"/>
             <ImageView
                 android:id="@+id/image_body"
                 android:layout_width="match_parent"
@@ -80,31 +90,40 @@
         <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="72">
-            <ImageView
+            android:layout_weight="75"
+            android:layout_margin="5dp">
+            <!--<ImageView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:src="@drawable/backgroundscreen"-->
+            <!--android:scaleType="fitXY"/>-->
+            <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/backgroundscreen"
-                android:scaleType="fitXY"/>
-            <TextView
-                android:id="@+id/text_AmiChat"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center|left"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:padding="20dp"/>
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/text_AmiChat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|top"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentTop="true"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:padding="15dp"
+                    android:text="@string/helloWorld"
+                    android:background="@drawable/custom_textview"/>
+            </ScrollView>
         </RelativeLayout>
     </LinearLayout>
 
     <!--Button
     android:layout_margin="2dp"
-     android:textColor="@color/white"tương tác-->
+     android:textColor="@color/black"tương tác-->
     <RelativeLayout
+        android:background="@color/background_layoutButton"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="18"
-        android:background="@color/black">
+        android:layout_weight="18">
         <LinearLayout
             android:id="@+id/linearLayout_home"
             android:layout_width="match_parent"
@@ -112,7 +131,7 @@
             android:orientation="horizontal">
             <Button
                 android:layout_margin="2dp"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:id="@+id/button_chat"
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -121,7 +140,7 @@
                 android:text="@string/Chat" />
             <Button
                 android:layout_margin="2dp"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:id="@+id/button_test"
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -138,7 +157,7 @@
             android:orientation="horizontal">
             <Button
                 android:layout_margin="2dp"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:id="@+id/button_testA"
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -147,7 +166,7 @@
                 android:text="@string/A" />
             <Button
                 android:layout_margin="2dp"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:id="@+id/button_testB"
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -156,7 +175,7 @@
                 android:text="@string/B" />
             <Button
                 android:layout_margin="2dp"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:id="@+id/button_testC"
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -165,7 +184,7 @@
                 android:text="@string/C" />
             <Button
 
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:id="@+id/button_testD"
                 android:layout_width="0dp"
                 android:layout_weight="1"

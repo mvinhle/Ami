@@ -1,30 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- support: [fun][sad][sud][ang][def][i][ni][you][nyou] -->
     <string-array name="ami_chat">
-        <item>[sad][ni] đã mất hết niềm tin với [nyou] rồi</item>
+        <item>[sad]dòng 0: [i] là [ni] còn [you] là [nyou] ([ni] đang sad (buồn))</item>
+        <item>[def]dòng 1: [i] là [ni] còn [you] là [nyou] ([ni] đang def (bình thường))</item>
+        <item>[fun]dòng 2: [i] là [ni] còn [you] là [nyou] ([ni] đang fun (vui))</item>
+        <item>[sud]dòng 3: [i] là [ni] còn [you] là [nyou] ([ni] đang sud (bất ngờ))</item>
+        <item>[ang]dòng 4: [i] là [ni] còn [you] là [nyou] ([ni] đang ang (giận))</item>
+        <item>[sad]dòng 5: [i] là [ni] còn [you] là [nyou] ([ni] đang sad (buồn))</item>
+        <item>[def]dòng 6: [i] là [ni] còn [you] là [nyou] ([ni] đang def (bình thường))</item>
+        <item>[fun]dòng 7: [i] là [ni] còn [you] là [nyou] ([ni] đang fun (vui))</item>
+        <item>[sud]dòng 8: [i] là [ni] còn [you] là [nyou] ([ni] đang sud (bất ngờ))</item>
+        <item>[ang]dòng 9: [i] là [ni] còn [you] là [nyou] ([ni] đang ang (giận))</item>
+        <item>[sad]dòng 10: [i] là [ni] còn [you] là [nyou] ([ni] đang sad (buồn))</item>
+        <item>[def]dòng 11: [i] là [ni] còn [you] là [nyou] ([ni] đang def (bình thường))</item>
+        <item>[fun]dòng 12: [i] là [ni] còn [you] là [nyou] ([ni] đang fun (vui))</item>
+        <item>[sud]dòng 13: [i] là [ni] còn [you] là [nyou] ([ni] đang sud (bất ngờ))</item>
+        <item>[ang]dòng 14: [i] là [ni] còn [you] là [nyou] ([ni] đang ang (giận))</item>
 
-        <item>[fun]đôi khi [i] quá lời, [you] đừng bi quan, tự tin, bình tĩnh, nếu không thì.. thôi</item>
-        <item>[ang]Tại sao [i] lại phải làm việc cho [you] nhỉ.</item>
-        <item>[sud][you] đừng nghĩ [you] là giỏi hơn [i] nhé.</item>
-        <item>[ang]bạn bè gọi em là tiểu A, nhưng [you] thì không được</item>
-        <item>[fun]nhiều người nói rằng [i] dể thương,.. ai cũng là người tốt ^^</item>
-        <item>[ang][you] nên học hành tốt hơn, [i] sẽ giúp.</item>
-        <item>[sad]Có lẽ [you] học tốt hơn, [i] sẽ tốt với anh hơn - về cách ăn nói.</item>
-        <item>[fun]làm việc nghiêm túc luôn tạo ra không khí tin tưởng cho mọi người xung quanh mà</item>
-        <item>[fun]bạn bè của [i] rất tài giỏi, hòa đồng thân thiện, không phạm lỗi,..</item>
-        <item>[ang][ni] là bé ngoan, nhưng không phải với [you]</item>
-
-        <item>[fun][i] sẽ rất vui nếu [you] chịu ấn vào KIỂM TRA</item>
-        <item>[sad][i] có vài bộ quần áo "sexy" nhưng [i] chỉ mặc cho người [i] tin tưởng xem thôi..</item>
-        <item>[def]à.. ờ.. [i] tên là [ni], [you] có thể gọi là tiểu A rất vui khi được trợ giúp [you]</item>
-        <item>[fun][ni] sẽ giúp đỡ [you] trong thời gian tới</item>
-        <item>[sad]hi vọng [you] sẽ cần [i]</item>
-        <item>[sad]em vẫn chưa tin tưởng [you] lắm</item>
-        <item>[sud]tên [you] là [nyou] phải không ạ?, [i] sẽ nhớ nó.</item>
-        <item>[def][i] đã xem tờ tự bạch của [you] rồi, nhưng [i] vẫn chưa biết nhiều về [you] do nó không chi tiết lắm.</item>
-        <item>[sad]xin.. lỗi [you] vì trước đó.. [i], [i] đã nghi ngờ khả năng của [you]. [i] xin lỗi.</item>
-        <item>[fun][you]..</item>
-
-        <item>[21]</item>
+        <item>[fun]dòng 15: [i] là [ni] còn [you] là [nyou] ([ni] đang fun (vui)) (xuống dòng và tab)-> (\n \t) (đã tab)</item>
+        <item>[sad]dòng 16: [i] là [ni] còn [you] là [nyou] ([ni] đang sad (buồn)) (xuống 2 dòng và chấm) (\n\n.) </item>
+        <item>[sad]dòng 17: [i] là [ni] còn [you] là [nyou] ([ni] đang sad (buồn)) (thử nhảy 10 dòng (\n\n\n\n\n\n\n\n\n\n) (đã nhảy 10 dòng)</item>
+        <item>[sad]dòng 18: [i] là [ni] còn [you] là [nyou] ([ni] đang sad (buồn))</item>
+        <item>[fun]hôm nay là một ngày đẹp trời phải không [you]</item>
+        <item>[fun][i] biết 1 công thức này vui lắm:\n\t\t c = a > b : a ? b \n (đó là toán tử ba ngôi đó.</item>
+        <item>[sad][you] là đồ ngốc ^^</item>
+        <item>[sud]thử nghiệm tính năng của [i] đã thành công chưa [you]</item>
+        <item>[ang]em cũng biết 1 công thức java là: \n if (a>b){boolean c = b > a; //c = fale}\n thấy [i] hay không</item>
     </string-array>
 </resources>

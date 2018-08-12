@@ -9,4 +9,7 @@
     <color name="backgroundInformation">#bcabff</color>
     <color name="blu">#0066ff</color>
     <color name="black">#000000</color>
+    <color name="background_layoutButton">#be000000</color>
+    <color name="background_textView">#beffffff</color>
+    <color name="mainBackground">#ccb0b0</color>
 </resources>
