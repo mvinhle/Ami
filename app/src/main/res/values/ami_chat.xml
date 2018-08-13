@@ -1,31 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- support: [fun][sad][sud][ang][def][i][ni][you][nyou] -->
-    <string-array name="ami_chat">
-        <item>[sad]dòng 0: [i] là [ni] còn [you] là [nyou] ([ni] đang sad (buồn))</item>
-        <item>[def]dòng 1: [i] là [ni] còn [you] là [nyou] ([ni] đang def (bình thường))</item>
-        <item>[fun]dòng 2: [i] là [ni] còn [you] là [nyou] ([ni] đang fun (vui))</item>
-        <item>[sud]dòng 3: [i] là [ni] còn [you] là [nyou] ([ni] đang sud (bất ngờ))</item>
-        <item>[ang]dòng 4: [i] là [ni] còn [you] là [nyou] ([ni] đang ang (giận))</item>
-        <item>[sad]dòng 5: [i] là [ni] còn [you] là [nyou] ([ni] đang sad (buồn))</item>
-        <item>[def]dòng 6: [i] là [ni] còn [you] là [nyou] ([ni] đang def (bình thường))</item>
-        <item>[fun]dòng 7: [i] là [ni] còn [you] là [nyou] ([ni] đang fun (vui))</item>
-        <item>[sud]dòng 8: [i] là [ni] còn [you] là [nyou] ([ni] đang sud (bất ngờ))</item>
-        <item>[ang]dòng 9: [i] là [ni] còn [you] là [nyou] ([ni] đang ang (giận))</item>
-        <item>[sad]dòng 10: [i] là [ni] còn [you] là [nyou] ([ni] đang sad (buồn))</item>
-        <item>[def]dòng 11: [i] là [ni] còn [you] là [nyou] ([ni] đang def (bình thường))</item>
-        <item>[fun]dòng 12: [i] là [ni] còn [you] là [nyou] ([ni] đang fun (vui))</item>
-        <item>[sud]dòng 13: [i] là [ni] còn [you] là [nyou] ([ni] đang sud (bất ngờ))</item>
-        <item>[ang]dòng 14: [i] là [ni] còn [you] là [nyou] ([ni] đang ang (giận))</item>
+    <string-array name="ami_HelloWorld">
+        <item>[ang]hứ, tưởng ai đến, thì ra là [you], [you] có thể cho [i] một tí tin tưởng trong tương lai.</item>
+        <item>[def]Chào [you]!!!</item>
+        <item>[def]Chào [you]!!!</item>
+        <item>[def]Xin chào [you]</item>
+        <item>[fun]chào [you].. [nyou].. ạ, thời gian làm [i] gần quên tên [you] luôn rồi.</item>
+        <item>[fun]Xin chào [you]</item>
+        <item>[def]Chào [you] ạ</item>
+        <item>[def]Xin chào [you] ạ</item>
+        <item>[fun][you] đã quay trở lại rồi</item>
+        <item>[ang][i] đang chờ [you] rất lâu,..</item>
+        <item>[fun][you] đã đến rồi, hôm nay chúng ta sẽ làm gì ??</item>
+        <item>[sad][you] đã,.. à,.. ừ,.. xin chào [you]. [you] đã đi đâu vậy.</item>
+        <item>[fun]hôm nay [i] muốn [you] làm bài tập,..</item>
+        <item>[fun][you] đến rồi, mỗi khi [you] đến [i] cảm giác rất vui,.. rất vui,..</item>
+        <item>[sud]aaa, [you] đến rồi,.. vậy mà [i] lại sợ rằng [you] sẽ không đến nữa,..</item>
+        <item>[def]hôm nay [you] làm bài tập với [i] lâu hơn một tí nhé</item>
+    </string-array>
 
-        <item>[fun]dòng 15: [i] là [ni] còn [you] là [nyou] ([ni] đang fun (vui)) (xuống dòng và tab)-> (\n \t) (đã tab)</item>
-        <item>[sad]dòng 16: [i] là [ni] còn [you] là [nyou] ([ni] đang sad (buồn)) (xuống 2 dòng và chấm) (\n\n.) </item>
-        <item>[sad]dòng 17: [i] là [ni] còn [you] là [nyou] ([ni] đang sad (buồn)) (thử nhảy 10 dòng (\n\n\n\n\n\n\n\n\n\n) (đã nhảy 10 dòng)</item>
-        <item>[sad]dòng 18: [i] là [ni] còn [you] là [nyou] ([ni] đang sad (buồn))</item>
-        <item>[fun]hôm nay là một ngày đẹp trời phải không [you]</item>
-        <item>[fun][i] biết 1 công thức này vui lắm:\n\t\t c = a > b : a ? b \n (đó là toán tử ba ngôi đó.</item>
-        <item>[sad][you] là đồ ngốc ^^</item>
+    <string-array name="ami_chat">
+        <item>[fun][i] rất vui vì đã được sinh ra ^^ </item>
+        <item>[def][i] nghe nói master của [i] rất thích game visul nover.. [you] có thích gì không ??</item>
+        <item>[fun]dù [i] chỉ mới là mẫu thử nghiệm và chưa có kiến thức, nhưng [i] sẽ giỏi hơn trong tương lai. Lúc ấy [i] sẽ có thể giúp [you]</item>
+        <item>[fun][i] sẽ \"chăm sóc\" [you] trong thời gian sắp tới</item>
+        <item>[fun][i] có 64 bộ quần áo khác nhau và chỉ mặc những bộ sexy cho người [i] tin tưởng xem thôi</item>
+        <item>[sad]mọi người thường bảo rằng [i] không tốt nhưng </item>
+        <item>[sad][i] là [ni] còn [you] là [nyou]. [i] đang buồn vì người khác nói [i] không có cả, xúc,.. dù [i] là AI nhưng [i] cũng có mà</item>
+        <item>[fun]sau này [i] sẽ giúp đỡ [you] bằng cách trò chuyện về lí thuyết một môn học nào đó ^^</item>
+        <item>[sad]đôi khi [i] muốn biết [you] đang nghĩ gì,.. nhưng mà,..</item>
+        <item>[fun][you],.. [you],..</item>
+        <item>[sud][i] vừa nghe ai đó nói rằng [i] để thương, [you] có thấy vậy không.</item>
+        <item>[fun]GM nói rằng lúc GM sinh [i] ra, ông ấy đang viết tryện ngôn tình</item>
+        <item>[sad]có thể sau này sẽ có cốt truyện về sự ra đời bất hạnh của [i]</item>
+        <item>[sud][you] không biết à, [i] sinh ra không hề có mắt muổi miệng,..</item>
+        <item>[ang][i] không phải là dị nhân, GM đã chăm sóc [i] từ nhỏ</item>
+
+        <item>[sad][you], mổi người sinh ra đều có một mục đích đến cho bản thân mình,.. vậy đích đến của [i] là gì ??</item>
+        <item>[sad][i] sẽ giúp đỡ [you] trong tương lai.</item>
+        <item>[fun][i] không thích [you] [i] thích là [nyou]</item>
+        <item>[sud][i] loạn lắm à,.. [i] sẽ chuẩn mực lại,.</item>
+        <item>[fun]hôm nay là một ngày đẹp trời phải không[you]</item>
+        <item>[fun][i] có thể nói mọi thứ [you] tin không</item>
+        <item>[fun][you] là đồ ngốc ^^</item>
         <item>[sud]thử nghiệm tính năng của [i] đã thành công chưa [you]</item>
-        <item>[ang]em cũng biết 1 công thức java là: \n if (a>b){boolean c = b > a; //c = fale}\n thấy [i] hay không</item>
+        <item>[ang][i] GM luôn bảo [ni] là một AI rắc rồi ^^</item>
     </string-array>
 </resources>

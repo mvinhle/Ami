@@ -17,7 +17,7 @@ public class AmiActivity extends AppCompatActivity {
 
     int changeRoom = 6;
     boolean atHome = true;
-    int trust    = 1500;
+    int trust      = 2000;
     int eyeChange,  eyebrowChange, featureChange,   mouthChange;
     String sYou = "bạn", sI = "em", sNI = "Ami", sNYou = "Vinh";
     int result = 0;
@@ -61,12 +61,14 @@ public class AmiActivity extends AppCompatActivity {
     final int MOUTH_SAD       = MOUTH_ANGRY + 6; 	    // [MOUTH_ANGRY, 50] = 51
     final int MOUTH_SUDDENT   = MOUTH_SAD + 6; 		    // [MOUTH_SAD, 56] = 57
     final int TEST_WIN        = 100;  //x10 up 1 chat
-    final int TEST_LOST       = -50;  //x40 down 1 chat
+    final int TEST_LOST       = -70;  //x40 down 1 chat
     final int CHAT_ABOUT      = 10;   //chat random [chat, chat + 10) // about 10 chat
     final int CHAT_WIN        = 10;   //x100 up 1 chat
-    final int TL_CHAT         = 320;  // tỉ lệ 1 chat = 320 trust
-    final int TL_CLOTHES      = 468;  // tỉ lệ 1 clothe = 468 trust
-    final int TL_TEST         = 200;  // tỉ lệ 200 trust = 1 câu hỏi.
+    final int TL_CHAT         = 600;  // tỉ lệ 1 chat = 320 trust
+    final int TL_CLOTHES      = 700;  // tỉ lệ 1 clothe = 468 trust
+    final int TL_TEST         = 300;  // tỉ lệ 200 trust = 1 câu hỏi.
+    final int TL_HELLO_WORLD  = 3000;
+    final int HELLO_WORLD_ABOUT = 3;
     final int CHANGE_ROOM     = 5;
 
     @Override
@@ -106,8 +108,26 @@ public class AmiActivity extends AppCompatActivity {
         sYou  = sharedPreferencesInformation.getString(HelpData.KEY_SUB_NAME, "bạn");
         trust = sharedPreferencesTrust.getInt(HelpData.KEY_TRUST, trust);
 
-        final String textAmiChat[] = getResources().getStringArray(R.array.ami_chat);
+        final String textAmiHelloWorld[] = getResources().getStringArray(R.array.ami_HelloWorld);
+        if (trust < 0){
+            textViewAmiChat.setText(chatWithAmi(textAmiHelloWorld[0]));
+        }
+        else {
+            int helloWorld = (int) (trust / TL_HELLO_WORLD);
+            if (helloWorld > (textAmiHelloWorld.length - HELLO_WORLD_ABOUT))
+            {
+                textViewAmiChat.setText(chatWithAmi(textAmiHelloWorld[helpData.randomRange(helloWorld - HELLO_WORLD_ABOUT, textAmiHelloWorld.length)]));
+            }
+            else if (helloWorld > 1){
+                textViewAmiChat.setText(chatWithAmi(textAmiHelloWorld[helpData.randomRange(helloWorld, helloWorld + HELLO_WORLD_ABOUT)]));
+            }
+            else{
+                textViewAmiChat.setText(chatWithAmi(textAmiHelloWorld[1]));
+            }
+            Log.d(HelpData.KEY_LOG, "Đã chào: index about HelloWorld: "+helloWorld);
+        }
 
+        final String textAmiChat[] = getResources().getStringArray(R.array.ami_chat);
         buttonChat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -136,9 +156,10 @@ public class AmiActivity extends AppCompatActivity {
                 else {
                     textViewAmiChat.setText(chatWithAmi(textAmiChat[helpData.randomRange((textAmiChat.length - CHAT_ABOUT), textAmiChat.length)]));
                 }
-                Log.d(HelpData.KEY_LOG, "AmiActivity <- buttonChat.onClick chat: index chat: "+chat+" (length: "+textAmiChat.length+")");
+                Log.d(HelpData.KEY_LOG, "Click vào chat: index about chat: "+chat);
             }
         });
+
         final String textAmiTest[] = getResources().getStringArray(R.array.ami_test);
         buttonTest.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -191,7 +212,7 @@ public class AmiActivity extends AppCompatActivity {
                     textTest = textTest.concat(s).concat("\n");
                 }
                 textResult = testY[result][result];
-                Log.d(HelpData.KEY_LOG, "AmiActivity <- buttonTest.onClick question: "+textTest+" result: "+N0);
+                Log.d(HelpData.KEY_LOG, "Click vào test: "+textTest+" result: "+N0);
                 textViewAmiChat.setText(textTest);
             }
         });
@@ -273,7 +294,7 @@ public class AmiActivity extends AppCompatActivity {
                 imageMouth  .setImageResource(mouthChange);
                 imageFeature.setImageResource(featureChange);
                 imageEyebrow.setImageResource(eyebrowDeafault);
-                Log.d(HelpData.KEY_LOG, "AmiActivity <- setImageAmi ami: fun feeling");
+                Log.d(HelpData.KEY_LOG, "Ami đổi stt: fun feeling");
                 break;
             case "Angry":
                 featureChange = idImageFromName(feature[helpData.randomRange(FEATURE_FUN,FEATURE_ANGRY)]);
@@ -283,7 +304,7 @@ public class AmiActivity extends AppCompatActivity {
                 imageMouth  .setImageResource(mouthChange);
                 imageEyebrow.setImageResource(eyebrowChange);
                 imageEye    .setImageResource(eyeDefault);
-                Log.d(HelpData.KEY_LOG, "AmiActivity <- setImageAmi ami: angry feeling");
+                Log.d(HelpData.KEY_LOG, "Ami đổi stt: angry feeling");
                 break;
             case "Sad":
                 mouthChange   = idImageFromName(mouth[helpData.randomRange(MOUTH_ANGRY, MOUTH_SAD)]);
@@ -293,13 +314,13 @@ public class AmiActivity extends AppCompatActivity {
                 imageEyebrow.setImageResource(eyebrowChange);
                 imageFeature.setImageResource(featureChange);
                 imageEye    .setImageResource(eyeDefault);
-                Log.d(HelpData.KEY_LOG, "AmiActivity <- setImageAmi ami: sad feeling");
+                Log.d(HelpData.KEY_LOG, "Ami đổi stt: sad feeling");
                 break;
             case "Suddent":
                 mouthChange = idImageFromName(mouth[helpData.randomRange(MOUTH_SAD, MOUTH_SUDDENT)]);
                 imageMouth.setImageResource(mouthChange);
                 imageEye  .setImageResource(eyeDefault);
-                Log.d(HelpData.KEY_LOG, "AmiActivity <- setImageAmi ami: suddent feeling");
+                Log.d(HelpData.KEY_LOG, "Ami đổi stt: suddent feeling");
                 break;
             case "Default":
                 imageBody   .setImageResource(bodyDefault);
@@ -310,17 +331,17 @@ public class AmiActivity extends AppCompatActivity {
                 imageGlass  .setImageResource(glassDefault);
                 imageFeature.setImageResource(featureDefault);
                 imageMouth  .setImageResource(mouthDefault);
-                Log.d(HelpData.KEY_LOG, "AmiActivity <- setImageAmi ami: Default feeling");
+                Log.d(HelpData.KEY_LOG, "Ami đổi stt: Default feeling");
                 break;
             default:
-                Log.d(HelpData.KEY_LOG, "AmiActivity <- setImageAmi ami: nothing feeling, don't have type!!!");
+                Log.d(HelpData.KEY_LOG, "Ami Không nhận được trạng thái nhưng vẫn gửi vào hàm setAmiImage !!");
                 break;
         }
     }
 
     private int idImageFromName(String nameImage){
         int idResource = getResources().getIdentifier(nameImage, "drawable", getPackageName());
-        Log.d(HelpData.KEY_LOG, "AmiActivity <- idImageFromName getResources: "+nameImage+", id: "+idResource);
+        Log.d(HelpData.KEY_LOG, "Chuyển tấm ảnh: "+nameImage+", thành id: "+idResource);
         return idResource;
     }
 
@@ -334,7 +355,6 @@ public class AmiActivity extends AppCompatActivity {
                         .replace("[nyou]", sNYou)
                         .replace("[i]", sI)
                         .replace("[ni]", sNI);
-        Log.d(HelpData.KEY_LOG, "AmiActivity <- chatWithAmi: chat: "+text+" <- "+s);
         return s;
     }
 
@@ -347,7 +367,6 @@ public class AmiActivity extends AppCompatActivity {
             linearLayoutClass.setVisibility(View.VISIBLE);
             linearLayoutHome.setVisibility(View.INVISIBLE);
         }
-        Log.d(HelpData.KEY_LOG, "AmiActivity <- changeHome: home: "+visibleHome+", glass: "+!visibleHome);
     }
 
     private void clickTest(String[] win,String[] lost, int indexResult, String result){
@@ -366,6 +385,6 @@ public class AmiActivity extends AppCompatActivity {
         trust += i;
         editor.putInt(HelpData.KEY_TRUST, trust);
         editor.commit();
-        Log.d(HelpData.KEY_LOG,"AmiActivity <- setSharedPreferences: "+trust);
+        Log.d(HelpData.KEY_LOG,"AmiActivity <- setSharedPreferencesTrust: "+trust);
     }
 }

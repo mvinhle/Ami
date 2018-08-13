@@ -12,7 +12,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="82"
+        android:layout_weight="85"
         android:weightSum="100">
 
         <!--Image View-->
@@ -25,7 +25,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
-                android:text="Độ lười: 5"
+                android:text="Độ lười: 6"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentLeft="true"/>
             <ImageView
@@ -87,33 +87,21 @@
         </RelativeLayout>
 
         <!--Text View chat,...-->
-        <RelativeLayout
+        <ScrollView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="75"
             android:layout_margin="5dp">
-            <!--<ImageView-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:src="@drawable/backgroundscreen"-->
-            <!--android:scaleType="fitXY"/>-->
-            <ScrollView
+            <TextView
+                android:id="@+id/text_AmiChat"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <TextView
-                    android:id="@+id/text_AmiChat"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="left|top"
-                    android:layout_centerVertical="true"
-                    android:layout_alignParentTop="true"
-                    android:textColor="#000000"
-                    android:textSize="20sp"
-                    android:padding="15dp"
-                    android:text="@string/helloWorld"
-                    android:background="@drawable/custom_textview"/>
-            </ScrollView>
-        </RelativeLayout>
+                android:layout_height="wrap_content"
+                android:gravity="left|top"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:padding="15dp"
+                android:background="@drawable/custom_textview" />
+        </ScrollView>
     </LinearLayout>
 
     <!--Button
@@ -123,7 +111,7 @@
         android:background="@color/background_layoutButton"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="18">
+        android:layout_weight="15">
         <LinearLayout
             android:id="@+id/linearLayout_home"
             android:layout_width="match_parent"
@@ -183,7 +171,6 @@
                 android:gravity="center"
                 android:text="@string/C" />
             <Button
-
                 android:textColor="@color/black"
                 android:id="@+id/button_testD"
                 android:layout_width="0dp"

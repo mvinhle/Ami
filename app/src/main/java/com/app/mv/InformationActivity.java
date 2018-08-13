@@ -79,7 +79,7 @@ public class InformationActivity extends AppCompatActivity {
                     editor.putString(HelpData.KEY_SUB_NAME, sYou);
                     editor.putBoolean(HelpData.KEY_STUDENT, boy);
                     editor.commit();
-                    Log.d(HelpData.KEY_LOG,"InformationActivity <- ok.onclick: name,sname,boy: "+sYou+" "+sNYou+", boy = "+boy);
+                    Log.d(HelpData.KEY_LOG,"đăng kí thông tin thành công với: name,sname,boy: "+sYou+" "+sNYou+", boy = "+boy);
                     Toast.makeText(InformationActivity.this, getResources().getString(R.string.noteInformationComplete), Toast.LENGTH_LONG).show();
                     finish();
                 }

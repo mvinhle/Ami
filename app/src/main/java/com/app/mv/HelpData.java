@@ -11,21 +11,21 @@ public class HelpData {
     public final static String KEY_SUB_NAME    = "nyou";
     public final static String KEY_STUDENT     = "student";
     public final static String KEY_LOG         = "MVLog";
-    public final static String KEY_DONT_BUG    = "sanPhamDuocPhatTrienBoiLeMinhVinh";
+    public final static String KEY_DONT_BUG    = "sanPhamDuocPhatTrienBoiLeMinhVinhRaMatNgayCN12082018";
 
     public int randomRange(int start, int end){
         int random = (int) (start + Math.random() * (end - start));
-        Log.d(HelpData.KEY_LOG, "HelpData <- randomRange random từ: "+start+" -> "+end+" = "+random);
+        Log.d(HelpData.KEY_LOG, "random lớn từ: "+start+" đến "+end+" kết quả là "+random);
         return random;
     }
     public int randomRange(int range){
         int random = (int) (Math.random() * range);
-        Log.d(HelpData.KEY_LOG, "HelpData <- randomRange random từ: 0 -> "+range+" = "+random);
+        Log.d(HelpData.KEY_LOG, "random nhỏ từ: 0 đến "+range+" kết quả là "+random);
         return random;
     }
     public String removeSubString(String stringDefault, String stringDelete) {
         String s = stringDefault.replace(stringDelete, "");
-        Log.d(HelpData.KEY_LOG, "HelpData <- removeSubString delete: " + stringDefault + " <- " + stringDelete + " = " + s);
+        Log.d(HelpData.KEY_LOG, "xóa một đoạn: từ = " + stringDefault + " xóa bỏ = " + stringDelete + " kết quả là = " + s);
         return s;
     }
 }
