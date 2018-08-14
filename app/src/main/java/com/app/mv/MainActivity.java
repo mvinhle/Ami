@@ -94,7 +94,6 @@ public class MainActivity extends AppCompatActivity {
     private void dialogDeleteAllData(){
         final Dialog dialog = new Dialog(this);
         dialog.setContentView(R.layout.dialog_delete_data);
-        this.setFinishOnTouchOutside(false);
         dialog.setTitle(getResources().getString(R.string.deleteData));
         Button buttonYes = dialog.findViewById(R.id.deletaDataYes);
         Button buttonNo  = dialog.findViewById(R.id.deletaDataNo);
@@ -102,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 clickDeleteData += 1;
-                if (clickDeleteData > 15){
+                if (clickDeleteData > 50){
                     SharedPreferences.Editor editor = sharedPreferences.edit();
                     editor.clear();
                     editor.apply();
@@ -113,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this,getResources().getString(R.string.deleteDataComplete),Toast.LENGTH_SHORT).show();
                     dialog.cancel();
                 }
-                if (clickDeleteData % 5 == 0 && clickDeleteData > 0){
+                if (clickDeleteData % 10 == 0 && clickDeleteData > 0){
                     Toast.makeText(
                             MainActivity.this,
                             getResources().getString(R.string.deleteDataCompletess).replace("[n]",String.valueOf(clickDeleteData)),

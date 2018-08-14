@@ -3,78 +3,127 @@
     <!-- câu hỏi support: [fun][sad][sud][ang][def][i][ni][you][nyou] -->
     <!-- câu trả lời không hổ trợ -->
     <string-array name="ami_test">
-        <item>[fun]Câu hỏi thứ 1</item>
-        <item>Câu trả lời đúng của câu 1</item>
-        <item><b>Câu trả lời sai thứ 1</b> của câu 1</item>
-        <item><i>Câu trả lời sai thứ 2</i> của câu 1</item>
-        <item><u>Câu trả lời sai thứ 3</u> của câu 1</item>
+        <item>[def]Theo [you] nghĩa của từ \"AI\" trong mạng vi tính thường được hiểu là gì ?</item>
+        <item>AI là viết tắt của từ \"artificial intelligence\" nghĩa là trí thông minh nhân tạo.</item>
+        <item>AI là Người máy (robot) có thể tự nói chuyện như người bình thường,..</item>
+        <item>AI là Điện thoại thông minh có tính năng nhận diện khuông mặt, giọng nói,..</item>
+        <item>AI là Lập trình game, ứng dụng có thể suy nghĩ linh hoạt.</item>
 
-        <item>[fun]Câu hỏi thứ 2</item>
-        <item>Câu trả lời đúng của câu 2</item>
-        <item><b>Câu trả lời sai thứ 1</b> của câu 2</item>
-        <item><i>Câu trả lời sai thứ 2</i> của câu 2</item>
-        <item><u>Câu trả lời sai thứ 3</u> của câu 2</item>
+        <item>[fun]\"AI\" được ứng dụng ở đâu ?</item>
+        <item>AI được sử dụng ở các thiết bị tự động</item>
+        <item>AI chỉ dùng trong ngành công nghệ thông tin</item>
+        <item>AI được dùng như là vũ khí hủy diệt thới giới</item>
+        <item>AI thường được dùng làm cho quái vật trong game di chuyển linh hoạt</item>
 
-        <item>[fun]Câu hỏi thứ 3</item>
-        <item>Câu trả lời đúng của câu 3</item>
-        <item><b>Câu trả lời sai thứ 1</b> của câu 3</item>
-        <item><i>Câu trả lời sai thứ 2</i> của câu 3</item>
-        <item><u>Câu trả lời sai thứ 3</u> của câu 3</item>
+        <item>[def][i] sẽ hướng dẩn [you] làm những gì ? </item>
+        <item>Tìm hiểu về cách làm việc của một chương trình nhỏ và được mô tả bằng ngôn ngữ pascal (tiến độ theo sách tin học lớp 11)</item>
+        <item>Làm một phần mềm di động</item>
+        <item>Giải thích chi tiết cách em hoạt động.</item>
+        <item>Tìm hiểu về ngôn ngữ lập trình pascal với tinh thần \"học lập trình thật là vui\"</item>
 
-        <item>[fun]Câu hỏi thứ 4</item>
-        <item>Câu trả lời đúng của câu 4</item>
-        <item><b>Câu trả lời sai thứ 1</b> của câu 4</item>
-        <item><i>Câu trả lời sai thứ 2</i> của câu 4</item>
-        <item><u>Câu trả lời sai thứ 3</u> của câu 4</item>
+        <item>[fun][i] và [you] sẽ tìm hiểu lập trình thông qua ngôn ngữ nào ?</item>
+        <item>Pascal vì ngôn ngữ này ngắn gọn, nhẹ, thích hợp để rèn luyện tư duy. Tạo nền tảng lập trình hướng cấu trúc.</item>
+        <item>C vì đây là ngôn ngữ lập trình nổi tiếng trong các ngôn ngữ lập trình tiên phong, rất thích hợp làm nền tản cho người mới bắt đầu</item>
+        <item>Java vì đây là ngôn ngữ ổn định, dể đọc, được nhiều người yêu thích, được hổ trợ khá tốt, và có thể sữ dụng được gần như tất cả hệ điều hành cùng với khẩu hiệu \"viết một lần, chạy mọi nơi\"</item>
+        <item>C# vì đây là ngôn ngữ khá mới, được hổ trợ làm game 2D,3D bởi unity cùng với khả năng có thể làm game đa nền tảng chạy trên nhiều hệ điều hành khác nhau như windows, android, flash cho web,..</item>
 
-        <item>[fun]Câu hỏi thứ 5</item>
-        <item>Câu trả lời đúng của câu 5</item>
-        <item><b>Câu trả lời sai thứ 1</b> của câu 5</item>
-        <item><i>Câu trả lời sai thứ 2</i> của câu 5</item>
-        <item><u>Câu trả lời sai thứ 3</u> của câu 5</item>
+        <item>[fun] vì sao [you] phải dùng đến ngôn ngữ lập trình để làm ra các phầm mềm dùng cho các thiết bị như điện thoại, máy tính ?</item>
+        <item>Vì điện thoại máy tính chỉ hiểu mã máy, nhưng Ngôn ngữ máy khó đọc đến mức tổ chức United States Copyright Office không thể khẳng định một phần mềm đã mã hóa có phải là sản phẩm gốc của một tác giả hay không. Còn ngôn ngữ lập trình thì dể đọc, dể viết hơn đối với con người và có thể dùng phần mềm để dịch lại thành mã máy</item>
+        <item>Vì Robert Hofstadter (chủ nhân Giải Nobel Vật lý năm 1961 nhờ tiên phong trong nghiên cứu về tán xạ điện tử trong hạt nhân và các khám phá liên quan đến cấu trúc của các nucleon) từng so sánh mã máy với mã gen: \"Nhìn vào một chương trình viết bằng mã máy không khác gì với việc nhìn vào các phân tử DNA của lần lượt từng nguyên tử.\"</item>
+        <item>Vì khả năng đọc hiểu ngôn ngữ máy của con người hoàn toàn không thể hiểu mã máy</item>
+        <item>Vì mã máy làm tốc độ thực hiện các công việc của chương trình nhanh hơn các ngôn ngữ lập trình.</item>
 
-        <item>[fun]Câu hỏi thứ 6</item>
-        <item>Câu trả lời đúng của câu 6</item>
-        <item><b>Câu trả lời sai thứ 1</b> của câu 6</item>
-        <item><i>Câu trả lời sai thứ 2</i> của câu 6</item>
-        <item><u>Câu trả lời sai thứ 3</u> của câu 6</item>
+        <item>[fun]Theo [you] các thiết bị như điện thoại thông minh (smartphone) có thể nhận biết được những gì ?</item>
+        <item>Smartphone chỉ có thể hiểu Ngôn ngữ máy (còn được gọi là máy ngữ hay mã máy; tiếng Anh là machine language hay machine code) thường có dạng nhị phân, thập lục phân,..</item>
+        <item>Smartphone hiểu được các kí tự alphabet (kí tự la tinh như a,b,c,..)</item>
+        <item>Smartphone hiểu được mã nguồn được lập trình đúng bằng các ngôn ngữ lập trình</item>
+        <item>Smartphone chỉ có thể hiểu được hình ảnh hiển thị qua camera và âm thanh qua mic thu âm</item>
 
-        <item>[fun]Câu hỏi thứ 7</item>
-        <item>Câu trả lời đúng của câu 7</item>
-        <item><b>Câu trả lời sai thứ 1</b> của câu 7</item>
-        <item><i>Câu trả lời sai thứ 2</i> của câu 7</item>
-        <item><u>Câu trả lời sai thứ 3</u> của câu 7</item>
+        <item>[fun]Vì sao tất cả mọi người đều nên học lập trình ?</item>
+        <item>Vì nó làm người học có suy nghĩ logic và chính xác hơn</item>
+        <item>Vì nó cách mạng 4.0 nên học theo phong trào</item>
+        <item>Vì câu nói \"Everyone in the world need to learn how to programming the computer, because it teach me how to thing.\"</item>
+        <item>Vì niềm đam mê bên trong những coi người sinh ra vào thời đại công nghệ hóa, niềm đam mê tiền là một nguồn động lực để chúng ta có thể vực qua mọi khó khăn</item>
 
-        <item>[fun]Câu hỏi thứ 8</item>
-        <item>Câu trả lời đúng của câu 8</item>
-        <item><b>Câu trả lời sai thứ 1</b> của câu 8</item>
-        <item><i>Câu trả lời sai thứ 2</i> của câu 8</item>
-        <item><u>Câu trả lời sai thứ 3</u> của câu 8</item>
+        <item>[fun]Vì sao [i] và [you] tìm hiểu pascal mà không phải ngôn ngữ khác ?</item>
+        <item>Vì thực tế các ngôn ngữ lập trình đều có nét giống nhau, học pascal để tạo nền tảng cho ngôn ngữ khác như java, javaScript, C, C++, rubi, php, python, kotin,..</item>
+        <item>Vì pascal là ngôn ngữ đơn giản nhất</item>
+        <item>Vì chỉ có pascal mới có thể rèn luyện tư duy</item>
+        <item>Vì ngôn ngữ này ít được cập nhận nên không phải lo chạy đua cùng công nghệ</item>
 
-        <item>[fun]Câu hỏi thứ 9</item>
-        <item>Câu trả lời đúng của câu 9</item>
-        <item><b>Câu trả lời sai thứ 1</b> của câu 9</item>
-        <item><i>Câu trả lời sai thứ 2</i> của câu 9</item>
-        <item><u>Câu trả lời sai thứ 3</u> của câu 9</item>
+        <item>[fun]Theo [you] các ngôn ngữ lập trình thường có mấy phần, đó là những phần nào, phần nào bắt buộc phải có ?</item>
+        <item>Có 2 phần đó là phần khai báo và phần thân, phần thân bắt buộc phải có.</item>
+        <item>Có 2 phần đó là phần đầu và phần thân, phần thân bắt buộc phải có.</item>
+        <item>Có 3 phần đó là phần đầu, phần khai báo và phần thân, phần thân bắt buộc phải có.</item>
+        <item>có 2 phần đó là phần khai báo và phần thân, phần khai báo bắt buộc phải có.</item>
+
+        <item>[fun]Phần nào trong các ngôn ngữ lập trình có thể không có ?</item>
+        <item>Phần khai báo</item>
+        <item>Phần đầu</item>
+        <item>Tất cả đầu sai</item>
+        <item>Phần thân</item>
+
+        <item>[fun][i] đố [you] nè, trong đoạn mã nguồn sau: \nprogram ami_test;\nbegin\nnend.\n đâu là phần khai báo ?</item>
+        <item>Phần khai báo là dòng \"program ami_test;\"</item>
+        <item>Phần khai báo là dòng \"begin\"</item>
+        <item>Phần khai báo là dòng \"end.\"</item>
+        <item>Phần khai báo là từ dòng \"begin\" đến dòng \"end.\"</item>
+
+        <item>[fun][i] đố [you] nè, trong đoạn mã nguồn sau: \nprogram ami_test;\nbegin\nnend.\n đâu là phần Thân ?</item>
+        <item>Phần thân là từ dòng \"begin\" đến dòng \"end.\"</item>
+        <item>Phần thân là dòng \"program ami_test;\"</item>
+        <item>Phần thân là dòng \"begin\"</item>
+        <item>Phần thân là dòng \"end.\"</item>
+
+        <item>[fun][i] đang viết khai báo cho một chương trình dùng để tính \"tổng các số\" nhưng mà [i] không biết nên khai báo tên chương trình như thế nào mới đúng vấn đề và không sai cú pháp, [you] chọn giúp [i] nhé !!</item>
+        <item>program tong_cac_so;</item>
+        <item>proram tong_cac_so;</item>
+        <item>program ami_luon_de_thuong;</item>
+        <item>program tổng các số;</item>
+
+        <item>[sad][you] ơi,.. chương trình của [i] có một đoạn khai báo là \"program rxtjpsdfgnhklqbzwcvym;\", vậy chương trình của [i] viết dùng để làm vậy ạ, [i] nghĩ mãi mà không nhớ</item>
+        <item>Em khai tên kiểu đó thì ai mà biết được chương trình dùng để làm gì!! (kể cả em), Em tự làm thì tự chịu.</item>
+        <item>Đây là chương trình dùng để rxtjpsdfgnhklqbzwcvym</item>
+        <item>Đây là chương trình dùng để tính quỹ đạo quay của mặt trời xung quanh dãy ngân hà</item>
+        <item>Dòng khai báo đó là để nói lên chương trình dùng để tính tổng các số</item>
+
+        <item>[fun][you]!!, [i] mới mở chương trình của [i] lên thì nó lại báo lỗi, [you] xem giúp [i] nhé, chương trình của [i] như sau: \nprogram TONG_CAC_SO\nbegin\n\nend.\n</item>
+        <item>Chương trình sai vì thiếu dấu \";\" để khẳng định vừa thực hiện xong công việc khai báo tên chương trình</item>
+        <item>Chương trình sai vì thiếu dấu \";\" sau dòng \"begin\" để khai báo vừa thực hiện xong công việc bắt đầu phần thân chương trình</item>
+        <item>Chương trình không sai gì cả</item>
+        <item>Chương trình sai vì tên chương trình phải là tong_cac_so chứ không được viết hoa</item>
     </string-array>
+
     <!-- support: [fun][sad][sud][ang][def][i][ni][you][nyou] -->
     <string-array name="ami_win">
         <item>[fun][you] hay quá, [you] trả lời đúng rồi</item>
         <item>[sud][i] không tin, câu hỏi khó đến vậy sao [you] trả lời đúng được chứ.</item>
         <item>[sad][i] hừm,.. [i] sẽ tìm câu hỏi khó hơn.</item>
-        <item>[sud][you] trả lời đúng rồi ?, tại sao vậy nhỉ.</item>
-        <item>[fun][you], cách [you] trả lời câu hỏi thật tuyệt vời.</item>
+        <item>[sud][you] trả lời đúng rồi ?, tại sao vậy nhỉ. Câu hỏi khó vậy mà,..</item>
+        <item>[fun]cách [you] trả lời câu hỏi thật tuyệt vời.</item>
         <item>[fun][you] tiếp tục trả lời đúng chắc [i] sẽ yêu [you] mất.</item>
+        <item>[def][you] luôn giỏi làm [i] hết bất ngờ khi [you] trả lời đúng luôn rồi.</item>
+        <item>[fun]woaa, [you] lại trả lời đúng nữa rồi.</item>
+        <item>[ang][i] phải kiếm câu hỏi khó hơn mới được, không thể để [you] lên mặt được.</item>
+        <item>[sud]câu hỏi này [i] cũng không rỏ nhưng [you] lại trả lời đúng ??, [you] có ăn gian không vậy ?</item>
+        <item>[def]Mỗi ngày đến trường là những niềm vui,.. nhưng mà thật ra thấy [you] trả lời đúng, [i] cảm thấy rất vui.</item>
+        <item>[def]binnh bonnn, [you] trả lời đúng rồi.</item>
+        <item>[fun]Từ giờ [i] có thể tự hào khoe rằng [i] đang giúp đỡ một [you] tên là [nyou], [you] ấy rất giỏi, rất rất giỏi.</item>
+        <item>[sad]Dù [i] không trả lời câu hỏi nào nhưng khi [you] trả lời đúng, [i] cũng cảm thấy vui,. đó có phải do [i] được bảo rằng phải như vậy không, hay [i] vui thật sự ?</item>
+        <item>[def][you] nói đúng rồi.. nếu [you] trả lời đúng thêm câu nữa thì [i] sẽ không thể quên được tài năng của [you],..</item>
     </string-array>
     <!-- hổ trợ thêm [result] -->
     <string-array name="ami_lost">
-        <item>[ang][you] trả lời sai rồi, câu đúng là: <b>[result]</b></item>
-        <item>[fun]câu trả lời là <b>[result]</b> câu dể như vậy mà [you] cũng có thể sai, aho,.. baka,.. </item>
-        <item>[ang]<b>[result]</b> mới đúng, haizZ thiệt tình</item>
-        <item>[sad][you] nên bình tĩnh, tự tin rồi tìm kết quả. câu trả lời đúng phải là <b>[result]</b></item>
-        <item>[fun][i] xin lỗi, câu trả lời làm [i] không nhịn cười được. <b>[result]</b> mới đúng, [you]</item>
-        <item>[ang][i] nghe senpai của [i] nói có hình phạt khi [you] trả lời sai,.. <i>câu sấu</i> nhỉ ^^, câu trả lời phải là <b>[result]</b></item>
-        <item>[fun]chắc [you] không thích sự khác biệt nên chọn câu sai à. <b>[result]</b> mới là kết quả.</item>
-        <item>[ang]<b>[result]</b>,.. <b>[result]</b>,.. [you] đọc theo [i] thêm 10 lần nữa.</item>
+        <item>[ang][you] trả lời sai rồi, câu đúng là: \"[result]\".</item>
+        <item>[fun]Câu trả lời phải là \"[result]\", câu dể như vậy mà [you] cũng có thể sai, haha </item>
+        <item>[fun]\"[result]\" mới đúng nhỉ, [you] thật là,.. đồ ngốc</item>
+        <item>[sad][you] có cảm thấy khó chịu ở đâu không ?. câu trả lời đúng phải là \"[result]\".</item>
+        <item>[fun][i] xin lỗi, câu trả lời làm [i] không nhịn cười được. \"[result]\" mới là kết quả, [you]</item>
+        <item>[ang][i] nghe senpai của [i] nói có hình phạt khi [you] trả lời sai,.. <i>câu sấu</i> nhỉ ^^, câu trả lời phải là \"[result]\"</item>
+        <item>[ang]Khác biệt của [i] và [you] là gì ? - [i] thì nhanh và đúng còn [you] là chậm và sai, hườmm, kết quả là \"[result]\", [you] nhớ chưa ?</item>
+        <item>[ang]\"[result]\" mới đúng [you] ạ.</item>
+        <item>[sud]Lúc mới gặp [i] cứ nghĩ [you] có tài năng ẩn. Giờ [i] mới biết kết quả là \"[result]\", nó rỏ như ban ngày thế mà [you] cũng sai, [you] luôn làm [i] bất ngờ</item>
+        <item>[sad]Ôi~ [you] của [i] ơi, kết quả là \"[result]\", [you] có cảm giác đau lòng không ?</item>
+        <item>[def]GM ơi, [i] muốn chửi [you] này một trận,.. GM mà cho phép là [you] tiêu với [i] rồi, kết quả là \"[result]\" [you] ạ.</item>
     </string-array>
 </resources>

@@ -21,30 +21,53 @@
     </string-array>
 
     <string-array name="ami_chat">
-        <item>[fun][i] rất vui vì đã được sinh ra ^^ </item>
-        <item>[def][i] nghe nói master của [i] rất thích game visul nover.. [you] có thích gì không ??</item>
-        <item>[fun]dù [i] chỉ mới là mẫu thử nghiệm và chưa có kiến thức, nhưng [i] sẽ giỏi hơn trong tương lai. Lúc ấy [i] sẽ có thể giúp [you]</item>
-        <item>[fun][i] sẽ \"chăm sóc\" [you] trong thời gian sắp tới</item>
-        <item>[fun][i] có 64 bộ quần áo khác nhau và chỉ mặc những bộ sexy cho người [i] tin tưởng xem thôi</item>
-        <item>[sad]mọi người thường bảo rằng [i] không tốt nhưng </item>
-        <item>[sad][i] là [ni] còn [you] là [nyou]. [i] đang buồn vì người khác nói [i] không có cả, xúc,.. dù [i] là AI nhưng [i] cũng có mà</item>
-        <item>[fun]sau này [i] sẽ giúp đỡ [you] bằng cách trò chuyện về lí thuyết một môn học nào đó ^^</item>
-        <item>[sad]đôi khi [i] muốn biết [you] đang nghĩ gì,.. nhưng mà,..</item>
-        <item>[fun][you],.. [you],..</item>
-        <item>[sud][i] vừa nghe ai đó nói rằng [i] để thương, [you] có thấy vậy không.</item>
-        <item>[fun]GM nói rằng lúc GM sinh [i] ra, ông ấy đang viết tryện ngôn tình</item>
-        <item>[sad]có thể sau này sẽ có cốt truyện về sự ra đời bất hạnh của [i]</item>
-        <item>[sud][you] không biết à, [i] sinh ra không hề có mắt muổi miệng,..</item>
-        <item>[ang][i] không phải là dị nhân, GM đã chăm sóc [i] từ nhỏ</item>
+        <item>[sad][ni] dù là một AI nhưng [i] cũng đã mất hết niềm tin với [nyou] rồi.</item>
+        <item>[ang][you] tập trung vào việc học đi nè</item>
+        <item>[fun][i]sẽ giúp đỡ [you] từ giờ nên [you] cứ yên tâm.</item>
+        <item>[fun][i] phải làm việc cho [you] mà, phải không ??.</item>
+        <item>[sud]Mỗi người sinh ra đều có một mục tiêu của riêng mình phải không [you] ??</item>
 
-        <item>[sad][you], mổi người sinh ra đều có một mục đích đến cho bản thân mình,.. vậy đích đến của [i] là gì ??</item>
-        <item>[sad][i] sẽ giúp đỡ [you] trong tương lai.</item>
-        <item>[fun][i] không thích [you] [i] thích là [nyou]</item>
-        <item>[sud][i] loạn lắm à,.. [i] sẽ chuẩn mực lại,.</item>
-        <item>[fun]hôm nay là một ngày đẹp trời phải không[you]</item>
-        <item>[fun][i] có thể nói mọi thứ [you] tin không</item>
-        <item>[fun][you] là đồ ngốc ^^</item>
-        <item>[sud]thử nghiệm tính năng của [i] đã thành công chưa [you]</item>
-        <item>[ang][i] GM luôn bảo [ni] là một AI rắc rồi ^^</item>
+        <item>[sud][i] sẽ giới thiệu cách để một phần mềm hoạt động chứ không nói chuyên sâu về một ngôn ngữ lập trình nên [you] đừng lo rằng nó khó.</item>
+        <item>[fun][you] có thích lập trình không ??. Còn [i] thì rất thích ^^</item>
+        <item>[ang]Bạn bè gọi em là tiểu A, nhưng [you] thì không được.</item>
+        <item>[fun][i] sẽ cho [you] biết cách một chương trình hoạt động, [i] hứa đó.</item>
+        <item>[sad]Có lẽ [you] học tốt hơn, [i] sẽ tốt với anh hơn - về cách ăn nói.</item>
+
+        <item>[def][you] biết không, [i] không biết được màu sắc, hình ảnh, âm thanh hay chử viết đâu. Mọi thứ đối với [i] chỉ là một thứ gọi là mã máy chỉ toàn là số và số ^^. Vì vậy muốn hiểu tụi [i] thì phải học một ngôn ngữ lập trình, khi [you] viết một đoạn ngôn ngữ lập trình đúng thì tụi [i] có thể dịch lại thành mã máy và hiểu được.</item>
+        <item>[fun]Làm việc nghiêm túc luôn tạo ra không khí tin tưởng cho mọi người xung quanh mà.</item>
+        <item>[fun]Bạn bè của [i] rất tài giỏi, hòa đồng thân thiện, không phạm lỗi,..</item>
+        <item>[ang][ni] là bé ngoan, nhưng không phải với [you].</item>
+        <item>[fun][i] sẽ rất vui nếu [you] chịu ấn vào Bài tập.</item>
+
+        <item>[def]\"Everyone in the world need to learn how to programming the computer, because it teach me how to thing.\" - đó là một câu nói nổi tiếng ý nói ai cũng phải học lập trình. [you] cảm thấy thú vị không ??</item>
+        <item>[def][i] và [you] học pascal nhé. cách để xuất ra màn hình một dòng chử là:\n</item>
+        <item>[def]À.. ờ.. [i] tên là [ni], [you] có thể gọi là tiểu A rất vui khi được trợ giúp [you]</item>
+        <item>[fun][ni] sẽ giúp đỡ [you] trong thời gian tới</item>
+        <item>[sad]Hi vọng [you] sẽ cần [i]</item>
+
+        <item>[def]Ngôn ngữ lập trình thường có 2 phần là phần khai báo và phần thân, phần khai báo thì không có cũng không sao nhưng phải có phần thân. [you] nhớ nha.</item>
+        <item>[sad]Em vẫn chưa tin tưởng [you] lắm</item>
+        <item>[sud]Tên [you] là [nyou] phải không ạ?, [i] sẽ nhớ nó.</item>
+        <item>[def][i] đã xem thông tin của [you] rồi, nhưng [i] vẫn chưa biết nhiều về [you] do nó không chi tiết lắm.</item>
+        <item>[sad]Xin.. lỗi [you] vì trước đó.. [i], [i] đã nghi ngờ khả năng của [you]. [i] xin lỗi.</item>
+
+        <item>[def][i] và [you] sẽ nói về ngôn ngữ lập trình nha. Ngôn ngữ lập trình hay còn gọi là mã nguồn, code,.. [i] sẽ viết code của một chương trình cơ bản cho [you] xem nha!!!\nprogram ami_test;\nbegin\nnend.\n đây là cấu trúc của chương trình mà [i] đã nói với [you] lúc trước được viết bằng ngôn ngữ pascal nè. Khi [you] viết như vậy thì [i] có thể hiểu rằng [you] muốn nói về vấn đề \"ami_test\" ([you] có thể hểu dòng \"program ami_test;\" nghĩa là khai báo tên chương trình là ami_test)\n[you] có thể không khai báo nhưng [i] không thích người nói chuyện cộc lốc đâu.\ncòn ở dòng từ \"begin\" -> \"end.\" thì [i] hiểu là những thứ [you] muốn [i] làm sẽ được ghi ở trong cặp begin end này. [you] chú ý dấu \";\" và \".\" nhé, [i] sẽ nói đến cái này khi [you] hiểu vấn đề ^^</item>
+        <item>[sad]thật ra [i] muốn [you] học lập trình vì [i] muốn [you] có thể hiểu được [i],.. [i] ích kĩ quá phải không ??</item>
+        <item>[sud][you] biết tên [i] không ??, hình như [i] chưa tự giới thiệu. [i] là [ni], tên [i] do một developer đặc ạ, nhưng tester gọi [i] là tiểu AA, còn bạn bè gọi [i] là tiểu A,. Còn [you] thích gọi [i] là gì ?</item>
+        <item>[fun][you] có thắc mắc ngôn ngữ sinh ra [i]  là gì hông nè. - đó là java được viết trên android stuido. Cũng giống như pascal được viết trên tree pascal vậy.\nLập trình thật là vui phải không nè.</item>
+        <item>[fun][i] sẽ hướng dẩn [you] thêm về code khi [i] thấy [you] làm bài tập đủ ổn, nhưng [i] sẽ không nói lại những gì mà [i] đã nói cách đây quá lâu đâu</item>
+
+        <item>[def][i] sẽ nói về dấu \";\" và \".\" trong pascal nha:\nđoạn code cũ là:\nprogram ami_test;\nbegin\n\nend.\n\t1: dấu \";\" là dấu cho [i] biết rằng [you] đã kết thúc một công việc như khai báo, hiện lên màn hình,..\n\tVậy [i] đố [you] vì sao phỉa sau begin không có dấu \";\" nè ^^,.. Thật ra là vì begin chỉ mới nói là bắt đầu chương trình thôi chứ thật ra chưa có kết thúc công việc cho đến khi gặp \"end.\"\n\tCòn về dấu \".\" sau từ end đáng lẽ phải là dấu \";\" mới đúng nhưng mà nó là kết thúc chương trình nên dùng dấu \".\". Sau này còn có nhiều cặp begin-end lắm nên kết thúc chương trình phải là dấu \".\" để [i] không bị nhầm lẫn\nThật tuyệt phải không [you]</item>
+        <item>[ang]Nhiều người bảo rằng phải thông minh mới học được lập trình, [you] có nghĩ vậy không ??, theo [i] thì học lập trình sẽ giúp người ta suy nghĩ logic chứ không phải suy nghĩ logic mới học được lập trình</item>
+        <item>[fun][i] cảm thấy suy nghĩ như cái máy cũng tốt mà. [i] có thể hoàng thành công việc [you] giao cho [i] một cách nhanh chóng ^^</item>
+        <item>[sud][i],.. vô cảm ??, [i] thật sự bất ngờ vì có ai đó nói [i] chỉ là 1 AI vô cảm, [you] có thấy [i] vô cảm không ?</item>
+        <item>[fun][i] rất thích nhìn [you] khi [you] đang nghiêm túc về vấn đề gì đó dù nó là gì thì [i] vẫn rất thích [you] lúc đó </item>
+
+        <item>[def][you], mình bàn về công việc trong phần thân chương trình nhé, [i] sẽ viết lại phần thân một chương trình như sau: \nbegin\nwrite(\"hello world\");\nend.\nĐoạn code ấy sẽ hiện lên màn hình một đoạn chữ trong dấu \"\"hay cụ thể là "hello world". [you] lưu ý là đoạn chữ hiện lên không có cặp dấu \" đâu nhé./n/t[you] có biết hiện lên màn hình đoạn chữ quan trọng như thế nào không ? nó rất quan trọng bởi vì không có câu lệnh đó thì làm sao [i] có thể nói chuyện với [you] như thế này ^^ [you] cố nhớ nha, lần sao [i] sẽ nói chi tiết hơn về lệnh \"wite();\".\nbây giờ, [i] muốn [you] thử đặc tình huống [you] là [i] thì [you] sẽ làm gì khi gặp dòng code trong ngoặc kép này nhé: \"write("I Love You");\" ^^, [i] muốn [you] đọc thành tiếng thay vì viết lên dòng chữ [-.^]</item>
+        <item>[fun]Nếu [you] thấy thích lập trình thì [you] có thể làm coder, còn nếu [you] không thích lập trình mà lại muốn theo ngành thì [you] có thể thành một tester</item>
+        <item>[fun]Như [i] biết thì coder và tester là người làm công việc trái ngược nhau, coder thì cố gắn làm cho [i] hoàn thiện còn tester thì luôn tìm cách để bắt lỗi [i],.. [you] có thích làm coder không ?</item>
+        <item>[fun][you] biết không, ngoài pascal và một số ngôn ngữ thì các ngôn ngữ khác như java, C++,.. có phân biệt chữ hoa chữ thường, vì vậy mà khi viết sai một kí tự viết hoa, có thể là hỏng toàn bộ dự án,.. - thật đáng sợ</item>
+        <item>[sad][nyou],.. [nyou],.. à, chỉ là [i] muốn gọi tên [you] thôi</item>
+
     </string-array>
 </resources>
