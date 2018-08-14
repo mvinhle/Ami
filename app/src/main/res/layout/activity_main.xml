@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    android:background="@color/mainBackground"
+    android:background="@drawable/backgroundmain"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -35,7 +35,8 @@
             android:layout_height="match_parent"
             android:text="@string/ClickYes"
             android:textSize="20sp"
-            android:layout_marginHorizontal="25dp"/>
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp"/>
         <Button
             android:id="@+id/ButtonNo"
             android:layout_width="0dp"
@@ -43,6 +44,7 @@
             android:layout_height="match_parent"
             android:text="@string/ClickNo"
             android:textSize="20sp"
-            android:layout_marginHorizontal="25dp"/>
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp"/>
     </LinearLayout>
 </LinearLayout>

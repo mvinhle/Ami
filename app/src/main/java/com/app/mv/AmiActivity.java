@@ -146,7 +146,6 @@ public class AmiActivity extends AppCompatActivity {
                 if (trust > TL_CHAT){
                     chat = (int) trust / TL_CHAT;
                 }
-                setSharedPreferencesTrust(CHAT_WIN);
                 if (chat < 1){
                     textViewAmiChat.setText(chatWithAmi(textAmiChat[0]));
                 }
@@ -157,6 +156,7 @@ public class AmiActivity extends AppCompatActivity {
                     textViewAmiChat.setText(chatWithAmi(textAmiChat[helpData.randomRange((textAmiChat.length - CHAT_ABOUT), textAmiChat.length)]));
                 }
                 Log.d(HelpData.KEY_LOG, "Click vào chat: index about chat: "+chat);
+                setSharedPreferencesTrust(CHAT_WIN);
             }
         });
 
@@ -171,7 +171,7 @@ public class AmiActivity extends AppCompatActivity {
                         setIndexDefault(true);
                     }
                     else {
-                        changeRoom-=1;
+                        changeRoom -= 1;
                         textViewStt.setText("Độ lười: "+changeRoom);
                     }
                 }

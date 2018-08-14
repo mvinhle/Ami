@@ -3,6 +3,8 @@
     android:background="@color/white"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:layout_marginLeft="25dp"
+    android:layout_marginRight="25dp"
     android:orientation="horizontal"
     android:weightSum="10"
     xmlns:android="http://schemas.android.com/apk/res/android" >
@@ -37,7 +39,7 @@
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text="@string/ClickYes"
-                android:layout_margin="20dp"
+                android:layout_margin="10dp"
                 android:textSize="20sp"/>
             <Button
                 android:id="@+id/deletaDataNo"
@@ -45,7 +47,7 @@
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text="@string/ClickNo"
-                android:layout_margin="20dp"
+                android:layout_margin="10dp"
                 android:textSize="20sp"/>
         </LinearLayout>
     </LinearLayout>

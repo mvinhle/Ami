@@ -6,18 +6,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:icon="@drawable/iconedit"
-        android:title="Sửa thông tin cá nhân"/>
+        android:title="@string/editMenu"/>
     <item
         android:id="@+id/deleteData"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:icon="@drawable/icondeletedata"
-        android:title="Xóa tất cả dử liệu" />
+        android:title="@string/deleteDataMenu" />
     <item
         android:id="@+id/exit"
         app:showAsAction="always"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:icon="@drawable/iconexit"
-        android:title="thoát" />
+        android:title="@string/exitMenu" />
 </menu>

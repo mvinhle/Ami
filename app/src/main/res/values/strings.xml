@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Tiểu AA</string>
+    <string name="titleMain">Tiểu AA - thông báo</string>
 
     <string name="noteAplication">
         <b>QUAN TRỌNG, CẦN ĐỌC KĨ</b>\n
@@ -13,6 +14,7 @@
     <string name="ClickYes">Đồng ý</string>
     <string name="ClickNo">Không đồng ý</string>
 
+    <string name="titleActivityInformation">Ami đang muốn biết một ít thông tin về bạn</string>
     <string name="titleInformartion"><b>Thông tin cá nhân</b></string>
     <string name="noteInformation">
         chú ý:\n\t\t>|-<u>Vui lòng điền đầy đủ thông tin.</u>\n
@@ -42,4 +44,14 @@
         \tBạn thật sự muốn xóa <b>tất cả dữ liệu</b> trong trò chơi ??\n
         \tVui lòng ấn vào \"Đồng ý\" <u>16</u> lần.\n
         \tẤn vào \"Không đồng ý\" để quay trở lại</string>
+
+    <string name="editMenu">Sửa thông tin cá nhân</string>
+    <string name="deleteDataMenu">Xóa tất cả dử liệu</string>
+    <string name="messengerExit">
+        Cảm ơn vì đã tin dùng Ami - phần mềm hổ trợ học tập\n
+        ấn vào tiếp tục để thoát khỏi phầm mềm.
+    </string>
+    <string name="exitMenu">Thoát</string>
+    <string name="continueExit">Tiếp tục</string>
+    <string name="cancelExit">Quay lại</string>
 </resources>

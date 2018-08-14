@@ -11,7 +11,6 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -24,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        setTitle("Tiểu AA - thông báo");
+        setTitle(getResources().getString(R.string.titleMain));
         Button buttonYes = findViewById(R.id.ButtonYes);
 
         sharedPreferences      = getSharedPreferences(HelpData.KEY_INFORMATION, MODE_PRIVATE);
@@ -74,14 +73,14 @@ public class MainActivity extends AppCompatActivity {
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
                 builder.setTitle("Cảm ơn !!!");
                 builder.setIcon(R.drawable.iconexit);
-                builder.setMessage("\tCảm ơn vì đã tin dùng Ami - hổ trợ học tập\n\tấn vào tiếp tục để thoát khỏi phầm mềm");
-                builder.setPositiveButton("Tiếp tục", new DialogInterface.OnClickListener() {
+                builder.setMessage(getResources().getString(R.string.messengerExit));
+                builder.setPositiveButton(getResources().getString(R.string.continueExit), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         finish();
                     }
                 });
-                builder.setNegativeButton("Quay lại", new DialogInterface.OnClickListener() {
+                builder.setNegativeButton(getResources().getString(R.string.cancelExit), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i){}});
                 builder.show();
@@ -95,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
     private void dialogDeleteAllData(){
         final Dialog dialog = new Dialog(this);
         dialog.setContentView(R.layout.dialog_delete_data);
-//                dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        this.setFinishOnTouchOutside(false);
         dialog.setTitle(getResources().getString(R.string.deleteData));
         Button buttonYes = dialog.findViewById(R.id.deletaDataYes);
         Button buttonNo  = dialog.findViewById(R.id.deletaDataNo);
@@ -106,14 +105,15 @@ public class MainActivity extends AppCompatActivity {
                 if (clickDeleteData > 15){
                     SharedPreferences.Editor editor = sharedPreferences.edit();
                     editor.clear();
-                    editor.commit();
+                    editor.apply();
                     editor = sharedPreferencesTrust.edit();
                     editor.clear();
-                    editor.commit();
+                    editor.apply();
+                    clickDeleteData = 0;
                     Toast.makeText(MainActivity.this,getResources().getString(R.string.deleteDataComplete),Toast.LENGTH_SHORT).show();
                     dialog.cancel();
                 }
-                if (clickDeleteData / 5 == 0 && clickDeleteData > 0){
+                if (clickDeleteData % 5 == 0 && clickDeleteData > 0){
                     Toast.makeText(
                             MainActivity.this,
                             getResources().getString(R.string.deleteDataCompletess).replace("[n]",String.valueOf(clickDeleteData)),
@@ -124,7 +124,6 @@ public class MainActivity extends AppCompatActivity {
         buttonNo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                clickDeleteData = 0;
                 Toast.makeText(
                         MainActivity.this,
                         getResources().getString(R.string.deleteDataError),
@@ -133,5 +132,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         dialog.show();
+        if (dialog.isShowing()){
+            clickDeleteData = 0;
+        }
     }
 }
