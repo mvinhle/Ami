@@ -8,7 +8,6 @@
         <item>AI là Người máy (robot) có thể tự nói chuyện như người bình thường,..</item>
         <item>AI là Điện thoại thông minh có tính năng nhận diện khuông mặt, giọng nói,..</item>
         <item>AI là Lập trình game, ứng dụng có thể suy nghĩ linh hoạt.</item>
-
         <item>[fun]\"AI\" được ứng dụng ở đâu ?</item>
         <item>AI được sử dụng ở các thiết bị tự động</item>
         <item>AI chỉ dùng trong ngành công nghệ thông tin</item>
@@ -20,7 +19,6 @@
         <item>Làm một phần mềm di động</item>
         <item>Giải thích chi tiết cách em hoạt động.</item>
         <item>Tìm hiểu về ngôn ngữ lập trình pascal với tinh thần \"học lập trình thật là vui\"</item>
-
         <item>[fun][i] và [you] sẽ tìm hiểu lập trình thông qua ngôn ngữ nào ?</item>
         <item>Pascal vì ngôn ngữ này ngắn gọn, nhẹ, thích hợp để rèn luyện tư duy. Tạo nền tảng lập trình hướng cấu trúc.</item>
         <item>C vì đây là ngôn ngữ lập trình nổi tiếng trong các ngôn ngữ lập trình tiên phong, rất thích hợp làm nền tản cho người mới bắt đầu</item>
@@ -32,7 +30,6 @@
         <item>Vì Robert Hofstadter (chủ nhân Giải Nobel Vật lý năm 1961 nhờ tiên phong trong nghiên cứu về tán xạ điện tử trong hạt nhân và các khám phá liên quan đến cấu trúc của các nucleon) từng so sánh mã máy với mã gen: \"Nhìn vào một chương trình viết bằng mã máy không khác gì với việc nhìn vào các phân tử DNA của lần lượt từng nguyên tử.\"</item>
         <item>Vì khả năng đọc hiểu ngôn ngữ máy của con người hoàn toàn không thể hiểu mã máy</item>
         <item>Vì mã máy làm tốc độ thực hiện các công việc của chương trình nhanh hơn các ngôn ngữ lập trình.</item>
-
         <item>[fun]Theo [you] các thiết bị như điện thoại thông minh (smartphone) có thể nhận biết được những gì ?</item>
         <item>Smartphone chỉ có thể hiểu Ngôn ngữ máy (còn được gọi là máy ngữ hay mã máy; tiếng Anh là machine language hay machine code) thường có dạng nhị phân, thập lục phân,..</item>
         <item>Smartphone hiểu được các kí tự alphabet (kí tự la tinh như a,b,c,..)</item>
@@ -44,9 +41,8 @@
         <item>Vì nó cách mạng 4.0 nên học theo phong trào</item>
         <item>Vì câu nói \"Everyone in the world need to learn how to programming the computer, because it teach me how to thing.\"</item>
         <item>Vì niềm đam mê bên trong những coi người sinh ra vào thời đại công nghệ hóa, niềm đam mê tiền là một nguồn động lực để chúng ta có thể vực qua mọi khó khăn</item>
-
         <item>[fun]Vì sao [i] và [you] tìm hiểu pascal mà không phải ngôn ngữ khác ?</item>
-        <item>Vì thực tế các ngôn ngữ lập trình đều có nét giống nhau, học pascal để tạo nền tảng cho ngôn ngữ khác như java, javaScript, C, C++, rubi, php, python, kotin,..</item>
+        <item>Vì thực tế các ngôn ngữ lập trình đều có nét giống nhau, học pascal để tạo nền tảng cho ngôn ngữ khác như java, javaScript, C, C++, ruby, php, python, kotlin,..</item>
         <item>Vì pascal là ngôn ngữ đơn giản nhất</item>
         <item>Vì chỉ có pascal mới có thể rèn luyện tư duy</item>
         <item>Vì ngôn ngữ này ít được cập nhận nên không phải lo chạy đua cùng công nghệ</item>
@@ -56,20 +52,18 @@
         <item>Có 2 phần đó là phần đầu và phần thân, phần thân bắt buộc phải có.</item>
         <item>Có 3 phần đó là phần đầu, phần khai báo và phần thân, phần thân bắt buộc phải có.</item>
         <item>có 2 phần đó là phần khai báo và phần thân, phần khai báo bắt buộc phải có.</item>
-
         <item>[fun]Phần nào trong các ngôn ngữ lập trình có thể không có ?</item>
         <item>Phần khai báo</item>
         <item>Phần đầu</item>
         <item>Tất cả đầu sai</item>
         <item>Phần thân</item>
 
-        <item>[fun][i] đố [you] nè, trong đoạn mã nguồn sau: \nprogram ami_test;\nbegin\nnend.\n đâu là phần khai báo ?</item>
+        <item>[fun][i] đố [you] nè, trong đoạn mã nguồn sau: \nprogram ami_test;\nbegin\nend.\n đâu là phần khai báo ?</item>
         <item>Phần khai báo là dòng \"program ami_test;\"</item>
         <item>Phần khai báo là dòng \"begin\"</item>
         <item>Phần khai báo là dòng \"end.\"</item>
         <item>Phần khai báo là từ dòng \"begin\" đến dòng \"end.\"</item>
-
-        <item>[fun][i] đố [you] nè, trong đoạn mã nguồn sau: \nprogram ami_test;\nbegin\nnend.\n đâu là phần Thân ?</item>
+        <item>[fun][i] đố [you] nè, trong đoạn mã nguồn sau: \nprogram ami_test;\nbegin\nend.\n đâu là phần Thân ?</item>
         <item>Phần thân là từ dòng \"begin\" đến dòng \"end.\"</item>
         <item>Phần thân là dòng \"program ami_test;\"</item>
         <item>Phần thân là dòng \"begin\"</item>
@@ -80,18 +74,66 @@
         <item>proram tong_cac_so;</item>
         <item>program ami_luon_de_thuong;</item>
         <item>program tổng các số;</item>
-
         <item>[sad][you] ơi,.. chương trình của [i] có một đoạn khai báo là \"program rxtjpsdfgnhklqbzwcvym;\", vậy chương trình của [i] viết dùng để làm vậy ạ, [i] nghĩ mãi mà không nhớ</item>
         <item>Em khai tên kiểu đó thì ai mà biết được chương trình dùng để làm gì!! (kể cả em), Em tự làm thì tự chịu.</item>
         <item>Đây là chương trình dùng để rxtjpsdfgnhklqbzwcvym</item>
         <item>Đây là chương trình dùng để tính quỹ đạo quay của mặt trời xung quanh dãy ngân hà</item>
         <item>Dòng khai báo đó là để nói lên chương trình dùng để tính tổng các số</item>
 
-        <item>[fun][you]!!, [i] mới mở chương trình của [i] lên thì nó lại báo lỗi, [you] xem giúp [i] nhé, chương trình của [i] như sau: \nprogram TONG_CAC_SO\nbegin\n\nend.\n</item>
+        <item>[sad][you]!!, [i] mới mở chương trình của [i] lên thì nó lại báo lỗi, [you] xem giúp [i] nhé, chương trình của [i] như sau: \nprogram TONG_CAC_SO\nbegin\nend.\n</item>
         <item>Chương trình sai vì thiếu dấu \";\" để khẳng định vừa thực hiện xong công việc khai báo tên chương trình</item>
         <item>Chương trình sai vì thiếu dấu \";\" sau dòng \"begin\" để khai báo vừa thực hiện xong công việc bắt đầu phần thân chương trình</item>
         <item>Chương trình không sai gì cả</item>
         <item>Chương trình sai vì tên chương trình phải là tong_cac_so chứ không được viết hoa</item>
+        <item>[sad][you] ơi!!, [i] đang viết lại cấu trúc của một chương trình thì máy tính của [i] báo lỗi, [you] giúp [i] xem lại cấu trúc chương trình của [i] nhé, chương trình của [i] như sau: \n\"\"\"\nprogram cau_truc_chuong_trinh;\nbegin\nend;\n\"\"\"\n [you] giúp [i] nhé.</item>
+        <item>Chương trình sai vì end. kết thúc chương trình phải dùng dấu \".\" chứ không phải dấu \";\"</item>
+        <item>Chương trình sai vì thiếu dấu \";\" để khẳng định vừa thực hiện xong công việc khai báo tên chương trình</item>
+        <item>Chương trình sai vì thiếu dấu \";\" sau dòng \"begin\" để khai báo vừa thực hiện xong công việc bắt đầu phần thân chương trình</item>
+        <item>Chương trình không sai gì cả</item>
+
+        <item>[fun]Theo [you] chương trình này chính xác là đang làm gì ? \n\"\"\"\nbegin\nwrite(\"xin chao\");\nend.\n\"\"\"\n</item>
+        <item>Chương trình in ra dòng chử: xin chao</item>
+        <item>Chương trình bị lỗi vì không khai báo</item>
+        <item>Chương trình in ra màn hình dòng chử: \"xin chao\"</item>
+        <item>Chương trình không làm gì cả</item>
+        <item>[fun][you] ơi, làm thế nào để in ra dòng chử \"I Love You\" (không có dấu \"), cái này khó quá, [you] giúp [i] nhé</item>
+        <item>\"\"\"\nbegin\nwrite(\"I Love You\");\nend.\n\"\"\"</item>
+        <item>\"\"\"\nbegin\nwrite(\"sorry, I don't Like You\");\nend.\n\"\"\"</item>
+        <item>\"\"\"\nbegin;\nwrite(\"I Love You\");\nend.\n\"\"\"</item>
+        <item>\"\"\"\nbegin\nwrite(\"I Love You\");\nend;\n\"\"\"</item>
+
+        <item>[fun][you] ơi, làm sao để có thể tạo một không gian lưu các số nguyên ?</item>
+        <item>Ở dưới dòng khai báo tên chương trình và khai báo hằng (nếu có) khai báo biến như sau: \nvar so_nguyen : integer;</item>
+        <item>Ở trong phần thân chương trình viết như sau: \nvar so_nguyen : integer;</item>
+        <item>Viết \"int so_nguyen;\" ở bất kì vì trí nào trong chương trình</item>
+        <item>Viết \"i = 1;\" ở bất kì vị trí nào chương trình sẽ tự tạo vùng không gian thích hợp</item>
+        <item>[sad][you] ơi, sao chương trình của [i] bị GM bảo là viết sai, [you] xem giúp [i] với: \n\"\"\"\nvar i : integer;\nbegin\ni := "co len";\nend.\n\"\"\"</item>
+        <item>Vì biến i thuộc kiểu integer (số nguyên) nên không thể lưu dũ liệu kiểu chuổi</item>
+        <item>Vì GM bị ngu</item>
+        <item>Do quên khai báo tên chương trình</item>
+        <item>do dấu := là lệnh gán, lệnh gán sẽ lưu giá trị phía bênh phải vào biến ở bênh trái</item>
+
+        <item>[fun][you],.. làm sao để lưu số 255 vào biến được khai báo như sau: \n\"\"\"\nvar bien_so : integer;\n\"\"\"\n [you]!!</item>
+        <item>Trong phần thân viết là: bien_so := 255;</item>
+        <item>Trong phần thân viết là: bien_so_nguyen := 255;</item>
+        <item>Trong phần thân viết là: bien_so := 127;</item>
+        <item>Trong phần khai báo viết là: bien_so := 255;</item>
+        <item>[sad][you] ơi, [i] muốn viết hiển thị ra màn hình số \"127\" được lưu trong biến \"so_127\" thì nên viết trong phần thân như thế nào trong 4 cách sau ? </item>
+        <item>write(so_127);</item>
+        <item>write("so_127");</item>
+        <item>writeln("so_127");</item>
+        <item>write(127);</item>
+
+        <item>[fun][i] không biết cách để hiện lên một dòng chử \"so tien la\"(số tiền là) sau đó hiện tiếp một số lưu trong biến tên là \"tien\" chỉ trong một câu lệnh, [you] có biết cách nào không? </item>
+        <item>writeln(\"so tien la\",tien);</item>
+        <item>write(\"so tien la" + tien);</item>
+        <item>writeln(so tien la, "tien");</item>
+        <item>write("so tien la 2000");</item>
+        <item>[def][you], làm cách nào đê lưu giá trị số nguyên (ví dụ: 200) vào biến kiểu số thực (ví dụ: real)</item>
+        <item>Dùng lệnh gán \":= \"như bình thường vì như ví dụ thì 200 cũng là 200.0 (thuộc kiểu số thực)</item>
+        <item>Dùng phép nhân và chia để biến số nguyên thành số thực rồi gán vào, ví dụ: \nbien_so_thu := (200 / 0.5) * 0.5;</item>
+        <item>Không có cách nào cả vì số nguyên không thể trở thành số thực</item>
+        <item>Vũ trụ bao la luôn có vô vàng điều mới lạ,.. ... </item>
     </string-array>
 
     <!-- support: [fun][sad][sud][ang][def][i][ni][you][nyou] -->
@@ -122,8 +164,8 @@
         <item>[ang][i] nghe senpai của [i] nói có hình phạt khi [you] trả lời sai,.. <i>câu sấu</i> nhỉ ^^, câu trả lời phải là \"[result]\"</item>
         <item>[ang]Khác biệt của [i] và [you] là gì ? - [i] thì nhanh và đúng còn [you] là chậm và sai, hườmm, kết quả là \"[result]\", [you] nhớ chưa ?</item>
         <item>[ang]\"[result]\" mới đúng [you] ạ.</item>
-        <item>[sud]Lúc mới gặp [i] cứ nghĩ [you] có tài năng ẩn. Giờ [i] mới biết kết quả là \"[result]\", nó rỏ như ban ngày thế mà [you] cũng sai, [you] luôn làm [i] bất ngờ</item>
+        <item>[sud]Lúc mới gặp [i] cứ nghĩ [you] có tài năng ẩn. Giờ [i] mới biết, dù kết quả là \"[result]\" rỏ như ban ngày thế mà [you] cũng sai, [you] luôn làm [i] bất ngờ</item>
         <item>[sad]Ôi~ [you] của [i] ơi, kết quả là \"[result]\", [you] có cảm giác đau lòng không ?</item>
-        <item>[def]GM ơi, [i] muốn chửi [you] này một trận,.. GM mà cho phép là [you] tiêu với [i] rồi, kết quả là \"[result]\" [you] ạ.</item>
+        <item>[def]GM ơi, [i] muốn chửi [you] này một trận,.. GM mà cho phép là [you] tiêu với [i] rồi, kết quả là \"[result]\", [you] ạ.</item>
     </string-array>
 </resources>

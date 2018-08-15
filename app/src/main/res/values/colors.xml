@@ -9,6 +9,6 @@
     <color name="blu">#0033ff</color>
     <color name="black">#000000</color>
     <color name="background_layoutButton">#be000000</color>
-    <color name="background_textView">#beffffff</color>
+    <color name="background_textView">#beffe9e9</color>
     <color name="mainBackground">#ccb0b0</color>
 </resources>

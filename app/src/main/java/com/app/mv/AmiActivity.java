@@ -181,7 +181,7 @@ public class AmiActivity extends AppCompatActivity {
                 else if (test < 0){test = 30;}
                 int ran = helpData.randomRange(test);
                 int rand = ran - (ran % 5);
-                String textTest = chatWithAmi(textAmiTest[rand]) + "\n";
+                String textTest = chatWithAmi("<^>" + textAmiTest[rand]).concat("\n\n");
                 Integer nT[] = {2,3,4};
                 ArrayList<Integer> NT = new ArrayList<>(Arrays.asList(nT));
                 Collections.shuffle(NT);
@@ -190,26 +190,26 @@ public class AmiActivity extends AppCompatActivity {
                 String N2 = textAmiTest[rand+NT.get(1)];
                 String N3 = textAmiTest[rand+NT.get(2)];
                 String testY[][]  = {
-                        {getResources().getString(R.string.A).concat(": ").concat(N0),
-                                getResources().getString(R.string.B).concat(": ").concat(N1),
-                                getResources().getString(R.string.C).concat(": ").concat(N2),
-                                getResources().getString(R.string.D).concat(": ").concat(N3)},
-                        {getResources().getString(R.string.A).concat(": ").concat(N1),
-                                getResources().getString(R.string.B).concat(": ").concat(N0),
-                                getResources().getString(R.string.C).concat(": ").concat(N2),
-                                getResources().getString(R.string.D).concat(": ").concat(N3)},
-                        {getResources().getString(R.string.A).concat(": ").concat(N1),
-                                getResources().getString(R.string.B).concat(": ").concat(N2),
-                                getResources().getString(R.string.C).concat(": ").concat(N0),
-                                getResources().getString(R.string.D).concat(": ").concat(N3)},
-                        {getResources().getString(R.string.A).concat(": ").concat(N1),
-                                getResources().getString(R.string.B).concat(": ").concat(N2),
-                                getResources().getString(R.string.C).concat(": ").concat(N3),
-                                getResources().getString(R.string.D).concat(": ").concat(N0)}
+                        {"\t"+getResources().getString(R.string.A).concat(": ").concat(N0).concat("\n\n"),
+                                "\t"+getResources().getString(R.string.B).concat(": ").concat(N1).concat("\n\n"),
+                                "\t"+getResources().getString(R.string.C).concat(": ").concat(N2).concat("\n\n"),
+                                "\t"+getResources().getString(R.string.D).concat(": ").concat(N3)},
+                        {"\t"+getResources().getString(R.string.A).concat(": ").concat(N1).concat("\n\n"),
+                                "\t"+getResources().getString(R.string.B).concat(": ").concat(N0).concat("\n\n"),
+                                "\t"+getResources().getString(R.string.C).concat(": ").concat(N2).concat("\n\n"),
+                                "\t"+getResources().getString(R.string.D).concat(": ").concat(N3)},
+                        {"\t"+getResources().getString(R.string.A).concat(": ").concat(N1).concat("\n\n"),
+                                "\t"+getResources().getString(R.string.B).concat(": ").concat(N2).concat("\n\n"),
+                                "\t"+getResources().getString(R.string.C).concat(": ").concat(N0).concat("\n\n"),
+                                "\t"+getResources().getString(R.string.D).concat(": ").concat(N3)},
+                        {"\t"+getResources().getString(R.string.A).concat(": ").concat(N1).concat("\n\n"),
+                                "\t"+getResources().getString(R.string.B).concat(": ").concat(N2).concat("\n\n"),
+                                "\t"+getResources().getString(R.string.C).concat(": ").concat(N3.concat("\n\n")),
+                                "\t"+getResources().getString(R.string.D).concat(": ").concat(N0)}
                 };
                 result = helpData.randomRange(testY.length);
                 for (String s : testY[result]){
-                    textTest = textTest.concat(s).concat("\n");
+                    textTest = textTest.concat(s);
                 }
                 textResult = testY[result][result];
                 Log.d(HelpData.KEY_LOG, "Click vào test: "+textTest+" result: "+N0);
