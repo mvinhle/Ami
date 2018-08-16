@@ -17,7 +17,7 @@ public class AmiActivity extends AppCompatActivity {
 
     int changeRoom = 6;
     boolean atHome = true;
-    int trust      = 2000;
+    int trust      = 140;
     int eyeChange,  eyebrowChange, featureChange,   mouthChange;
     String sYou = "bạn", sI = "em", sNI = "Ami", sNYou = "Vinh";
     int result = 0;
@@ -45,7 +45,6 @@ public class AmiActivity extends AppCompatActivity {
     Button buttonTouchHair, buttonTouchFace, buttonTouchBodyUp, buttonTouchBody;
 
     final int BODY_DEFAULT      = 1; // body.length;		// HAIR DEFAULT = BODY DEFAULT = 1
-    final int CLOTHES_DEFAULT   = 64;              		// [0, 63]
     final int EYE_TINY          = 2;
     final int EYE_BIG           = EYE_TINY + 4; 	    	// [indexTinyDefault,5] = 6 (4 is number of eyeBig)
     final int EYE_FUN           = EYE_BIG + 3; 	    	// [indexTinyBig, 9] = 10
@@ -61,18 +60,19 @@ public class AmiActivity extends AppCompatActivity {
     final int MOUTH_ANGRY       = MOUTH_FUN + 6; 		    // [MOUTH_FUN, 44] = 45
     final int MOUTH_SAD         = MOUTH_ANGRY + 6; 	    // [MOUTH_ANGRY, 50] = 51
     final int MOUTH_SUDDENT     = MOUTH_SAD + 6; 		    // [MOUTH_SAD, 56] = 57
-    final int TEST_WIN          = 100;  //x10 up 1 chat
-    final int TEST_LOST         = -70;  //x40 down 1 chat
-    final int CHAT_ABOUT        = 10;   //chat random [chat, chat + 10) // about 10 chat
-    final int CHAT_WIN          = 10;   //x100 up 1 chat
-    final int TL_CHAT           = 600;  // tỉ lệ 1 chat = 320 trust
-    final int TL_CLOTHES        = 700;  // tỉ lệ 1 clothe = 468 trust
-    final int TL_TEST           = 300;  // tỉ lệ 200 trust = 1 câu hỏi.
+    final int TL_CHAT           = 400;
+    final int CHAT_ABOUT        = 20;
+    final int CHAT_WIN          = 10;
+    final int TL_TEST           = 200;
+    final int TEST_ABOUT        = 20;
+    final int TEST_WIN          = 100;
+    final int TEST_LOST         = -70;
     final int TL_HELLO_WORLD    = 3000;
     final int HELLO_WORLD_ABOUT = 3;
-    final int CHANGE_ROOM       = 5;
-    final int TL_TOUCH          = 1000;
+    final int TL_TOUCH          = 700;
     final int TOUCH_ABOUT       = 5;
+    final int TL_CLOTHES        = 600;
+    final int CHANGE_ROOM       = 5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,19 +95,18 @@ public class AmiActivity extends AppCompatActivity {
         linearLayoutHome  = findViewById(R.id.linearLayout_home);
         linearLayoutClass = findViewById(R.id.linearLayout_class);
         linearLayoutBackground = findViewById(R.id.linearLayout_BackgroundHomeAndClass);
+        buttonTouch();
         changeHome(true);
-
         amiHelloWorldAndGetFile();
         buttonChat();
         buttonTest();
-        buttonTouch();
     }
 
     private void amiHelloWorldAndGetFile(){
         sharedPreferencesInformation = getSharedPreferences(HelpData.KEY_INFORMATION, MODE_PRIVATE);
         sharedPreferencesTrust = getSharedPreferences(HelpData.KEY_SHARED_TRUST, MODE_PRIVATE);
         editor                 = sharedPreferencesTrust.edit();
-        sNYou = sharedPreferencesInformation.getString(HelpData.KEY_NAME, ".. quên tên bạn mất rồi ^^..");
+        sNYou = sharedPreferencesInformation.getString(HelpData.KEY_NAME, "\"*..cười nhe răng..*\"");
         sYou  = sharedPreferencesInformation.getString(HelpData.KEY_SUB_NAME, "bạn");
         trust = sharedPreferencesTrust.getInt(HelpData.KEY_TRUST, trust);
 
@@ -183,11 +182,15 @@ public class AmiActivity extends AppCompatActivity {
                 }
                 changeHome(false);
                 int test = (int)  trust / TL_TEST;
-                if (test > textAmiTest.length) {test = textAmiTest.length;}
-                else if (test < 0){test = 30;}
-                int ran = helpData.randomRange(test);
+                if (test < 0){
+                    test = 0;
+                }
+                else if (test > textAmiTest.length - TEST_ABOUT) {
+                    test = textAmiTest.length - TEST_ABOUT;
+                }
+                int ran = helpData.randomRange(test, test + TEST_ABOUT);
                 int rand = ran - (ran % 5);
-                String textTest = chatWithAmi("<^>" + textAmiTest[rand]).concat("\n\n");
+                String textTest = chatWithAmi("<^> " + textAmiTest[rand]).concat("\n\n");
                 Integer nT[] = {2,3,4};
                 ArrayList<Integer> NT = new ArrayList<>(Arrays.asList(nT));
                 Collections.shuffle(NT);
@@ -196,34 +199,34 @@ public class AmiActivity extends AppCompatActivity {
                 String N2 = textAmiTest[rand+NT.get(1)];
                 String N3 = textAmiTest[rand+NT.get(2)];
                 String testY[][]  = {
-                        {"\t"+getResources().getString(R.string.A).concat(": ").concat(N0),
-                                "\t"+getResources().getString(R.string.B).concat(": ").concat(N1),
-                                "\t"+getResources().getString(R.string.C).concat(": ").concat(N2),
-                                "\t"+getResources().getString(R.string.D).concat(": ").concat(N3)},
-                        {"\t"+getResources().getString(R.string.A).concat(": ").concat(N1),
-                                "\t"+getResources().getString(R.string.B).concat(": ").concat(N0),
-                                "\t"+getResources().getString(R.string.C).concat(": ").concat(N2),
-                                "\t"+getResources().getString(R.string.D).concat(": ").concat(N3)},
-                        {"\t"+getResources().getString(R.string.A).concat(": ").concat(N1),
-                                "\t"+getResources().getString(R.string.B).concat(": ").concat(N2),
-                                "\t"+getResources().getString(R.string.C).concat(": ").concat(N0),
-                                "\t"+getResources().getString(R.string.D).concat(": ").concat(N3)},
-                        {"\t"+getResources().getString(R.string.A).concat(": ").concat(N1),
-                                "\t"+getResources().getString(R.string.B).concat(": ").concat(N2),
-                                "\t"+getResources().getString(R.string.C).concat(": ").concat(N3),
-                                "\t"+getResources().getString(R.string.D).concat(": ").concat(N0)}
+                        {getResources().getString(R.string.A).concat(": ").concat(N0),
+                                getResources().getString(R.string.B).concat(": ").concat(N1),
+                                getResources().getString(R.string.C).concat(": ").concat(N2),
+                                getResources().getString(R.string.D).concat(": ").concat(N3)},
+                        {getResources().getString(R.string.A).concat(": ").concat(N1),
+                                getResources().getString(R.string.B).concat(": ").concat(N0),
+                                getResources().getString(R.string.C).concat(": ").concat(N2),
+                                getResources().getString(R.string.D).concat(": ").concat(N3)},
+                        {getResources().getString(R.string.A).concat(": ").concat(N1),
+                                getResources().getString(R.string.B).concat(": ").concat(N2),
+                                getResources().getString(R.string.C).concat(": ").concat(N0),
+                                getResources().getString(R.string.D).concat(": ").concat(N3)},
+                        {getResources().getString(R.string.A).concat(": ").concat(N1),
+                                getResources().getString(R.string.B).concat(": ").concat(N2),
+                                getResources().getString(R.string.C).concat(": ").concat(N3),
+                                getResources().getString(R.string.D).concat(": ").concat(N0)}
                 };
                 result = helpData.randomRange(testY.length);
                 for (int i = 0; i < testY[result].length; i++){
                     if (i < testY[result].length - 1){
-                        textTest = textTest.concat(testY[result][i]).concat("\n\n");
+                        textTest += "\t"+testY[result][i].concat("\n\n");
                     }
                     else {
-                        textTest = textTest.concat(testY[result][i]);
+                        textTest += "\t"+testY[result][i];
                     }
                 }
                 textResult = testY[result][result];
-                Log.d(HelpData.KEY_LOG, "Click vào test: "+textTest+" result: "+N0);
+                Log.d(HelpData.KEY_LOG, "Click vào test: "+textTest+" \nresult: "+N0);
                 textViewAmiChat.setText(textTest);
             }
         });
@@ -358,7 +361,7 @@ public class AmiActivity extends AppCompatActivity {
         int CLOTHES = 3;
         if (trust > (TL_CLOTHES * CLOTHES) ){
             CLOTHES = (int) trust / TL_CLOTHES;
-            if (CLOTHES > CLOTHES_DEFAULT){CLOTHES = CLOTHES_DEFAULT;}
+            if (CLOTHES > clothes.length){CLOTHES = clothes.length;}
         }
         clothesDefault = idImageFromName(clothes[helpData.randomRange(CLOTHES)]);
         setImageAmi("Default");
@@ -447,10 +450,18 @@ public class AmiActivity extends AppCompatActivity {
         if (visibleHome){
             linearLayoutHome.setVisibility(View.VISIBLE);
             linearLayoutClass.setVisibility(View.INVISIBLE);
+            buttonTouchBodyUp.setVisibility(View.VISIBLE);
+            buttonTouchBody.setVisibility(View.VISIBLE);
+            buttonTouchFace.setVisibility(View.VISIBLE);
+            buttonTouchHair.setVisibility(View.VISIBLE);
         }
         else {
             linearLayoutClass.setVisibility(View.VISIBLE);
             linearLayoutHome.setVisibility(View.INVISIBLE);
+            buttonTouchBodyUp.setVisibility(View.INVISIBLE);
+            buttonTouchBody.setVisibility(View.INVISIBLE);
+            buttonTouchFace.setVisibility(View.INVISIBLE);
+            buttonTouchHair.setVisibility(View.INVISIBLE);
         }
     }
 
