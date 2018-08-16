@@ -20,14 +20,6 @@
             android:layout_width="0dp"
             android:layout_weight="25"
             android:layout_height="match_parent">
-            <TextView
-                android:id="@+id/textView_HomeAndClass"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="15sp"
-                android:text="Độ lười: 6"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentLeft="true"/>
             <ImageView
                 android:id="@+id/image_body"
                 android:layout_width="match_parent"
@@ -84,6 +76,73 @@
                 android:layout_centerInParent="true"
                 android:scaleType="fitEnd"
                 android:src="@drawable/feature0"/>
+            <TextView
+                android:id="@+id/textView_HomeAndClass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:text="Độ lười: 6"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="100"
+                android:gravity="center">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="78"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="bottom"
+                    android:weightSum="100"
+                    android:layout_margin="0dp">
+                    <Button
+                        android:id="@+id/button_Touch_Hair"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="25"
+                        android:layout_margin="0dp"
+                        android:background="@null"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="20"
+                        android:weightSum="100"
+                        android:gravity="center"
+                        android:layout_margin="0dp">
+                        <Button
+                            android:id="@+id/button_Touch_Face"
+                            android:layout_width="0dp"
+                            android:layout_weight="65"
+                            android:layout_height="match_parent"
+                            android:layout_margin="0dp"
+                            android:background="@null"/>
+                    </LinearLayout>
+                    <Button
+                        android:id="@+id/button_Touch_Body_Up"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="12"
+                        android:background="@null"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="18"
+                        android:weightSum="100"
+                        android:gravity="center"
+                        android:layout_margin="0dp">
+                        <Button
+                            android:id="@+id/button_Touch_Body"
+                            android:layout_width="0dp"
+                            android:layout_weight="75"
+                            android:layout_height="match_parent"
+                            android:layout_margin="0dp"
+                            android:background="@null"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
         </RelativeLayout>
 
         <!--Text View chat,...-->

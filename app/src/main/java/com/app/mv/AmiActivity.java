@@ -42,34 +42,37 @@ public class AmiActivity extends AppCompatActivity {
     TextView textViewStt;
     Button buttonChat, buttonTest, button0, button1, button2, button3;
     LinearLayout linearLayoutHome, linearLayoutClass, linearLayoutBackground;
+    Button buttonTouchHair, buttonTouchFace, buttonTouchBodyUp, buttonTouchBody;
 
-    final int BODY_DEFAULT    = 1; // body.length;		// HAIR DEFAULT = BODY DEFAULT = 1
-    final int CLOTHES_DEFAULT = 64;              		// [0, 63]
-    final int EYE_TINY        = 2;
-    final int EYE_BIG         = EYE_TINY + 4; 	    	// [indexTinyDefault,5] = 6 (4 is number of eyeBig)
-    final int EYE_FUN         = EYE_BIG + 3; 	    	// [indexTinyBig, 9] = 10
-    final int EYEBROW_DEFAULT = 1;
-    final int EYEBROW_ANGRY   = EYEBROW_DEFAULT + 1; 	// [EYEBORW_DEFAULT, 1] = 2
-    final int EYEBROW_SAD     = EYEBROW_ANGRY + 1;  	// [EYEBROW_ANGRY, 2] = 3
-    final int GLASS_DEFAULT   = 4; // glass.length; 	// [0, 3] = 4
-    final int FEATURE_FUN     = 9;
-    final int FEATURE_ANGRY   = FEATURE_FUN + 9; 	    // [FEATURE_FUN, 17] = 18
-    final int FEATURE_SAD     = FEATURE_ANGRY + 2; 	    // [FEATURE_FUN, 19] = 20
-    final int MOUTH_DEFAULT   = 8;
-    final int MOUTH_FUN       = MOUTH_DEFAULT + 31; 	// [MOUTH_DEFAULT, 38] = 39
-    final int MOUTH_ANGRY     = MOUTH_FUN + 6; 		    // [MOUTH_FUN, 44] = 45
-    final int MOUTH_SAD       = MOUTH_ANGRY + 6; 	    // [MOUTH_ANGRY, 50] = 51
-    final int MOUTH_SUDDENT   = MOUTH_SAD + 6; 		    // [MOUTH_SAD, 56] = 57
-    final int TEST_WIN        = 100;  //x10 up 1 chat
-    final int TEST_LOST       = -70;  //x40 down 1 chat
-    final int CHAT_ABOUT      = 10;   //chat random [chat, chat + 10) // about 10 chat
-    final int CHAT_WIN        = 10;   //x100 up 1 chat
-    final int TL_CHAT         = 600;  // tỉ lệ 1 chat = 320 trust
-    final int TL_CLOTHES      = 700;  // tỉ lệ 1 clothe = 468 trust
-    final int TL_TEST         = 300;  // tỉ lệ 200 trust = 1 câu hỏi.
-    final int TL_HELLO_WORLD  = 3000;
+    final int BODY_DEFAULT      = 1; // body.length;		// HAIR DEFAULT = BODY DEFAULT = 1
+    final int CLOTHES_DEFAULT   = 64;              		// [0, 63]
+    final int EYE_TINY          = 2;
+    final int EYE_BIG           = EYE_TINY + 4; 	    	// [indexTinyDefault,5] = 6 (4 is number of eyeBig)
+    final int EYE_FUN           = EYE_BIG + 3; 	    	// [indexTinyBig, 9] = 10
+    final int EYEBROW_DEFAULT   = 1;
+    final int EYEBROW_ANGRY     = EYEBROW_DEFAULT + 1; 	// [EYEBORW_DEFAULT, 1] = 2
+    final int EYEBROW_SAD       = EYEBROW_ANGRY + 1;  	// [EYEBROW_ANGRY, 2] = 3
+    final int GLASS_DEFAULT     = 4; // glass.length; 	// [0, 3] = 4
+    final int FEATURE_FUN       = 9;
+    final int FEATURE_ANGRY     = FEATURE_FUN + 9; 	    // [FEATURE_FUN, 17] = 18
+    final int FEATURE_SAD       = FEATURE_ANGRY + 2; 	    // [FEATURE_FUN, 19] = 20
+    final int MOUTH_DEFAULT     = 8;
+    final int MOUTH_FUN         = MOUTH_DEFAULT + 31; 	// [MOUTH_DEFAULT, 38] = 39
+    final int MOUTH_ANGRY       = MOUTH_FUN + 6; 		    // [MOUTH_FUN, 44] = 45
+    final int MOUTH_SAD         = MOUTH_ANGRY + 6; 	    // [MOUTH_ANGRY, 50] = 51
+    final int MOUTH_SUDDENT     = MOUTH_SAD + 6; 		    // [MOUTH_SAD, 56] = 57
+    final int TEST_WIN          = 100;  //x10 up 1 chat
+    final int TEST_LOST         = -70;  //x40 down 1 chat
+    final int CHAT_ABOUT        = 10;   //chat random [chat, chat + 10) // about 10 chat
+    final int CHAT_WIN          = 10;   //x100 up 1 chat
+    final int TL_CHAT           = 600;  // tỉ lệ 1 chat = 320 trust
+    final int TL_CLOTHES        = 700;  // tỉ lệ 1 clothe = 468 trust
+    final int TL_TEST           = 300;  // tỉ lệ 200 trust = 1 câu hỏi.
+    final int TL_HELLO_WORLD    = 3000;
     final int HELLO_WORLD_ABOUT = 3;
-    final int CHANGE_ROOM     = 5;
+    final int CHANGE_ROOM       = 5;
+    final int TL_TOUCH          = 1000;
+    final int TOUCH_ABOUT       = 5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -94,13 +97,13 @@ public class AmiActivity extends AppCompatActivity {
         linearLayoutBackground = findViewById(R.id.linearLayout_BackgroundHomeAndClass);
         changeHome(true);
 
-        buttonChat = findViewById(R.id.button_chat);
-        buttonTest = findViewById(R.id.button_test);
-        button0    = findViewById(R.id.button_testA);
-        button1    = findViewById(R.id.button_testB);
-        button2    = findViewById(R.id.button_testC);
-        button3    = findViewById(R.id.button_testD);
+        amiHelloWorldAndGetFile();
+        buttonChat();
+        buttonTest();
+        buttonTouch();
+    }
 
+    private void amiHelloWorldAndGetFile(){
         sharedPreferencesInformation = getSharedPreferences(HelpData.KEY_INFORMATION, MODE_PRIVATE);
         sharedPreferencesTrust = getSharedPreferences(HelpData.KEY_SHARED_TRUST, MODE_PRIVATE);
         editor                 = sharedPreferencesTrust.edit();
@@ -126,7 +129,9 @@ public class AmiActivity extends AppCompatActivity {
             }
             Log.d(HelpData.KEY_LOG, "Đã chào: index about HelloWorld: "+helloWorld);
         }
-
+    }
+    private void buttonChat(){
+        buttonChat = findViewById(R.id.button_chat);
         final String textAmiChat[] = getResources().getStringArray(R.array.ami_chat);
         buttonChat.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -142,24 +147,25 @@ public class AmiActivity extends AppCompatActivity {
                         textViewStt.setText("Độ lười: "+changeRoom);
                     }
                 }
-                int chat = 0;
-                if (trust > TL_CHAT){
-                    chat = (int) trust / TL_CHAT;
+                int chat = (int) trust / TL_CHAT;
+                if (chat < 0){
+                    chat = 0;
                 }
-                if (chat < 1){
-                    textViewAmiChat.setText(chatWithAmi(textAmiChat[0]));
+                else if (chat > (textAmiChat.length - CHAT_ABOUT)){
+                    chat = textAmiChat.length - CHAT_ABOUT;
                 }
-                else if (chat < (textAmiChat.length - CHAT_ABOUT)){
-                    textViewAmiChat.setText(chatWithAmi(textAmiChat[helpData.randomRange(chat, chat + CHAT_ABOUT)]));
-                }
-                else {
-                    textViewAmiChat.setText(chatWithAmi(textAmiChat[helpData.randomRange((textAmiChat.length - CHAT_ABOUT), textAmiChat.length)]));
-                }
+                textViewAmiChat.setText(chatWithAmi(textAmiChat[helpData.randomRange(chat, chat + CHAT_ABOUT)]));
                 Log.d(HelpData.KEY_LOG, "Click vào chat: index about chat: "+chat);
                 setSharedPreferencesTrust(CHAT_WIN);
             }
         });
-
+    }
+    private void buttonTest(){
+        buttonTest = findViewById(R.id.button_test);
+        button0    = findViewById(R.id.button_testA);
+        button1    = findViewById(R.id.button_testB);
+        button2    = findViewById(R.id.button_testC);
+        button3    = findViewById(R.id.button_testD);
         final String textAmiTest[] = getResources().getStringArray(R.array.ami_test);
         buttonTest.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -176,7 +182,7 @@ public class AmiActivity extends AppCompatActivity {
                     }
                 }
                 changeHome(false);
-                int test = (int)  trust / TL_TEST + 30; // +30 để trust <= 0 vẫn ra 6 câu hỏi
+                int test = (int)  trust / TL_TEST;
                 if (test > textAmiTest.length) {test = textAmiTest.length;}
                 else if (test < 0){test = 30;}
                 int ran = helpData.randomRange(test);
@@ -245,6 +251,80 @@ public class AmiActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 clickTest(textAmiWin, textAmiLost, 3, textResult);
+            }
+        });
+    }
+    private void buttonTouch(){
+        buttonTouchHair = findViewById(R.id.button_Touch_Hair);
+        buttonTouchFace = findViewById(R.id.button_Touch_Face);
+        buttonTouchBody = findViewById(R.id.button_Touch_Body);
+        buttonTouchBodyUp = findViewById(R.id.button_Touch_Body_Up);
+
+        final String[] textTouchHair = getResources().getStringArray(R.array.stringTouchHair);
+        final String[] textTouchFace = getResources().getStringArray(R.array.stringTouchFace);
+        final String[] textTouchBodyB = getResources().getStringArray(R.array.stringTouchBodyB);
+        final String[] textTouchBodyG = getResources().getStringArray(R.array.stringTouchBodyG);
+        final String[] textTouchBodyUp = getResources().getStringArray(R.array.stringTouchBodyUp);
+
+        buttonTouchHair.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int touch = (int) trust / TL_TOUCH;
+                if (touch < 0){
+                    touch = 0;
+                }
+                else if (touch > (textTouchHair.length - TOUCH_ABOUT)){
+                    touch = textTouchHair.length - TOUCH_ABOUT;
+                }
+                textViewAmiChat.setText(chatWithAmi(textTouchHair[helpData.randomRange(touch,touch+TOUCH_ABOUT)]));
+            }
+        });
+        buttonTouchFace.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int touch = (int) trust / TL_TOUCH;
+                if (touch < 0){
+                    touch = 0;
+                }
+                else if (touch > (textTouchFace.length - TOUCH_ABOUT)){
+                    touch = textTouchFace.length - TOUCH_ABOUT;
+                }
+                textViewAmiChat.setText(chatWithAmi(textTouchFace[helpData.randomRange(touch,touch+TOUCH_ABOUT)]));
+            }
+        });
+        buttonTouchBody.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int touch = (int) trust / TL_TOUCH;
+                if (touch < 0){
+                    touch = 0;
+                }
+                if (sYou.equalsIgnoreCase(HelpData.S_NAME_G)) {
+                    if (touch > (textTouchBodyG.length - TOUCH_ABOUT)) {
+                        touch = textTouchBodyG.length - TOUCH_ABOUT;
+                    }
+                    textViewAmiChat.setText(chatWithAmi(textTouchBodyG[helpData.randomRange(touch, touch + TOUCH_ABOUT)]));
+                }
+                else {
+                    if (touch > (textTouchBodyB.length - TOUCH_ABOUT )){
+                        touch = textTouchBodyB.length - TOUCH_ABOUT;
+                    }
+                    textViewAmiChat.setText(chatWithAmi(textTouchBodyB[helpData.randomRange(touch,touch+TOUCH_ABOUT)]));
+                }
+//                if (sYou.equalsIgnoreCase("anh"))
+            }
+        });
+        buttonTouchBodyUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int touch = (int) trust / TL_TOUCH;
+                if (touch < 0){
+                    touch = 0;
+                }
+                else if (touch > (textTouchBodyUp.length - TOUCH_ABOUT)){
+                    touch = textTouchBodyUp.length - TOUCH_ABOUT;
+                }
+                textViewAmiChat.setText(chatWithAmi(textTouchBodyUp[helpData.randomRange(touch,touch+TOUCH_ABOUT)]));
             }
         });
     }

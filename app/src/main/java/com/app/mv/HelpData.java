@@ -12,6 +12,8 @@ public class HelpData {
     public final static String KEY_STUDENT     = "student";
     public final static String KEY_LOG         = "MVLog";
     public final static String KEY_DONT_BUG    = "sanPhamDuocPhatTrienBoiLeMinhVinhRaMatNgayCN12082018";
+    public final static String S_NAME_B        = "anh";
+    public final static String S_NAME_G        = "chị";
 
     public int randomRange(int start, int end){
         int random = (int) (start + Math.random() * (end - start));

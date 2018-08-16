@@ -57,11 +57,11 @@ public class InformationActivity extends AppCompatActivity {
                 switch (i){
                     case R.id.radioButton_Boy:
                         boy = true;
-                        sYou = "anh";
+                        sYou = HelpData.S_NAME_B;
                     break;
                     case R.id.radioButton_Girl:
                         boy = false;
-                        sYou = "chị";
+                        sYou = HelpData.S_NAME_G;
                     break;
                 }
             }
