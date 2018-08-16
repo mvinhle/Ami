@@ -8,7 +8,7 @@
     android:weightSum="100"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!--Image View and Stt-->
+    <!--Image View and touch-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -84,6 +84,7 @@
                 android:text="Độ lười: 6"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentLeft="true"/>
+            <!--touch-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -150,17 +151,45 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="75"
-            android:layout_margin="2dp">
-            <TextView
-                android:id="@+id/text_AmiChat"
+            android:layout_margin="2dp"
+            android:layout_gravity="top">
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="left|top"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:padding="12dp"
-                android:text="asdfadsfasdf"
-                android:background="@drawable/custom_textview" />
+                android:gravity="top"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/text_AmiChat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:padding="12dp"
+                    android:background="@drawable/custom_textview" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+                    <EditText
+                        android:id="@+id/editText_Chat_To_Ami"
+                        android:visibility="gone"
+                        android:background="@drawable/custom_textview_note"
+                        android:padding="7dp"
+                        android:hint="Chú ý dấu ngoặc, chấm, chấm phẩy khi viết code."
+                        android:textColor="@color/black"
+                        android:layout_width="0dp"
+                        android:layout_weight="80"
+                        android:layout_height="wrap_content" />
+                    <Button
+                        android:id="@+id/button_Chat_To_Ami"
+                        android:visibility="gone"
+                        android:layout_width="0dp"
+                        android:layout_weight="20"
+                        android:text="@string/continueExit"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+            </LinearLayout>
         </ScrollView>
     </LinearLayout>
 
