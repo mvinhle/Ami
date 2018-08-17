@@ -105,4 +105,16 @@
         <item>[sud]thử nghiệm tính năng của [i] đã thành công chưa [you]</item>
         <item>[ang][i] GM luôn bảo [ni] là một AI rắc rối ^^</item>
     </string-array>
+
+    <string-array name="move_class">
+        <item>[fun]Cứ ở nhà làm bài tập thì chán quá, [you] đến trường vào phòng thực hành với [i] đi.</item>
+        <item>[def][you] làm bài thực hành để quen với code đi [you]</item>
+        <item>[fun][i] Thích làm bài tập ở trường hơn, ở nhà hoài chán lắm,..</item>
+    </string-array>
+
+    <string-array name="move_home">
+        <item>[sad]Xin lỗi vì [i] muốn về nhà, ở trường lâu quá làm [i] bị choáng.</item>
+        <item>[fun][you] cứ nói chuyện ở phòng học mãi như vậy là không tốt đâu, [i] và [you] nên ở nhà tâm sự ^^</item>
+        <item>[fun]Ở nhà luôn thoải mái, [you] có cảm thấy giống [i] không ??</item>
+    </string-array>
 </resources>

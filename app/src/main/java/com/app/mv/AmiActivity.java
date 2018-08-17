@@ -47,6 +47,7 @@ public class AmiActivity extends AppCompatActivity {
     Button buttonTouchHair, buttonTouchFace, buttonTouchBodyUp, buttonTouchBody;
     EditText editTextChatToAmi;
     Button buttonChatToAmi;
+    Button buttonTestCode;
 
     final int BODY_DEFAULT      = 1; // body.length;		// HAIR DEFAULT = BODY DEFAULT = 1
     final int EYE_TINY          = 2;
@@ -100,11 +101,11 @@ public class AmiActivity extends AppCompatActivity {
         linearLayoutTest = findViewById(R.id.linearLayout_class);
         linearLayoutBackground = findViewById(R.id.linearLayout_BackgroundHomeAndClass);
 
-        buttonTouch();
-        changeChatAndTest(true);
         amiHelloWorldAndGetFile();
+        buttonTouch();
         buttonChat();
         buttonTest();
+        buttonTestCode();
         buttonChatToAmi();
     }
 
@@ -341,11 +342,33 @@ public class AmiActivity extends AppCompatActivity {
                     setSharedPreferencesTrust(TEST_WIN * 2);
                 }
                 else {
-                    textViewAmiChat.setText(chatWithAmi(textAmiLost[helpData.randomRange(textAmiLost.length)].replace("[result]", testCodeResult[0])));
+                    textViewAmiChat.setText(chatWithAmi(textAmiLost[helpData.randomRange(textAmiLost.length)].replace("[result]", "\n"+testCodeResult[0]+"\n")));
                     setSharedPreferencesTrust(TEST_LOST * 2);
                 }
 //                getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
                 changeChatToAmiAndAmiChat(false);
+            }
+        });
+    }
+    private void buttonTestCode(){
+        buttonTestCode = findViewById(R.id.button_test_code);
+        buttonTestCode.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                changeChatToAmiAndAmiChat(true);
+                final String[] textAmiTestCode = getResources().getStringArray(R.array.ami_test_code);
+                int test = (int) trust / TL_TEST;
+                if (test < 0) {
+                    test = 0;
+                } else if (test > textAmiTestCode.length - TEST_ABOUT) {
+                    test = textAmiTestCode.length - TEST_ABOUT;
+                }
+                int ran = helpData.randomRange(test, test + TEST_ABOUT);
+                int rand = ran - (ran % 5);
+                textViewAmiChat.setText(chatWithAmi(textAmiTestCode[rand]));
+                for (int i = 0; i < testCodeResult.length; i++) {
+                    testCodeResult[i] = textAmiTestCode[rand + i + 1]; // +1 is result
+                }
             }
         });
     }
@@ -489,6 +512,9 @@ public class AmiActivity extends AppCompatActivity {
                 linearLayoutBackground.setBackgroundResource(R.drawable.athome);
                 atHome = true;
                 setIndexDefault(false);
+                buttonTestCode.setVisibility(View.GONE);
+                final String[] textAmiMoveHome = getResources().getStringArray(R.array.move_home);
+                textViewAmiChat.setText(chatWithAmi(textAmiMoveHome[helpData.randomRange(textAmiMoveHome.length)]));
                 return false;
             }
             else {
@@ -501,20 +527,9 @@ public class AmiActivity extends AppCompatActivity {
                 linearLayoutBackground.setBackgroundResource(R.drawable.atclass);
                 atHome = false;
                 setIndexDefault(true);
-                changeChatToAmiAndAmiChat(true);
-                final String[] textAmiTestCode = getResources().getStringArray(R.array.ami_test_code);
-                int test = (int) trust / TL_TEST;
-                if (test < 0) {
-                    test = 0;
-                } else if (test > textAmiTestCode.length - TEST_ABOUT) {
-                    test = textAmiTestCode.length - TEST_ABOUT;
-                }
-                int ran = helpData.randomRange(test, test + TEST_ABOUT);
-                int rand = ran - (ran % 5);
-                textViewAmiChat.setText(chatWithAmi(textAmiTestCode[rand]));
-                for (int i = 0; i < testCodeResult.length; i++){
-                    testCodeResult[i] = textAmiTestCode[rand + i + 1]; // +1 is result
-                }
+                buttonTestCode.setVisibility(View.VISIBLE);
+                final String[] textAmiMoveClass = getResources().getStringArray(R.array.move_class);
+                textViewAmiChat.setText(chatWithAmi(textAmiMoveClass[helpData.randomRange(textAmiMoveClass.length)]));
                 return false;
             }
             else {
@@ -529,20 +544,24 @@ public class AmiActivity extends AppCompatActivity {
         if (chatToAmi){
             editTextChatToAmi.setVisibility(View.VISIBLE);
             buttonChatToAmi.setVisibility(View.VISIBLE);
-            changeChatAndTest(false);
-            button0.setEnabled(false);
-            button1.setEnabled(false);
-            button2.setEnabled(false);
-            button3.setEnabled(false);
+            buttonTouchBodyUp.setVisibility(View.INVISIBLE);
+            buttonTouchBody.setVisibility(View.INVISIBLE);
+            buttonTouchFace.setVisibility(View.INVISIBLE);
+            buttonTouchHair.setVisibility(View.INVISIBLE);
+            buttonChat.setEnabled(false);
+            buttonTest.setEnabled(false);
+            buttonTestCode.setEnabled(false);
         }
         else {
             editTextChatToAmi.setVisibility(View.GONE);
             buttonChatToAmi.setVisibility(View.GONE);
-            changeChatAndTest(true);
-            button0.setEnabled(true);
-            button1.setEnabled(true);
-            button2.setEnabled(true);
-            button3.setEnabled(true);
+            buttonTouchBodyUp.setVisibility(View.VISIBLE);
+            buttonTouchBody.setVisibility(View.VISIBLE);
+            buttonTouchFace.setVisibility(View.VISIBLE);
+            buttonTouchHair.setVisibility(View.VISIBLE);
+            buttonChat.setEnabled(true);
+            buttonTest.setEnabled(true);
+            buttonTestCode.setEnabled(true);
         }
     }
 

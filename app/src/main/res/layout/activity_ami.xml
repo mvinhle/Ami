@@ -163,7 +163,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
-                    android:textSize="20sp"
+                    android:textSize="18sp"
                     android:padding="12dp"
                     android:background="@drawable/custom_textview" />
                 <LinearLayout
@@ -220,6 +220,15 @@
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:text="@string/Test"/>
+            <Button
+                android:textColor="@color/black"
+                android:id="@+id/button_test_code"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/TestCode"
+                android:visibility="gone"/>
         </LinearLayout>
 
         <!-- đối lập với phía trên -->
@@ -227,7 +236,8 @@
             android:id="@+id/linearLayout_class"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:visibility="invisible">
             <Button
                 android:textColor="@color/black"
                 android:id="@+id/button_testA"
