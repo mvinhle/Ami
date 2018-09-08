@@ -16,14 +16,13 @@ import java.util.Collections;
 
 public class AmiActivity extends AppCompatActivity {
 
-    int changeRoom = 6;
+    int changeRoom = 5;
     boolean atHome = true;
-    int trust      = 140;
+    long trust     = 140;
     int eyeChange,  eyebrowChange, featureChange,   mouthChange;
     String sYou = "bạn", sI = "em", sNI = "Ami", sNYou = "Vinh";
     int result = 0;
     String testResult = "";
-    String testCodeResult[] = new String[4];
 
     private int bodyDefault;
     private int hairDefault;
@@ -69,7 +68,8 @@ public class AmiActivity extends AppCompatActivity {
     final int CHAT_ABOUT        = 20;
     final int CHAT_WIN          = 10;
     final int TL_TEST           = 200;
-    final int TEST_ABOUT        = 20;
+    final int TEST_ABOUT        = 20; // 4
+    final int TEST_CODE_ABOUT   = 8; // 4
     final int TEST_WIN          = 100;
     final int TEST_LOST         = -70;
     final int TL_HELLO_WORLD    = 3000;
@@ -77,7 +77,7 @@ public class AmiActivity extends AppCompatActivity {
     final int TL_TOUCH          = 700;
     final int TOUCH_ABOUT       = 5;
     final int TL_CLOTHES        = 600;
-    final int CHANGE_ROOM       = 5;
+    final int CHANGE_ROOM       = 4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -115,7 +115,7 @@ public class AmiActivity extends AppCompatActivity {
         editor                 = sharedPreferencesTrust.edit();
         sNYou = sharedPreferencesInformation.getString(HelpData.KEY_NAME, "\"*..cười nhe răng..*\"");
         sYou  = sharedPreferencesInformation.getString(HelpData.KEY_SUB_NAME, "bạn");
-        trust = sharedPreferencesTrust.getInt(HelpData.KEY_TRUST, trust);
+        trust = sharedPreferencesTrust.getLong(HelpData.KEY_TRUST, trust);
 
         final String textAmiHelloWorld[] = getResources().getStringArray(R.array.ami_HelloWorld);
         if (trust < 0){
@@ -125,7 +125,7 @@ public class AmiActivity extends AppCompatActivity {
             int helloWorld = (int) (trust / TL_HELLO_WORLD);
             if (helloWorld > (textAmiHelloWorld.length - HELLO_WORLD_ABOUT))
             {
-                textViewAmiChat.setText(chatWithAmi(textAmiHelloWorld[helpData.randomRange(helloWorld - HELLO_WORLD_ABOUT, textAmiHelloWorld.length)]));
+                textViewAmiChat.setText(chatWithAmi(textAmiHelloWorld[helpData.randomRange(textAmiHelloWorld.length - HELLO_WORLD_ABOUT, textAmiHelloWorld.length)]));
             }
             else if (helloWorld > 1){
                 textViewAmiChat.setText(chatWithAmi(textAmiHelloWorld[helpData.randomRange(helloWorld, helloWorld + HELLO_WORLD_ABOUT)]));
@@ -175,7 +175,7 @@ public class AmiActivity extends AppCompatActivity {
                         test = textAmiTest.length - TEST_ABOUT;
                     }
                     int ran = helpData.randomRange(test, test + TEST_ABOUT);
-                    int rand = ran - (ran % 5);
+                    int rand = (int) ran - (ran % 5);
                     String textTest = chatWithAmi("<^> " + textAmiTest[rand]).concat("\n\n");
                     Integer nT[] = {2, 3, 4};
                     ArrayList<Integer> NT = new ArrayList<>(Arrays.asList(nT));
@@ -328,21 +328,18 @@ public class AmiActivity extends AppCompatActivity {
         buttonChatToAmi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String textResult = editTextChatToAmi.getText().toString().trim();
+                String textResult = helpData.removeSubString(editTextChatToAmi.getText().toString(), " ").trim();
                 boolean result = false;
-                for (String s : testCodeResult){
-                    if (textResult.equalsIgnoreCase(s)){
+                    if (textResult.equalsIgnoreCase(helpData.removeSubString(testResult, " ").trim())){
                         result = true;
-                        break;
                     }
-                }
                 editTextChatToAmi.setText(null);
                 if (result){
                     textViewAmiChat.setText(chatWithAmi(textAmiWin[helpData.randomRange(textAmiWin.length)]));
                     setSharedPreferencesTrust(TEST_WIN * 2);
                 }
                 else {
-                    textViewAmiChat.setText(chatWithAmi(textAmiLost[helpData.randomRange(textAmiLost.length)].replace("[result]", "\n"+testCodeResult[0]+"\n")));
+                    textViewAmiChat.setText(chatWithAmi(textAmiLost[helpData.randomRange(textAmiLost.length)].replace("[result]", testResult)));
                     setSharedPreferencesTrust(TEST_LOST * 2);
                 }
 //                getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
@@ -352,23 +349,21 @@ public class AmiActivity extends AppCompatActivity {
     }
     private void buttonTestCode(){
         buttonTestCode = findViewById(R.id.button_test_code);
+        final String[] textAmiTestCode = getResources().getStringArray(R.array.ami_test_code);
         buttonTestCode.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 changeChatToAmiAndAmiChat(true);
-                final String[] textAmiTestCode = getResources().getStringArray(R.array.ami_test_code);
                 int test = (int) trust / TL_TEST;
                 if (test < 0) {
                     test = 0;
-                } else if (test > textAmiTestCode.length - TEST_ABOUT) {
-                    test = textAmiTestCode.length - TEST_ABOUT;
+                } else if (test > textAmiTestCode.length - TEST_CODE_ABOUT) {
+                    test = textAmiTestCode.length - TEST_CODE_ABOUT;
                 }
-                int ran = helpData.randomRange(test, test + TEST_ABOUT);
-                int rand = ran - (ran % 5);
+                int ran = helpData.randomRange(test, test + TEST_CODE_ABOUT);
+                int rand = (int) ran - (ran % 2);
                 textViewAmiChat.setText(chatWithAmi(textAmiTestCode[rand]));
-                for (int i = 0; i < testCodeResult.length; i++) {
-                    testCodeResult[i] = textAmiTestCode[rand + i + 1]; // +1 is result
-                }
+                testResult = textAmiTestCode[rand+1];
             }
         });
     }
@@ -579,7 +574,7 @@ public class AmiActivity extends AppCompatActivity {
 
     private void setSharedPreferencesTrust(int i){
         trust += i;
-        editor.putInt(HelpData.KEY_TRUST, trust);
+        editor.putLong(HelpData.KEY_TRUST, trust);
         editor.commit();
         Log.d(HelpData.KEY_LOG,"AmiActivity <- setSharedPreferencesTrust: "+trust);
     }

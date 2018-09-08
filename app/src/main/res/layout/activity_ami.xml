@@ -81,7 +81,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="15sp"
-                android:text="Độ lười: 6"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentLeft="true"/>
             <!--touch-->
