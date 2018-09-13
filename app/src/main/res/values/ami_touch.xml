@@ -1,44 +1,132 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="stringTouchHair">
-        <item>[ang][i] không thích để [you] xoa đầu như thế này đâu.</item>
-        <item>[sud]Tóc của [i] có gì lạ lắm à ?</item>
-        <item>[ang]dừng,.. dừng lại.</item>
-        <item>[fun][you]~</item>
-        <item>[fun][you] đừng xoa đầu [i] như vậy, [i] ngại lắm.</item>
-        <item>[fun][i] hình như bắt đầu thích việt này.</item>
+        <item>[fun]Vui, chạm đầu, dòng 0</item>
+        <item>[sad]Buồn, chạm đầu, dòng 1</item>
+        <item>[def]Def, chạm đầu, dòng 3</item>
+        <item>[sud]bất ngờ, chạm đầu, dòng 4</item>
+        <item>[ang]giận, chạm đầu, dòng 5</item>
+
+        <item>[fun]Vui, chạm đầu, dòng 6</item>
+        <item>[sad]Buồn, chạm đầu, dòng 7</item>
+        <item>[def]Def, chạm đầu, dòng 8</item>
+        <item>[sud]bất ngờ, chạm đầu, dòng 9</item>
+        <item>[ang]giận, chạm đầu, dòng 10</item>
+
+        <item>[fun]Vui, chạm đầu, dòng 11</item>
+        <item>[sad]Buồn, chạm đầu, dòng 12</item>
+        <item>[def]Def, chạm đầu, dòng 13</item>
+        <item>[sud]bất ngờ, chạm đầu, dòng 14</item>
+        <item>[ang]giận, chạm đầu, dòng 15</item>
+
+        <item>[fun]Vui, chạm đầu, dòng 16</item>
+        <item>[sad]Buồn, chạm đầu, dòng 17</item>
+        <item>[def]Def, chạm đầu, dòng 18</item>
+        <item>[sud]bất ngờ, chạm đầu, dòng 19</item>
+        <item>[ang]giận, chạm đầu, dòng 20</item>
     </string-array>
     <string-array name="stringTouchFace">
-        <item>[sud]Mặt [i] có dính gì à [you]</item>
-        <item>[sad]Đừng nựng [i] như con nít nữa, [i] 16 tuổi rồi đó.</item>
-        <item>[fun]hihi</item>
-        <item>[def][you] thích chạm vào mặt [i] lắm ạ.</item>
-        <item>[fun][i] không biết nên nói gì nữa</item>
-        <item>[ang][you]~</item>
+        <item>[fun]Vui, chạm mặt, dòng 0</item>
+
+        <item>[sad]Buồn, chạm mặt, dòng 1</item>
+        <item>[def]Def, chạm mặt, dòng 3</item>
+        <item>[sud]bất ngờ, chạm mặt, dòng 4</item>
+        <item>[ang]giận, chạm mặt, dòng 5</item>
+
+        <item>[fun]Vui, chạm mặt, dòng 6</item>
+        <item>[sad]Buồn, chạm mặt, dòng 7</item>
+        <item>[def]Def, chạm mặt, dòng 8</item>
+        <item>[sud]bất ngờ, chạm mặt, dòng 9</item>
+        <item>[ang]giận, chạm mặt, dòng 10</item>
+
+        <item>[fun]Vui, chạm mặt, dòng 11</item>
+        <item>[sad]Buồn, chạm mặt, dòng 12</item>
+        <item>[def]Def, chạm mặt, dòng 13</item>
+        <item>[sud]bất ngờ, chạm mặt, dòng 14</item>
+        <item>[ang]giận, chạm mặt, dòng 15</item>
+
+        <item>[fun]Vui, chạm mặt, dòng 16</item>
+        <item>[sad]Buồn, chạm mặt, dòng 17</item>
+        <item>[def]Def, chạm mặt, dòng 18</item>
+        <item>[sud]bất ngờ, chạm mặt, dòng 19</item>
+        <item>[ang]giận, chạm mặt, dòng 20</item>
     </string-array>
     <string-array name="stringTouchBodyUp">
-        <item>[ang][you], dừng lại, đừng chạm vào vai [i] như vậy.</item>
-        <item>[ang]A,.. đừng chạm vào vai [i] như vậy, [you]. </item>
-        <item>[ang][i] Không thích đâu</item>
-        <item>[ang][i] thực sự không thích đâu</item>
-        <item>[ang][you] không biết rằng [i] là nữ à.</item>
-        <item>[ang][you]~ là đồ ngốc.</item>
+        <item>[fun]Vui, chạm vai, dòng 0</item>
+
+        <item>[sad]Buồn, chạm vai, dòng 1</item>
+        <item>[def]Def, chạm vai, dòng 3</item>
+        <item>[sud]bất ngờ, chạm vai, dòng 4</item>
+        <item>[ang]giận, chạm vai, dòng 5</item>
+
+        <item>[fun]Vui, chạm vai, dòng 6</item>
+        <item>[sad]Buồn, chạm vai, dòng 7</item>
+        <item>[def]Def, chạm vai, dòng 8</item>
+        <item>[sud]bất ngờ, chạm vai, dòng 9</item>
+        <item>[ang]giận, chạm vai, dòng 10</item>
+
+        <item>[fun]Vui, chạm vai, dòng 11</item>
+        <item>[sad]Buồn, chạm vai, dòng 12</item>
+        <item>[def]Def, chạm vai, dòng 13</item>
+        <item>[sud]bất ngờ, chạm vai, dòng 14</item>
+        <item>[ang]giận, chạm vai, dòng 15</item>
+
+        <item>[fun]Vui, chạm vai, dòng 16</item>
+        <item>[sad]Buồn, chạm vai, dòng 17</item>
+        <item>[def]Def, chạm vai, dòng 18</item>
+        <item>[sud]bất ngờ, chạm vai, dòng 19</item>
+        <item>[ang]giận, chạm vai, dòng 20</item>
     </string-array>
     <string-array name="stringTouchBodyB">
-        <item>[ang][you] là đồ biến thái.</item>
-        <item>[sad][you]~ dừng lại.</item>
-        <item>[sud][you] đang chạm vào đâu đó ??</item>
-        <item>[ang][i] có thể sẽ kiện [you] vì tội quấy rối đó.</item>
-        <item>[ang][you] dừng lại đi, không thôi [i] sẽ báo công an.</item>
-        <item>[sad][i] cũng có cảm giác nên [you] tốt nhất không nên làm như vậy.</item>
-        <item>[fun]tại sao con trai các [you] lại thích ngực đến vậy ?</item>
+        <item>[fun]Vui, chạm ngực (phản ứng với nam), dòng 0</item>
+
+        <item>[sad]Buồn, chạm ngực (phản ứng với nam), dòng 1</item>
+        <item>[def]Def, chạm ngực (phản ứng với nam), dòng 3</item>
+        <item>[sud]bất ngờ, chạm ngực (phản ứng với nam), dòng 4</item>
+        <item>[ang]giận, chạm ngực (phản ứng với nam), dòng 5</item>
+
+        <item>[fun]Vui, chạm ngực (phản ứng với nam), dòng 6</item>
+        <item>[sad]Buồn, chạm ngực (phản ứng với nam), dòng 7</item>
+        <item>[def]Def, chạm ngực (phản ứng với nam), dòng 8</item>
+        <item>[sud]bất ngờ, chạm ngực (phản ứng với nam), dòng 9</item>
+        <item>[ang]giận, chạm ngực (phản ứng với nam), dòng 10</item>
+
+        <item>[fun]Vui, chạm ngực (phản ứng với nam), dòng 11</item>
+        <item>[sad]Buồn, chạm ngực (phản ứng với nam), dòng 12</item>
+        <item>[def]Def, chạm ngực (phản ứng với nam), dòng 13</item>
+        <item>[sud]bất ngờ, chạm ngực (phản ứng với nam), dòng 14</item>
+        <item>[ang]giận, chạm ngực (phản ứng với nam), dòng 15</item>
+
+        <item>[fun]Vui, chạm ngực (phản ứng với nam), dòng 16</item>
+        <item>[sad]Buồn, chạm ngực (phản ứng với nam), dòng 17</item>
+        <item>[def]Def, chạm ngực (phản ứng với nam), dòng 18</item>
+        <item>[sud]bất ngờ, chạm ngực (phản ứng với nam), dòng 19</item>
+        <item>[ang]giận, chạm ngực (phản ứng với nam), dòng 20</item>
     </string-array>
     <string-array name="stringTouchBodyG">
-        <item>[fun]A~, dừng lại dừng lại [you] ơi</item>
-        <item>[sud]Dù [i] và [you] cùng là nữ nhưng mà như vậy không tốt đâu~</item>
-        <item>[sud][you] là yuri à, đùng làm vậy nữa</item>
-        <item>[ang][you] là đồ ngốc, ngốc, ngốc, ngốc</item>
-        <item>[fun][you] thật là,..</item>
-        <item>[sud][i] nghe nói mát-xa ngực sẽ làm cho chúng to hơn, có thật vậy không nhỉ ?</item>
+        <item>[fun]Vui, chạm ngực (phản ứng với nữ), dòng 0</item>
+
+        <item>[sad]Buồn, chạm ngực (phản ứng với nữ), dòng 1</item>
+        <item>[def]Def, chạm ngực (phản ứng với nữ), dòng 3</item>
+        <item>[sud]bất ngờ, chạm ngực (phản ứng với nữ), dòng 4</item>
+        <item>[ang]giận, chạm ngực (phản ứng với nữ), dòng 5</item>
+
+        <item>[fun]Vui, chạm ngực (phản ứng với nữ), dòng 6</item>
+        <item>[sad]Buồn, chạm ngực (phản ứng với nữ), dòng 7</item>
+        <item>[def]Def, chạm ngực (phản ứng với nữ), dòng 8</item>
+        <item>[sud]bất ngờ, chạm ngực (phản ứng với nữ), dòng 9</item>
+        <item>[ang]giận, chạm ngực (phản ứng với nữ), dòng 10</item>
+
+        <item>[fun]Vui, chạm ngực (phản ứng với nữ), dòng 11</item>
+        <item>[sad]Buồn, chạm ngực (phản ứng với nữ), dòng 12</item>
+        <item>[def]Def, chạm ngực (phản ứng với nữ), dòng 13</item>
+        <item>[sud]bất ngờ, chạm ngực (phản ứng với nữ), dòng 14</item>
+        <item>[ang]giận, chạm ngực (phản ứng với nữ), dòng 15</item>
+
+        <item>[fun]Vui, chạm ngực (phản ứng với nữ), dòng 16</item>
+        <item>[sad]Buồn, chạm ngực (phản ứng với nữ), dòng 17</item>
+        <item>[def]Def, chạm ngực (phản ứng với nữ), dòng 18</item>
+        <item>[sud]bất ngờ, chạm ngực (phản ứng với nữ), dòng 19</item>
+        <item>[ang]giận, chạm ngực (phản ứng với nữ), dòng 20</item>
     </string-array>
 </resources>

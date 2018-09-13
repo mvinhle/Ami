@@ -1,19 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="ami_test_code">
-        <item>[fun][you] ơi, [i] muốn khai báo tên của một chương trình tên là \"tinh_tong\" giờ [i] phải viết như thế nào ạ ?</item>
-        <item>program tinh_tong;</item>
+        <item>[fun][vui] kết quả: \"dong 0\"</item>
+        <item>dong 0</item>
 
-        <item>[fun][you] ơi, [i] viết cấu trúc của một chương trình, nhưng [i] quên một dòng rồi, [you] sửa lại dòng \"_____\" giúp [i] với ạ. Chương trình của [i] như sau:\n\"\"\"\nprogram cau_truc_cua_chuong_trinh;\nbegin\n_____\n\"\"\"</item>
-        <item>end.</item>
+        <item>[fun][vui] kết quả: \"dong 1\"</item>
+        <item>dong 1</item>
 
-        <item>[fun][i] muốn viết dòng chử \"I Love You\" thì [i] phải viết ở dòng \"_____\" trong đoạn code: \n\"\"\"\nbegin\n_____\nend.\n\"\"\"\n[you] ơi giúp [i]~</item>
-        <item>write(\"I Love You\");</item>
+        <item>[fun][vui] kết quả: \"dong 2\"</item>
+        <item>dong 2</item>
 
-        <item>[sad][you]!!, code của [i] bị sai, [you] viết lại dòng bị sai cho đúng giúp [i] nha ([you] chỉ cần viết đúng dòng code bị sai thôi là [i] biết [i] sai chổ nào liền). Code của [i]: \n\"\"\"\nbegin;\nwriteln(\"watashi wa [ni] desu!!!\");\nend.\n\"\"\"</item>
-        <item>begin</item>
+        <item>[fun][vui] kết quả: \"dong 3\"</item>
+        <item>dong 3</item>
 
-        <item>[fun][you]!!, [i] muốn viết một chương trình tính tổng của \"so_a\" và \"so_b\", [you] xem giúp [i] viết lại cho đúng dòng bị sai nha: \n\"\"\"\nvar so_a, so_b, tong : integer;\nbegin\ntong := so_a / so_b;\nwrite(\"tong la: \");\nwrite(tong);\nend.\n\"\"\"\n</item>
-        <item>tong := so_a + so_b;</item>
+        <item>[fun][vui] kết quả: \"dong 5\"</item>
+        <item>dong 5</item>
+
+        <item>[fun][vui] kết quả: \"dong 6\"</item>
+        <item>dong 6</item>
+
+        <item>[fun][vui] kết quả: \"dong 7\"</item>
+        <item>dong 7</item>
+
+        <item>[fun][vui] kết quả: \"dong\"8\"</item>
+        <item>dong\"8</item>
+
+        <item>[fun][vui] kết quả: \"dong\"9\"</item>
+        <item>dong\"9</item>
+
+        <item>[fun][vui] kết quả: \"dong\"10\"</item>
+        <item>dong\"10</item>
     </string-array>
 </resources>
